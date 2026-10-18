@@ -1,0 +1,31 @@
+{
+  "id": "lucide",
+  "name": "Lucide",
+  "kind": "ui",
+  "provider": "community",
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/lucide"
+  },
+  "owner": "Lucide Contributors",
+  "homepage": "https://lucide.dev/",
+  "license": {
+    "spdx": "ISC",
+    "title": "ISC",
+    "url": "https://github.com/lucide-icons/lucide/blob/main/LICENSE"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": true,
+    "commercial": "yes",
+    "attribution": false
+  },
+  "customization": "free",
+  "defaultStyle": "outline",
+  "styles": [],
+  "brandMatching": false,
+  "restrictions": [],
+  "reviewed": "2026-10-18"
+}

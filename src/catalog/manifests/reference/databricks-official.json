@@ -1,0 +1,111 @@
+{
+  "id": "databricks-official",
+  "name": "Databricks — marca e iconografía (oficial)",
+  "kind": "reference",
+  "provider": "databricks",
+  "source": {
+    "type": "reference"
+  },
+  "sourceUrl": "https://brand.databricks.com/",
+  "terms": "Los recursos de marca de Databricks se obtienen en su Brand Center, sujetos a sus directrices. No se encontraron iconos de producto con licencia de redistribución.",
+  "reviewed": "2026-10-18",
+  "official": true,
+  "permissions": {
+    "download": false,
+    "redistribute": false,
+    "modify": false,
+    "commercial": "unverified",
+    "attribution": false
+  },
+  "customization": "none",
+  "license": {
+    "spdx": "LicenseRef-Proprietary",
+    "title": "Términos del propietario",
+    "url": "https://brand.databricks.com/"
+  },
+  "restrictions": [
+    "Recurso oficial con términos que no permiten su redistribución en IconAtlas: se ofrece ficha y enlace a la descarga oficial.",
+    "Los recursos de marca de Databricks se obtienen en su Brand Center, sujetos a sus directrices. No se encontraron iconos de producto con licencia de redistribución."
+  ],
+  "entries": [
+    {
+      "name": "Databricks",
+      "category": "analytics",
+      "family": "Platform",
+      "note": "Logotipo corporativo: disponible también en colecciones abiertas (SVG Logos, Simple Icons) bajo sus licencias, con las restricciones de marca."
+    },
+    {
+      "name": "Databricks Data Intelligence Platform",
+      "category": "analytics",
+      "family": "Platform",
+      "aliases": [
+        "lakehouse"
+      ]
+    },
+    {
+      "name": "Delta Lake",
+      "category": "analytics",
+      "family": "Platform",
+      "note": "Proyecto open source de la Linux Foundation; su logotipo existe en colecciones abiertas si está disponible."
+    },
+    {
+      "name": "Unity Catalog",
+      "category": "management",
+      "family": "Platform"
+    },
+    {
+      "name": "MLflow",
+      "category": "ai-ml",
+      "family": "Platform",
+      "note": "Proyecto open source; logotipo disponible en Simple Icons si existe."
+    },
+    {
+      "name": "Delta Sharing",
+      "category": "analytics",
+      "family": "Platform"
+    },
+    {
+      "name": "Mosaic AI",
+      "category": "ai-ml",
+      "family": "Platform"
+    },
+    {
+      "name": "Databricks SQL",
+      "category": "databases",
+      "family": "Platform"
+    },
+    {
+      "name": "Lakeflow Jobs",
+      "category": "integration",
+      "family": "Platform",
+      "aliases": [
+        "workflows",
+        "jobs",
+        "databricks workflows"
+      ]
+    },
+    {
+      "name": "Databricks Compute",
+      "category": "compute",
+      "family": "Platform",
+      "aliases": [
+        "clusters",
+        "compute"
+      ]
+    },
+    {
+      "name": "Model Serving",
+      "category": "ai-ml",
+      "family": "Platform"
+    },
+    {
+      "name": "Feature Engineering",
+      "category": "ai-ml",
+      "family": "Platform",
+      "aliases": [
+        "feature store"
+      ]
+    }
+  ],
+  "notes": "Ningún concepto de esta lista dispone de un icono oficial redistribuible verificado. No se fabrican versiones 'oficiales'."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "simple-icons",
+  "name": "Simple Icons",
+  "kind": "brand",
+  "provider": "community",
+  "brandMatching": true,
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/simple-icons",
+    "meta": "simple-icons"
+  },
+  "owner": "Simple Icons Collaborators",
+  "homepage": "https://simpleicons.org/",
+  "license": {
+    "spdx": "CC0-1.0",
+    "title": "CC0 1.0",
+    "url": "https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": false,
+    "commercial": "unverified",
+    "attribution": false
+  },
+  "customization": "brand-mono",
+  "defaultStyle": "monochrome",
+  "styles": [],
+  "restrictions": [
+    "Las marcas y logotipos pertenecen a sus propietarios. La licencia de la biblioteca cubre el archivo, no concede derechos de marca.",
+    "Respetar las directrices de marca de cada propietario; no usar para dar a entender patrocinio o afiliación.",
+    "Algunos iconos tienen licencia propia indicada por Simple Icons; se muestra en la ficha del icono."
+  ],
+  "reviewed": "2026-10-18"
+}

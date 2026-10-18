@@ -1,0 +1,80 @@
+{
+  "id": "sap-products",
+  "name": "SAP — productos (fuentes oficiales)",
+  "kind": "reference",
+  "provider": "sap",
+  "source": {
+    "type": "reference"
+  },
+  "sourceUrl": "https://github.com/SAP/btp-solution-diagrams",
+  "terms": "Los iconos de servicios SAP BTP se integran desde el repositorio oficial (Apache-2.0). Los logotipos de productos sin icono en ese repositorio no se redistribuyen.",
+  "reviewed": "2026-10-18",
+  "official": true,
+  "permissions": {
+    "download": false,
+    "redistribute": false,
+    "modify": false,
+    "commercial": "unverified",
+    "attribution": false
+  },
+  "customization": "none",
+  "license": {
+    "spdx": "LicenseRef-Proprietary",
+    "title": "Términos del propietario",
+    "url": "https://github.com/SAP/btp-solution-diagrams"
+  },
+  "restrictions": [
+    "Recurso oficial con términos que no permiten su redistribución en IconAtlas: se ofrece ficha y enlace a la descarga oficial.",
+    "Los iconos de servicios SAP BTP se integran desde el repositorio oficial (Apache-2.0). Los logotipos de productos sin icono en ese repositorio no se redistribuyen."
+  ],
+  "entries": [
+    {
+      "name": "SAP S/4HANA",
+      "category": "management",
+      "family": "Products",
+      "aliases": [
+        "s4hana"
+      ]
+    },
+    {
+      "name": "SAP HANA",
+      "category": "databases",
+      "family": "Products"
+    },
+    {
+      "name": "SAP Fiori",
+      "category": "interface",
+      "family": "Products",
+      "note": "La iconografía de interfaz SAP Fiori (SAP-icons v5) está integrada como colección descargable."
+    },
+    {
+      "name": "SAP SuccessFactors",
+      "category": "users",
+      "family": "Products"
+    },
+    {
+      "name": "SAP Ariba",
+      "category": "commerce",
+      "family": "Products"
+    },
+    {
+      "name": "SAP Concur",
+      "category": "finance",
+      "family": "Products"
+    },
+    {
+      "name": "SAP Business One",
+      "category": "management",
+      "family": "Products"
+    },
+    {
+      "name": "SAP Cloud ERP",
+      "category": "management",
+      "family": "Products",
+      "aliases": [
+        "erp"
+      ]
+    }
+  ],
+  "notes": "Productos como SAP BTP, SAP HANA Cloud, SAP Business Data Cloud, SAP Datasphere, SAP Analytics Cloud, SAP Integration Suite y SAP Build disponen de icono oficial descargable en la colección 'SAP BTP Solution Diagrams'."
+}

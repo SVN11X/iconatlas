@@ -1,0 +1,42 @@
+{
+  "id": "fluent",
+  "name": "Fluent UI System Icons",
+  "kind": "ui",
+  "provider": "microsoft",
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/fluent",
+    "include": "-24-(regular|filled)$"
+  },
+  "owner": "Microsoft Corporation",
+  "homepage": "https://github.com/microsoft/fluentui-system-icons",
+  "license": {
+    "spdx": "MIT",
+    "title": "MIT",
+    "url": "https://github.com/microsoft/fluentui-system-icons/blob/main/LICENSE"
+  },
+  "official": true,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": true,
+    "commercial": "yes",
+    "attribution": false
+  },
+  "customization": "free",
+  "defaultStyle": "outline",
+  "styles": [
+    {
+      "suffix": "-24-regular",
+      "style": "outline"
+    },
+    {
+      "suffix": "-24-filled",
+      "style": "filled"
+    }
+  ],
+  "notes": "Se incorporan las variantes de 24 px (regular y filled). Los demás tamaños del paquete original son redundantes para un catálogo vectorial.",
+  "brandMatching": false,
+  "restrictions": [],
+  "reviewed": "2026-10-18"
+}

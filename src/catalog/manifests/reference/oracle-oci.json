@@ -1,0 +1,113 @@
+{
+  "id": "oracle-oci",
+  "name": "Oracle Cloud Infrastructure — kits de diagramas (oficial)",
+  "kind": "reference",
+  "provider": "oracle",
+  "source": {
+    "type": "reference"
+  },
+  "sourceUrl": "https://docs.oracle.com/en-us/iaas/Content/General/Reference/graphicsfordiagrams.htm",
+  "terms": "Kits oficiales OCI para draw.io, PowerPoint y Visio. Sin permiso de redistribución verificado.",
+  "reviewed": "2026-10-18",
+  "official": true,
+  "permissions": {
+    "download": false,
+    "redistribute": false,
+    "modify": false,
+    "commercial": "unverified",
+    "attribution": false
+  },
+  "customization": "none",
+  "license": {
+    "spdx": "LicenseRef-Proprietary",
+    "title": "Términos del propietario",
+    "url": "https://docs.oracle.com/en-us/iaas/Content/General/Reference/graphicsfordiagrams.htm"
+  },
+  "restrictions": [
+    "Recurso oficial con términos que no permiten su redistribución en IconAtlas: se ofrece ficha y enlace a la descarga oficial.",
+    "Kits oficiales OCI para draw.io, PowerPoint y Visio. Sin permiso de redistribución verificado."
+  ],
+  "entries": [
+    {
+      "name": "OCI Compute",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "OCI Kubernetes Engine",
+      "category": "containers",
+      "family": "Compute",
+      "aliases": [
+        "oke"
+      ]
+    },
+    {
+      "name": "OCI Functions",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "OCI Object Storage",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "OCI Block Volume",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "OCI File Storage",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Oracle Autonomous Database",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Oracle Exadata Database Service",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "MySQL HeatWave",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "OCI Virtual Cloud Network",
+      "category": "networking",
+      "family": "Networking",
+      "aliases": [
+        "vcn"
+      ]
+    },
+    {
+      "name": "OCI Load Balancer",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "OCI FastConnect",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "OCI Vault",
+      "category": "security",
+      "family": "Security"
+    },
+    {
+      "name": "OCI Identity and Access Management",
+      "category": "security",
+      "family": "Security"
+    },
+    {
+      "name": "OCI Generative AI",
+      "category": "ai-ml",
+      "family": "AI"
+    }
+  ]
+}

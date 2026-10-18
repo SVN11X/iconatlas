@@ -1,0 +1,57 @@
+name: Catalog source check
+
+# Comprobación programada de las fuentes del catálogo: nuevas versiones,
+# iconos añadidos/retirados, cambios de licencia y enlaces oficiales rotos.
+# NO modifica el catálogo: abre (o actualiza) un issue para revisión manual.
+on:
+  schedule:
+    - cron: '17 6 * * 1' # lunes 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run catalog
+      - name: Comprobar fuentes
+        run: npm run catalog:check-sources -- --out sync-report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sync-report
+          path: sync-report.json
+      - name: Abrir issue si hay novedades
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const r = JSON.parse(fs.readFileSync('sync-report.json', 'utf8'));
+            const s = r.summary;
+            if (!s.updatesAvailable && !s.licenseChanges.length && !s.brokenLinks && !s.errors) return;
+            const lines = [
+              `Comprobación del ${r.checkedAt}`,
+              '',
+              `- Actualizaciones disponibles: ${s.updatesAvailable}`,
+              `- Cambios de licencia: ${s.licenseChanges.join(', ') || 'ninguno'}`,
+              `- Enlaces oficiales rotos: ${s.brokenLinks}`,
+              `- Errores: ${s.errors}`,
+              '',
+              ...r.packages.filter(p => p.updateAvailable).map(p => `- **${p.collection}** ${p.installedVersion} → ${p.latestVersion} (+${p.addedCount ?? '?'} / -${p.removedCount ?? '?'})`),
+              ...r.links.filter(l => !l.ok).map(l => `- ❌ ${l.url} (${l.owner}) → ${l.status || l.error}`),
+              '',
+              'Revisa los términos antes de actualizar. Los iconos retirados no se eliminan automáticamente (los favoritos de los usuarios se conservan).',
+            ];
+            const title = 'Catálogo: revisión de fuentes pendiente';
+            const { data: issues } = await github.rest.issues.listForRepo({ owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'catalog-sync' });
+            if (issues.length) await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: issues[0].number, body: lines.join('\n') });
+            else await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body: lines.join('\n'), labels: ['catalog-sync'] });

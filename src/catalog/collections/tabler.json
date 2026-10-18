@@ -1,0 +1,36 @@
+{
+  "id": "tabler",
+  "name": "Tabler Icons",
+  "kind": "ui",
+  "provider": "community",
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/tabler"
+  },
+  "owner": "Paweł Kuna",
+  "homepage": "https://tabler.io/icons",
+  "license": {
+    "spdx": "MIT",
+    "title": "MIT",
+    "url": "https://github.com/tabler/tabler-icons/blob/main/LICENSE"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": true,
+    "commercial": "yes",
+    "attribution": false
+  },
+  "customization": "free",
+  "defaultStyle": "outline",
+  "styles": [
+    {
+      "suffix": "-filled",
+      "style": "filled"
+    }
+  ],
+  "brandMatching": false,
+  "restrictions": [],
+  "reviewed": "2026-10-18"
+}

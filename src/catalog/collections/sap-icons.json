@@ -1,0 +1,32 @@
+{
+  "id": "sap-icons",
+  "name": "SAP Fiori / UI5 Icons (SAP-icons v5)",
+  "kind": "ui",
+  "provider": "sap",
+  "source": {
+    "type": "ui5",
+    "package": "@ui5/webcomponents-icons",
+    "dir": "dist/v5"
+  },
+  "owner": "SAP SE",
+  "homepage": "https://github.com/SAP/ui5-webcomponents/tree/main/packages/icons",
+  "license": {
+    "spdx": "Apache-2.0",
+    "title": "Apache 2.0",
+    "url": "https://github.com/SAP/ui5-webcomponents/blob/main/LICENSE.txt"
+  },
+  "official": true,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": true,
+    "commercial": "yes",
+    "attribution": false
+  },
+  "customization": "free",
+  "defaultStyle": "outline",
+  "styles": [],
+  "brandMatching": false,
+  "restrictions": [],
+  "reviewed": "2026-10-18"
+}

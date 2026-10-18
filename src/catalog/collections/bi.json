@@ -1,0 +1,36 @@
+{
+  "id": "bi",
+  "name": "Bootstrap Icons",
+  "kind": "ui",
+  "provider": "community",
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/bi"
+  },
+  "owner": "The Bootstrap Authors",
+  "homepage": "https://icons.getbootstrap.com/",
+  "license": {
+    "spdx": "MIT",
+    "title": "MIT",
+    "url": "https://github.com/twbs/icons/blob/main/LICENSE"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": true,
+    "commercial": "yes",
+    "attribution": false
+  },
+  "customization": "free",
+  "defaultStyle": "outline",
+  "styles": [
+    {
+      "suffix": "-fill",
+      "style": "filled"
+    }
+  ],
+  "brandMatching": false,
+  "restrictions": [],
+  "reviewed": "2026-10-18"
+}

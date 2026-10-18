@@ -1,0 +1,477 @@
+{
+  "id": "azure-architecture",
+  "name": "Azure Architecture Icons (oficial)",
+  "kind": "reference",
+  "provider": "microsoft",
+  "source": {
+    "type": "reference"
+  },
+  "sourceUrl": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+  "terms": "Microsoft permite usar los iconos de Azure en diagramas de arquitectura, formación y documentación; copiar y distribuir solo para ese uso.",
+  "reviewed": "2026-10-18",
+  "official": true,
+  "permissions": {
+    "download": false,
+    "redistribute": false,
+    "modify": false,
+    "commercial": "unverified",
+    "attribution": false
+  },
+  "customization": "none",
+  "license": {
+    "spdx": "LicenseRef-Proprietary",
+    "title": "Términos del propietario",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/icons/"
+  },
+  "restrictions": [
+    "Recurso oficial con términos que no permiten su redistribución en IconAtlas: se ofrece ficha y enlace a la descarga oficial.",
+    "Microsoft permite usar los iconos de Azure en diagramas de arquitectura, formación y documentación; copiar y distribuir solo para ese uso."
+  ],
+  "entries": [
+    {
+      "name": "Azure Virtual Machines",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "Azure App Service",
+      "category": "compute",
+      "family": "Compute",
+      "aliases": [
+        "web app",
+        "app service"
+      ]
+    },
+    {
+      "name": "Azure Functions",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "Azure Batch",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "Azure Virtual Desktop",
+      "category": "compute",
+      "family": "Compute",
+      "aliases": [
+        "avd"
+      ]
+    },
+    {
+      "name": "Azure Spring Apps",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "Azure Kubernetes Service",
+      "category": "containers",
+      "family": "Containers",
+      "aliases": [
+        "aks"
+      ]
+    },
+    {
+      "name": "Azure Container Apps",
+      "category": "containers",
+      "family": "Containers"
+    },
+    {
+      "name": "Azure Container Registry",
+      "category": "containers",
+      "family": "Containers"
+    },
+    {
+      "name": "Azure Container Instances",
+      "category": "containers",
+      "family": "Containers",
+      "aliases": [
+        "aci"
+      ]
+    },
+    {
+      "name": "Azure Red Hat OpenShift",
+      "category": "containers",
+      "family": "Containers"
+    },
+    {
+      "name": "Azure Storage Account",
+      "category": "storage",
+      "family": "Storage",
+      "aliases": [
+        "storage account",
+        "cuenta de almacenamiento"
+      ]
+    },
+    {
+      "name": "Azure Blob Storage",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Azure Files",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Azure Data Lake Storage",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Azure Disk Storage",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Azure NetApp Files",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Azure Backup",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Azure Site Recovery",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Azure SQL Database",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Azure SQL Managed Instance",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Azure Cosmos DB",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Azure DocumentDB",
+      "category": "databases",
+      "family": "Databases",
+      "note": "Añadido en la actualización de julio de 2026 del paquete oficial."
+    },
+    {
+      "name": "Azure Database for PostgreSQL",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Azure Database for MySQL",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Azure Managed Redis",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Azure Data Factory",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Azure Databricks",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Azure Synapse Analytics",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Azure Stream Analytics",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Azure Data Explorer",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Azure Event Hubs",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Azure HDInsight",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Azure Service Bus",
+      "category": "integration",
+      "family": "Integration"
+    },
+    {
+      "name": "Azure Event Grid",
+      "category": "integration",
+      "family": "Integration"
+    },
+    {
+      "name": "Azure API Management",
+      "category": "integration",
+      "family": "Integration",
+      "aliases": [
+        "apim"
+      ]
+    },
+    {
+      "name": "Azure Logic Apps",
+      "category": "integration",
+      "family": "Integration"
+    },
+    {
+      "name": "Azure Web PubSub",
+      "category": "integration",
+      "family": "Integration"
+    },
+    {
+      "name": "Azure Key Vault",
+      "category": "security",
+      "family": "Security"
+    },
+    {
+      "name": "Azure Firewall",
+      "category": "security",
+      "family": "Security"
+    },
+    {
+      "name": "Azure DDoS Protection",
+      "category": "security",
+      "family": "Security"
+    },
+    {
+      "name": "Azure Bastion",
+      "category": "security",
+      "family": "Security"
+    },
+    {
+      "name": "Azure Web Application Firewall",
+      "category": "security",
+      "family": "Security"
+    },
+    {
+      "name": "Azure Virtual Network",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Azure Load Balancer",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Azure Application Gateway",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Azure Front Door",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Azure DNS",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Azure VPN Gateway",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Azure ExpressRoute",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Azure Private Link",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Azure Traffic Manager",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Azure Virtual WAN",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Azure Monitor",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "Azure Policy",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "Azure Arc",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "Azure Advisor",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "Azure Cost Management",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "Azure Resource Groups",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "Azure Landing Zone",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "Azure Local",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "Azure DevOps",
+      "category": "devops",
+      "family": "DevOps"
+    },
+    {
+      "name": "Azure Pipelines",
+      "category": "devops",
+      "family": "DevOps"
+    },
+    {
+      "name": "Azure Repos",
+      "category": "devops",
+      "family": "DevOps"
+    },
+    {
+      "name": "Azure Boards",
+      "category": "devops",
+      "family": "DevOps"
+    },
+    {
+      "name": "Azure Artifacts",
+      "category": "devops",
+      "family": "DevOps"
+    },
+    {
+      "name": "Azure AI Search",
+      "category": "ai-ml",
+      "family": "AI + machine learning",
+      "aliases": [
+        "cognitive search",
+        "azure search"
+      ]
+    },
+    {
+      "name": "Azure OpenAI",
+      "category": "ai-ml",
+      "family": "AI + machine learning",
+      "aliases": [
+        "azure openai service"
+      ]
+    },
+    {
+      "name": "Azure Machine Learning",
+      "category": "ai-ml",
+      "family": "AI + machine learning"
+    },
+    {
+      "name": "Azure AI Services",
+      "category": "ai-ml",
+      "family": "AI + machine learning",
+      "aliases": [
+        "cognitive services"
+      ]
+    },
+    {
+      "name": "Azure AI Document Intelligence",
+      "category": "ai-ml",
+      "family": "AI + machine learning"
+    },
+    {
+      "name": "Azure AI Speech",
+      "category": "ai-ml",
+      "family": "AI + machine learning"
+    },
+    {
+      "name": "Azure AI Vision",
+      "category": "ai-ml",
+      "family": "AI + machine learning"
+    },
+    {
+      "name": "Azure Bot Service",
+      "category": "ai-ml",
+      "family": "AI + machine learning"
+    },
+    {
+      "name": "Microsoft Foundry",
+      "category": "ai-ml",
+      "family": "AI + machine learning",
+      "aliases": [
+        "azure ai foundry",
+        "ai foundry"
+      ]
+    },
+    {
+      "name": "Foundry Models",
+      "category": "ai-ml",
+      "family": "AI + machine learning"
+    },
+    {
+      "name": "Foundry Projects",
+      "category": "ai-ml",
+      "family": "AI + machine learning"
+    },
+    {
+      "name": "Foundry Agent Service",
+      "category": "ai-ml",
+      "family": "AI + machine learning"
+    },
+    {
+      "name": "AI Gateway",
+      "category": "ai-ml",
+      "family": "AI + machine learning"
+    },
+    {
+      "name": "Azure IoT Hub",
+      "category": "devices",
+      "family": "Internet of Things"
+    },
+    {
+      "name": "Azure IoT Central",
+      "category": "devices",
+      "family": "Internet of Things"
+    },
+    {
+      "name": "Azure Digital Twins",
+      "category": "devices",
+      "family": "Internet of Things"
+    }
+  ]
+}

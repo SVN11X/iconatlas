@@ -1,0 +1,52 @@
+{
+  "id": "ph",
+  "name": "Phosphor Icons",
+  "kind": "ui",
+  "provider": "community",
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/ph"
+  },
+  "owner": "Phosphor Icons",
+  "homepage": "https://phosphoricons.com/",
+  "license": {
+    "spdx": "MIT",
+    "title": "MIT",
+    "url": "https://github.com/phosphor-icons/core/blob/main/LICENSE"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": true,
+    "commercial": "yes",
+    "attribution": false
+  },
+  "customization": "free",
+  "defaultStyle": "outline",
+  "styles": [
+    {
+      "suffix": "-thin",
+      "style": "thin"
+    },
+    {
+      "suffix": "-light",
+      "style": "light"
+    },
+    {
+      "suffix": "-bold",
+      "style": "bold"
+    },
+    {
+      "suffix": "-fill",
+      "style": "filled"
+    },
+    {
+      "suffix": "-duotone",
+      "style": "duotone"
+    }
+  ],
+  "brandMatching": false,
+  "restrictions": [],
+  "reviewed": "2026-10-18"
+}

@@ -1,0 +1,206 @@
+{
+  "id": "google-cloud-architecture",
+  "name": "Google Cloud Icons (oficial)",
+  "kind": "reference",
+  "provider": "google-cloud",
+  "source": {
+    "type": "reference"
+  },
+  "sourceUrl": "https://cloud.google.com/icons",
+  "terms": "Iconos oficiales de Google Cloud para diagramas y documentación técnica; la página no concede redistribución. Usar la iconografía actual (2025+); el conjunto 'legacy console icons' es histórico.",
+  "reviewed": "2026-10-18",
+  "official": true,
+  "permissions": {
+    "download": false,
+    "redistribute": false,
+    "modify": false,
+    "commercial": "unverified",
+    "attribution": false
+  },
+  "customization": "none",
+  "license": {
+    "spdx": "LicenseRef-Proprietary",
+    "title": "Términos del propietario",
+    "url": "https://cloud.google.com/icons"
+  },
+  "restrictions": [
+    "Recurso oficial con términos que no permiten su redistribución en IconAtlas: se ofrece ficha y enlace a la descarga oficial.",
+    "Iconos oficiales de Google Cloud para diagramas y documentación técnica; la página no concede redistribución. Usar la iconografía actual (2025+); el conjunto 'legacy console icons' es histórico."
+  ],
+  "entries": [
+    {
+      "name": "Compute Engine",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "Google Kubernetes Engine",
+      "category": "containers",
+      "family": "Compute",
+      "aliases": [
+        "gke"
+      ]
+    },
+    {
+      "name": "Cloud Run",
+      "category": "containers",
+      "family": "Compute"
+    },
+    {
+      "name": "Cloud Run functions",
+      "category": "compute",
+      "family": "Compute",
+      "aliases": [
+        "cloud functions"
+      ],
+      "note": "Cloud Functions pasó a denominarse Cloud Run functions (2024)."
+    },
+    {
+      "name": "App Engine",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "Cloud Storage",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Cloud SQL",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Spanner",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Firestore",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Bigtable",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "AlloyDB",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "BigQuery",
+      "category": "analytics",
+      "family": "Data analytics"
+    },
+    {
+      "name": "Dataflow",
+      "category": "analytics",
+      "family": "Data analytics"
+    },
+    {
+      "name": "Dataproc",
+      "category": "analytics",
+      "family": "Data analytics"
+    },
+    {
+      "name": "Pub/Sub",
+      "category": "analytics",
+      "family": "Data analytics"
+    },
+    {
+      "name": "Looker",
+      "category": "analytics",
+      "family": "Data analytics"
+    },
+    {
+      "name": "Vertex AI",
+      "category": "ai-ml",
+      "family": "AI & machine learning"
+    },
+    {
+      "name": "Document AI",
+      "category": "ai-ml",
+      "family": "AI & machine learning"
+    },
+    {
+      "name": "Vision AI",
+      "category": "ai-ml",
+      "family": "AI & machine learning",
+      "aliases": [
+        "cloud vision"
+      ]
+    },
+    {
+      "name": "Gemini",
+      "category": "ai-ml",
+      "family": "AI & machine learning"
+    },
+    {
+      "name": "Cloud Load Balancing",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Cloud CDN",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Cloud DNS",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Cloud VPN",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Cloud Interconnect",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Virtual Private Cloud",
+      "category": "networking",
+      "family": "Networking"
+    },
+    {
+      "name": "Cloud Monitoring",
+      "category": "management",
+      "family": "Operations"
+    },
+    {
+      "name": "Cloud Logging",
+      "category": "management",
+      "family": "Operations"
+    },
+    {
+      "name": "Identity and Access Management",
+      "category": "security",
+      "family": "Security & identity",
+      "aliases": [
+        "cloud iam",
+        "iam"
+      ]
+    },
+    {
+      "name": "Secret Manager",
+      "category": "security",
+      "family": "Security & identity"
+    },
+    {
+      "name": "Cloud Key Management Service",
+      "category": "security",
+      "family": "Security & identity"
+    },
+    {
+      "name": "Security Command Center",
+      "category": "security",
+      "family": "Security & identity"
+    }
+  ]
+}

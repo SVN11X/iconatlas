@@ -1,0 +1,81 @@
+{
+  "$comment": "Proveedores (propietarios de productos/marcas). 'match' son expresiones regulares aplicadas al nombre de los iconos de colecciones de marcas (Simple Icons, Devicon, Logos) para asociarlos al proveedor. 'officialIcons' describe la fuente oficial de iconografía y el resultado de la revisión de permisos (reviewed = fecha de revisión).",
+  "providers": [
+    { "id": "microsoft", "name": "Microsoft", "kind": "cloud", "featured": 1, "website": "https://www.microsoft.com",
+      "logoIcon": "logos:microsoft-icon",
+      "match": "^(microsoft|azure|windows|dotnet|visualstudio|powerbi|powerapps|powerautomate|powerplatform|xbox|bing|skype|onedrive|sharepoint|outlook|github|githubactions|githubcopilot|msbuild|nuget|vscode|vscodium$)",
+      "officialIcons": [
+        { "name": "Azure architecture icons", "url": "https://learn.microsoft.com/en-us/azure/architecture/icons/", "redistributable": false, "reviewed": "2026-10-18",
+          "terms": "Microsoft permite usar estos iconos en diagramas de arquitectura, materiales de formación o documentación, y copiarlos/distribuirlos solo para ese uso. Se reservan todos los demás derechos. No recortar, voltear, rotar ni distorsionar." },
+        { "name": "Microsoft 365 architecture icons", "url": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates", "redistributable": false, "reviewed": "2026-10-18", "terms": "Descarga en la fuente oficial. No se redistribuye en IconAtlas." },
+        { "name": "Microsoft Entra ID architecture icons", "url": "https://learn.microsoft.com/en-us/entra/architecture/architecture-icons", "redistributable": false, "reviewed": "2026-10-18", "terms": "Descarga en la fuente oficial. No se redistribuye en IconAtlas." },
+        { "name": "Microsoft Fabric icons", "url": "https://learn.microsoft.com/en-us/fabric/fundamentals/icons", "redistributable": false, "reviewed": "2026-10-18", "terms": "Descarga en la fuente oficial. No se redistribuye en IconAtlas." },
+        { "name": "Microsoft Power Platform icons", "url": "https://learn.microsoft.com/en-us/power-platform/guidance/icons", "redistributable": false, "reviewed": "2026-10-18", "terms": "Descarga en la fuente oficial. No se redistribuye en IconAtlas." },
+        { "name": "Microsoft Dynamics 365 icons", "url": "https://learn.microsoft.com/en-us/dynamics365/get-started/icons", "redistributable": false, "reviewed": "2026-10-18", "terms": "Descarga en la fuente oficial. No se redistribuye en IconAtlas." }
+      ] },
+    { "id": "aws", "name": "Amazon Web Services", "shortName": "AWS", "kind": "cloud", "featured": 2, "website": "https://aws.amazon.com",
+      "logoIcon": "logos:aws",
+      "match": "^(amazon|aws)",
+      "officialIcons": [
+        { "name": "AWS Architecture Icons", "url": "https://aws.amazon.com/architecture/icons/", "redistributable": false, "reviewed": "2026-10-18",
+          "terms": "AWS permite a clientes y socios usar estos recursos para crear diagramas de arquitectura y materiales (whitepapers, presentaciones, fichas, pósters). La página no concede redistribución en catálogos de terceros; se enlaza la descarga oficial (paquete trimestral)." }
+      ] },
+    { "id": "google-cloud", "name": "Google Cloud", "kind": "cloud", "featured": 3, "website": "https://cloud.google.com",
+      "logoIcon": "logos:google-cloud",
+      "match": "^(googlecloud|google-cloud|googlebigquery|googlebigtable|googledataflow|googledataproc|googlepubsub|googlecloudcomposer|googlecloudspanner|googlecloudstorage|googlecontaineroptimizedos|googlekubernetesengine)",
+      "officialIcons": [
+        { "name": "Google Cloud icons (core products, categorías y legacy)", "url": "https://cloud.google.com/icons", "redistributable": false, "reviewed": "2026-10-18",
+          "terms": "Iconos oficiales para diagramas y documentación técnica. Desde 2025 existe una nueva iconografía de productos; los 'Legacy console icons' son el conjunto antiguo. La página no publica permiso de redistribución; se enlaza la descarga oficial." }
+      ] },
+    { "id": "databricks", "name": "Databricks", "kind": "cloud", "featured": 4, "website": "https://www.databricks.com",
+      "logoIcon": "logos:databricks-icon",
+      "match": "^databricks",
+      "officialIcons": [
+        { "name": "Databricks Brand Center", "url": "https://brand.databricks.com/", "redistributable": false, "reviewed": "2026-10-18",
+          "terms": "Logotipos e iconografía de marca sujetos a las directrices de Databricks. No se encontró una licencia que permita redistribuir iconos de producto; se enlaza la fuente oficial." }
+      ] },
+    { "id": "sap", "name": "SAP", "kind": "cloud", "featured": 5, "website": "https://www.sap.com",
+      "logoIcon": "logos:sap",
+      "match": "^sap($|-)",
+      "officialIcons": [
+        { "name": "SAP BTP Solution Diagrams (iconos de servicios SAP BTP)", "url": "https://github.com/SAP/btp-solution-diagrams", "redistributable": true, "reviewed": "2026-10-18",
+          "terms": "Repositorio oficial de SAP con licencia Apache-2.0 (REUSE.toml: '**' → Apache-2.0, © SAP SE). Integrado en IconAtlas. Las marcas SAP siguen siendo propiedad de SAP SE." },
+        { "name": "SAP Fiori / UI5 icons (SAP-icons v5)", "url": "https://github.com/SAP/ui5-webcomponents/tree/main/packages/icons", "redistributable": true, "reviewed": "2026-10-18",
+          "terms": "Paquete npm @ui5/webcomponents-icons, licencia Apache-2.0. Integrado en IconAtlas." }
+      ] },
+    { "id": "oracle", "name": "Oracle Cloud Infrastructure", "shortName": "Oracle", "kind": "cloud", "featured": 6, "website": "https://www.oracle.com/cloud/",
+      "logoIcon": "logos:oracle",
+      "match": "^oracle",
+      "officialIcons": [
+        { "name": "OCI Architecture Diagram Toolkits", "url": "https://docs.oracle.com/en-us/iaas/Content/General/Reference/graphicsfordiagrams.htm", "redistributable": false, "reviewed": "2026-10-18",
+          "terms": "Kits oficiales para diagramas (draw.io, PowerPoint, Visio). Sin permiso de redistribución verificado; se enlaza la fuente oficial." }
+      ] },
+    { "id": "google", "name": "Google", "kind": "vendor", "website": "https://about.google", "logoIcon": "logos:google-icon", "match": "^google" },
+    { "id": "ibm", "name": "IBM Cloud", "shortName": "IBM", "kind": "cloud", "website": "https://www.ibm.com/cloud", "logoIcon": "logos:ibm", "match": "^ibm" },
+    { "id": "alibaba", "name": "Alibaba Cloud", "kind": "cloud", "website": "https://www.alibabacloud.com", "logoIcon": "simple-icons:alibabacloud", "match": "^alibaba" },
+    { "id": "tencent", "name": "Tencent Cloud", "kind": "cloud", "website": "https://www.tencentcloud.com", "match": "^tencent" },
+    { "id": "huawei", "name": "Huawei Cloud", "kind": "cloud", "website": "https://www.huaweicloud.com", "match": "^huawei" },
+    { "id": "digitalocean", "name": "DigitalOcean", "kind": "cloud", "website": "https://www.digitalocean.com", "match": "^digitalocean" },
+    { "id": "cloudflare", "name": "Cloudflare", "kind": "cloud", "website": "https://www.cloudflare.com", "match": "^cloudflare" },
+    { "id": "ovhcloud", "name": "OVHcloud", "kind": "cloud", "website": "https://www.ovhcloud.com", "match": "^ovh" },
+    { "id": "hetzner", "name": "Hetzner Cloud", "kind": "cloud", "website": "https://www.hetzner.com/cloud", "match": "^hetzner" },
+    { "id": "vultr", "name": "Vultr", "kind": "cloud", "website": "https://www.vultr.com", "match": "^vultr" },
+    { "id": "akamai", "name": "Akamai Cloud", "kind": "cloud", "website": "https://www.akamai.com", "match": "^(akamai|linode)" },
+    { "id": "vmware", "name": "VMware", "kind": "cloud", "website": "https://www.vmware.com", "match": "^vmware" },
+    { "id": "openstack", "name": "OpenStack", "kind": "cloud", "website": "https://www.openstack.org", "match": "^openstack" },
+    { "id": "redhat", "name": "Red Hat / OpenShift", "kind": "cloud", "website": "https://www.redhat.com", "match": "^(redhat|openshift)" },
+    { "id": "salesforce", "name": "Salesforce", "kind": "cloud", "website": "https://www.salesforce.com", "match": "^salesforce" },
+    { "id": "servicenow", "name": "ServiceNow", "kind": "cloud", "website": "https://www.servicenow.com", "match": "^servicenow" },
+    { "id": "snowflake", "name": "Snowflake", "kind": "cloud", "website": "https://www.snowflake.com", "match": "^snowflake" },
+    { "id": "mongodb", "name": "MongoDB Atlas", "kind": "cloud", "website": "https://www.mongodb.com/atlas", "match": "^mongodb" },
+    { "id": "confluent", "name": "Confluent Cloud", "kind": "cloud", "website": "https://www.confluent.io", "match": "^confluent" },
+    { "id": "firebase", "name": "Firebase", "kind": "cloud", "website": "https://firebase.google.com", "match": "^firebase" },
+    { "id": "supabase", "name": "Supabase", "kind": "cloud", "website": "https://supabase.com", "match": "^supabase" },
+    { "id": "vercel", "name": "Vercel", "kind": "cloud", "website": "https://vercel.com", "match": "^vercel" },
+    { "id": "netlify", "name": "Netlify", "kind": "cloud", "website": "https://www.netlify.com", "match": "^netlify" },
+    { "id": "cisco", "name": "Cisco", "kind": "vendor", "website": "https://www.cisco.com", "match": "^(cisco|webex)" },
+    { "id": "fortinet", "name": "Fortinet", "kind": "vendor", "website": "https://www.fortinet.com", "match": "^fortinet" },
+    { "id": "paloalto", "name": "Palo Alto Networks", "kind": "vendor", "website": "https://www.paloaltonetworks.com", "match": "^paloalto" },
+    { "id": "community", "name": "Bibliotecas abiertas", "kind": "oss", "website": "https://github.com", "match": null }
+  ]
+}

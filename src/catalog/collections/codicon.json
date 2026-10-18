@@ -1,0 +1,32 @@
+{
+  "id": "codicon",
+  "name": "Codicons (VS Code)",
+  "kind": "ui",
+  "provider": "microsoft",
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/codicon"
+  },
+  "owner": "Microsoft Corporation",
+  "homepage": "https://github.com/microsoft/vscode-codicons",
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://github.com/microsoft/vscode-codicons/blob/main/LICENSE"
+  },
+  "official": true,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": true,
+    "commercial": "yes",
+    "attribution": true
+  },
+  "customization": "free",
+  "defaultStyle": "outline",
+  "styles": [],
+  "attribution": "Codicons © Microsoft Corporation, CC BY 4.0 — https://github.com/microsoft/vscode-codicons",
+  "brandMatching": false,
+  "restrictions": [],
+  "reviewed": "2026-10-18"
+}

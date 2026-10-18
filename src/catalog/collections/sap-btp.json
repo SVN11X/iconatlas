@@ -1,0 +1,39 @@
+{
+  "id": "sap-btp",
+  "name": "SAP BTP Solution Diagrams — Service Icons",
+  "kind": "architecture",
+  "provider": "sap",
+  "source": {
+    "type": "svg-folder",
+    "path": "vendor/sap-btp-solution-diagrams/svg",
+    "strip": "^\\d+-|_sd$",
+    "upstream": "https://github.com/SAP/btp-solution-diagrams",
+    "commit": "57199627c08fe3f4d7dc14d5ffee920fab70bd94",
+    "commitDate": "2026-10-02"
+  },
+  "owner": "SAP SE",
+  "homepage": "https://github.com/SAP/btp-solution-diagrams",
+  "license": {
+    "spdx": "Apache-2.0",
+    "title": "Apache 2.0",
+    "url": "https://github.com/SAP/btp-solution-diagrams/blob/main/LICENSE"
+  },
+  "official": true,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": false,
+    "commercial": "yes",
+    "attribution": true
+  },
+  "customization": "none",
+  "defaultStyle": "original",
+  "styles": [],
+  "attribution": "© 2024 SAP SE or an SAP affiliate company and btp-solution-diagrams contributors — Apache-2.0",
+  "restrictions": [
+    "Iconos oficiales de servicios SAP BTP: se conservan sin modificar para preservar la identidad de marca.",
+    "SAP y los nombres de productos SAP son marcas de SAP SE."
+  ],
+  "brandMatching": false,
+  "reviewed": "2026-10-18"
+}

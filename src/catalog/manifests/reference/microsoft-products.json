@@ -1,0 +1,209 @@
+{
+  "id": "microsoft-products",
+  "name": "Microsoft — productos (oficial)",
+  "kind": "reference",
+  "provider": "microsoft",
+  "source": {
+    "type": "reference"
+  },
+  "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates",
+  "terms": "Iconos oficiales de Microsoft 365, Entra, Fabric, Power Platform y Dynamics 365 disponibles en Microsoft Learn; no se redistribuyen aquí.",
+  "reviewed": "2026-10-18",
+  "official": true,
+  "permissions": {
+    "download": false,
+    "redistribute": false,
+    "modify": false,
+    "commercial": "unverified",
+    "attribution": false
+  },
+  "customization": "none",
+  "license": {
+    "spdx": "LicenseRef-Proprietary",
+    "title": "Términos del propietario",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates"
+  },
+  "restrictions": [
+    "Recurso oficial con términos que no permiten su redistribución en IconAtlas: se ofrece ficha y enlace a la descarga oficial.",
+    "Iconos oficiales de Microsoft 365, Entra, Fabric, Power Platform y Dynamics 365 disponibles en Microsoft Learn; no se redistribuyen aquí."
+  ],
+  "entries": [
+    {
+      "name": "Microsoft 365",
+      "category": "communication",
+      "family": "Microsoft 365",
+      "aliases": [
+        "office 365",
+        "m365"
+      ],
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates"
+    },
+    {
+      "name": "Microsoft Teams",
+      "category": "communication",
+      "family": "Microsoft 365",
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates"
+    },
+    {
+      "name": "SharePoint",
+      "category": "files",
+      "family": "Microsoft 365",
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates"
+    },
+    {
+      "name": "OneDrive",
+      "category": "storage",
+      "family": "Microsoft 365",
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates"
+    },
+    {
+      "name": "Outlook",
+      "category": "communication",
+      "family": "Microsoft 365",
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates"
+    },
+    {
+      "name": "Exchange",
+      "category": "communication",
+      "family": "Microsoft 365",
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates"
+    },
+    {
+      "name": "Microsoft Entra ID",
+      "category": "security",
+      "family": "Security & identity",
+      "aliases": [
+        "azure ad",
+        "azure active directory",
+        "entra"
+      ],
+      "sourceUrl": "https://learn.microsoft.com/en-us/entra/architecture/architecture-icons"
+    },
+    {
+      "name": "Microsoft Entra",
+      "category": "security",
+      "family": "Security & identity",
+      "aliases": [
+        "entra"
+      ],
+      "sourceUrl": "https://learn.microsoft.com/en-us/entra/architecture/architecture-icons"
+    },
+    {
+      "name": "Microsoft Intune",
+      "category": "management",
+      "family": "Security & identity",
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates"
+    },
+    {
+      "name": "Microsoft Defender",
+      "category": "security",
+      "family": "Security & identity",
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates"
+    },
+    {
+      "name": "Microsoft Sentinel",
+      "category": "security",
+      "family": "Security & identity",
+      "sourceUrl": "https://learn.microsoft.com/en-us/azure/architecture/icons/"
+    },
+    {
+      "name": "Microsoft Purview",
+      "category": "management",
+      "family": "Security & identity",
+      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates"
+    },
+    {
+      "name": "Active Directory",
+      "category": "security",
+      "family": "Security & identity",
+      "aliases": [
+        "ad ds"
+      ],
+      "sourceUrl": "https://learn.microsoft.com/en-us/entra/architecture/architecture-icons"
+    },
+    {
+      "name": "Microsoft Fabric",
+      "category": "analytics",
+      "family": "Data & BI",
+      "sourceUrl": "https://learn.microsoft.com/en-us/fabric/fundamentals/icons"
+    },
+    {
+      "name": "Power BI",
+      "category": "analytics",
+      "family": "Data & BI",
+      "sourceUrl": "https://learn.microsoft.com/en-us/fabric/fundamentals/icons"
+    },
+    {
+      "name": "Power Platform",
+      "category": "management",
+      "family": "Power Platform & Dynamics",
+      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/guidance/icons"
+    },
+    {
+      "name": "Power Apps",
+      "category": "development",
+      "family": "Power Platform & Dynamics",
+      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/guidance/icons"
+    },
+    {
+      "name": "Power Automate",
+      "category": "integration",
+      "family": "Power Platform & Dynamics",
+      "sourceUrl": "https://learn.microsoft.com/en-us/power-platform/guidance/icons"
+    },
+    {
+      "name": "Dynamics 365",
+      "category": "management",
+      "family": "Power Platform & Dynamics",
+      "sourceUrl": "https://learn.microsoft.com/en-us/dynamics365/get-started/icons"
+    },
+    {
+      "name": "Windows",
+      "category": "devices",
+      "family": "Platforms & tools",
+      "sourceUrl": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+    },
+    {
+      "name": "Windows Server",
+      "category": "compute",
+      "family": "Platforms & tools",
+      "sourceUrl": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+    },
+    {
+      "name": "SQL Server",
+      "category": "databases",
+      "family": "Platforms & tools",
+      "sourceUrl": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+    },
+    {
+      "name": "Visual Studio",
+      "category": "development",
+      "family": "Platforms & tools",
+      "sourceUrl": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+    },
+    {
+      "name": "Visual Studio Code",
+      "category": "development",
+      "family": "Platforms & tools",
+      "aliases": [
+        "vscode"
+      ],
+      "sourceUrl": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+    },
+    {
+      "name": "GitHub",
+      "category": "devops",
+      "family": "Platforms & tools",
+      "sourceUrl": "https://brand.github.com/"
+    },
+    {
+      "name": ".NET",
+      "category": "development",
+      "family": "Platforms & tools",
+      "aliases": [
+        "dotnet"
+      ],
+      "sourceUrl": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+    }
+  ]
+}

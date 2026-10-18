@@ -1,0 +1,41 @@
+{
+  "id": "devicon",
+  "name": "Devicon",
+  "kind": "brand",
+  "provider": "community",
+  "brandMatching": true,
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/devicon",
+    "exclude": "^(azuredatafactory|azuresqldatabase)$"
+  },
+  "owner": "konpa (Devicon contributors)",
+  "homepage": "https://devicon.dev/",
+  "license": {
+    "spdx": "MIT",
+    "title": "MIT",
+    "url": "https://github.com/devicons/devicon/blob/master/LICENSE"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": false,
+    "commercial": "unverified",
+    "attribution": false
+  },
+  "customization": "none",
+  "defaultStyle": "original",
+  "styles": [
+    {
+      "suffix": "-wordmark",
+      "style": "wordmark"
+    }
+  ],
+  "restrictions": [
+    "Las marcas y logotipos pertenecen a sus propietarios. La licencia de la biblioteca cubre el archivo, no concede derechos de marca.",
+    "Respetar las directrices de marca de cada propietario; no usar para dar a entender patrocinio o afiliación."
+  ],
+  "reviewed": "2026-10-18",
+  "notes": "Se excluyen 'azuredatafactory' y 'azuresqldatabase' porque reproducen iconos oficiales de servicios de Azure Architecture Icons, cuyos términos solo permiten su uso en diagramas/documentación. Se conservan los logotipos de producto y marca, sujetos a derechos de marca."
+}

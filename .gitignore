@@ -1,0 +1,9 @@
+node_modules
+dist
+public/catalog
+sync-report.json
+test-results
+playwright-report
+coverage
+*.local
+.DS_Store

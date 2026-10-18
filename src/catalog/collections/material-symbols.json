@@ -1,0 +1,52 @@
+{
+  "id": "material-symbols",
+  "name": "Material Symbols",
+  "kind": "ui",
+  "provider": "google",
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/material-symbols"
+  },
+  "owner": "Google",
+  "homepage": "https://fonts.google.com/icons",
+  "license": {
+    "spdx": "Apache-2.0",
+    "title": "Apache 2.0",
+    "url": "https://github.com/google/material-design-icons/blob/master/LICENSE"
+  },
+  "official": true,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": true,
+    "commercial": "yes",
+    "attribution": false
+  },
+  "customization": "free",
+  "defaultStyle": "filled",
+  "styles": [
+    {
+      "suffix": "-outline-rounded",
+      "style": "rounded"
+    },
+    {
+      "suffix": "-outline-sharp",
+      "style": "sharp"
+    },
+    {
+      "suffix": "-outline",
+      "style": "outline"
+    },
+    {
+      "suffix": "-rounded",
+      "style": "rounded"
+    },
+    {
+      "suffix": "-sharp",
+      "style": "sharp"
+    }
+  ],
+  "brandMatching": false,
+  "restrictions": [],
+  "reviewed": "2026-10-18"
+}

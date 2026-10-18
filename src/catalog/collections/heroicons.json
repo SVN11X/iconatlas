@@ -1,0 +1,44 @@
+{
+  "id": "heroicons",
+  "name": "Heroicons",
+  "kind": "ui",
+  "provider": "community",
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/heroicons"
+  },
+  "owner": "Refactoring UI Inc",
+  "homepage": "https://heroicons.com/",
+  "license": {
+    "spdx": "MIT",
+    "title": "MIT",
+    "url": "https://github.com/tailwindlabs/heroicons/blob/master/LICENSE"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": true,
+    "commercial": "yes",
+    "attribution": false
+  },
+  "customization": "free",
+  "defaultStyle": "outline",
+  "styles": [
+    {
+      "suffix": "-16-solid",
+      "style": "filled"
+    },
+    {
+      "suffix": "-20-solid",
+      "style": "filled"
+    },
+    {
+      "suffix": "-solid",
+      "style": "filled"
+    }
+  ],
+  "brandMatching": false,
+  "restrictions": [],
+  "reviewed": "2026-10-18"
+}

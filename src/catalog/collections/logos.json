@@ -1,0 +1,41 @@
+{
+  "id": "logos",
+  "name": "SVG Logos",
+  "kind": "brand",
+  "provider": "community",
+  "brandMatching": true,
+  "source": {
+    "type": "iconify",
+    "package": "@iconify-json/logos",
+    "exclude": "^(aws-|google-cloud-functions$|google-cloud-run$)"
+  },
+  "owner": "Gil Barbara",
+  "homepage": "https://github.com/gilbarbara/logos",
+  "license": {
+    "spdx": "CC0-1.0",
+    "title": "CC0 1.0",
+    "url": "https://github.com/gilbarbara/logos/blob/main/LICENSE.txt"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": false,
+    "commercial": "unverified",
+    "attribution": false
+  },
+  "customization": "none",
+  "defaultStyle": "original",
+  "styles": [
+    {
+      "suffix": "-icon",
+      "style": "original"
+    }
+  ],
+  "restrictions": [
+    "Las marcas y logotipos pertenecen a sus propietarios. La licencia de la biblioteca cubre el archivo, no concede derechos de marca.",
+    "Respetar las directrices de marca de cada propietario; no usar para dar a entender patrocinio o afiliación."
+  ],
+  "notes": "Se excluyen los iconos 'aws-*', 'google-cloud-functions' y 'google-cloud-run' porque reproducen iconos oficiales de arquitectura cuyos términos no permiten su redistribución en catálogos de terceros.",
+  "reviewed": "2026-10-18"
+}

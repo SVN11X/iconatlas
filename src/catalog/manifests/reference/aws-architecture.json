@@ -1,0 +1,422 @@
+{
+  "id": "aws-architecture",
+  "name": "AWS Architecture Icons (oficial)",
+  "kind": "reference",
+  "provider": "aws",
+  "source": {
+    "type": "reference"
+  },
+  "sourceUrl": "https://aws.amazon.com/architecture/icons/",
+  "terms": "AWS permite usar sus iconos para crear diagramas de arquitectura y materiales (whitepapers, presentaciones, pósters); no se concede redistribución en catálogos de terceros.",
+  "reviewed": "2026-10-18",
+  "official": true,
+  "permissions": {
+    "download": false,
+    "redistribute": false,
+    "modify": false,
+    "commercial": "unverified",
+    "attribution": false
+  },
+  "customization": "none",
+  "license": {
+    "spdx": "LicenseRef-Proprietary",
+    "title": "Términos del propietario",
+    "url": "https://aws.amazon.com/architecture/icons/"
+  },
+  "restrictions": [
+    "Recurso oficial con términos que no permiten su redistribución en IconAtlas: se ofrece ficha y enlace a la descarga oficial.",
+    "AWS permite usar sus iconos para crear diagramas de arquitectura y materiales (whitepapers, presentaciones, pósters); no se concede redistribución en catálogos de terceros."
+  ],
+  "entries": [
+    {
+      "name": "Amazon EC2",
+      "category": "compute",
+      "family": "Compute",
+      "aliases": [
+        "elastic compute cloud",
+        "ec2"
+      ]
+    },
+    {
+      "name": "AWS Lambda",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "Amazon ECS",
+      "category": "containers",
+      "family": "Compute",
+      "aliases": [
+        "elastic container service"
+      ]
+    },
+    {
+      "name": "Amazon EKS",
+      "category": "containers",
+      "family": "Compute",
+      "aliases": [
+        "elastic kubernetes service"
+      ]
+    },
+    {
+      "name": "AWS Fargate",
+      "category": "containers",
+      "family": "Compute"
+    },
+    {
+      "name": "AWS Elastic Beanstalk",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "Amazon Lightsail",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "AWS Batch",
+      "category": "compute",
+      "family": "Compute"
+    },
+    {
+      "name": "Amazon ECR",
+      "category": "containers",
+      "family": "Compute",
+      "aliases": [
+        "elastic container registry"
+      ]
+    },
+    {
+      "name": "Amazon S3",
+      "category": "storage",
+      "family": "Storage",
+      "aliases": [
+        "simple storage service"
+      ]
+    },
+    {
+      "name": "Amazon EBS",
+      "category": "storage",
+      "family": "Storage",
+      "aliases": [
+        "elastic block store"
+      ]
+    },
+    {
+      "name": "Amazon EFS",
+      "category": "storage",
+      "family": "Storage",
+      "aliases": [
+        "elastic file system"
+      ]
+    },
+    {
+      "name": "Amazon FSx",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "AWS Storage Gateway",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "AWS Backup",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Amazon S3 Glacier",
+      "category": "storage",
+      "family": "Storage"
+    },
+    {
+      "name": "Amazon RDS",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Amazon Aurora",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Amazon DynamoDB",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Amazon ElastiCache",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Amazon DocumentDB",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Amazon Neptune",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Amazon Keyspaces",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Amazon Timestream",
+      "category": "databases",
+      "family": "Databases"
+    },
+    {
+      "name": "Amazon Redshift",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Amazon Athena",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "AWS Glue",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Amazon EMR",
+      "category": "analytics",
+      "family": "Analytics",
+      "aliases": [
+        "elastic mapreduce"
+      ]
+    },
+    {
+      "name": "Amazon Kinesis",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Amazon QuickSight",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "AWS Lake Formation",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Amazon OpenSearch Service",
+      "category": "analytics",
+      "family": "Analytics"
+    },
+    {
+      "name": "Amazon MSK",
+      "category": "analytics",
+      "family": "Analytics",
+      "aliases": [
+        "managed streaming for apache kafka"
+      ]
+    },
+    {
+      "name": "Amazon VPC",
+      "category": "networking",
+      "family": "Networking & content delivery"
+    },
+    {
+      "name": "Amazon Route 53",
+      "category": "networking",
+      "family": "Networking & content delivery"
+    },
+    {
+      "name": "Amazon CloudFront",
+      "category": "networking",
+      "family": "Networking & content delivery"
+    },
+    {
+      "name": "Amazon API Gateway",
+      "category": "networking",
+      "family": "Networking & content delivery"
+    },
+    {
+      "name": "AWS Direct Connect",
+      "category": "networking",
+      "family": "Networking & content delivery"
+    },
+    {
+      "name": "Elastic Load Balancing",
+      "category": "networking",
+      "family": "Networking & content delivery"
+    },
+    {
+      "name": "AWS Transit Gateway",
+      "category": "networking",
+      "family": "Networking & content delivery"
+    },
+    {
+      "name": "Amazon Bedrock",
+      "category": "ai-ml",
+      "family": "Artificial intelligence"
+    },
+    {
+      "name": "Amazon SageMaker",
+      "category": "ai-ml",
+      "family": "Artificial intelligence"
+    },
+    {
+      "name": "Amazon Rekognition",
+      "category": "ai-ml",
+      "family": "Artificial intelligence"
+    },
+    {
+      "name": "Amazon Comprehend",
+      "category": "ai-ml",
+      "family": "Artificial intelligence"
+    },
+    {
+      "name": "Amazon Textract",
+      "category": "ai-ml",
+      "family": "Artificial intelligence"
+    },
+    {
+      "name": "Amazon Transcribe",
+      "category": "ai-ml",
+      "family": "Artificial intelligence"
+    },
+    {
+      "name": "Amazon Polly",
+      "category": "ai-ml",
+      "family": "Artificial intelligence"
+    },
+    {
+      "name": "Amazon Q",
+      "category": "ai-ml",
+      "family": "Artificial intelligence"
+    },
+    {
+      "name": "AWS IAM",
+      "category": "security",
+      "family": "Security, identity & compliance",
+      "aliases": [
+        "identity and access management"
+      ]
+    },
+    {
+      "name": "AWS KMS",
+      "category": "security",
+      "family": "Security, identity & compliance",
+      "aliases": [
+        "key management service"
+      ]
+    },
+    {
+      "name": "Amazon GuardDuty",
+      "category": "security",
+      "family": "Security, identity & compliance"
+    },
+    {
+      "name": "AWS Security Hub",
+      "category": "security",
+      "family": "Security, identity & compliance"
+    },
+    {
+      "name": "AWS WAF",
+      "category": "security",
+      "family": "Security, identity & compliance"
+    },
+    {
+      "name": "AWS Shield",
+      "category": "security",
+      "family": "Security, identity & compliance"
+    },
+    {
+      "name": "AWS Secrets Manager",
+      "category": "security",
+      "family": "Security, identity & compliance"
+    },
+    {
+      "name": "Amazon Cognito",
+      "category": "security",
+      "family": "Security, identity & compliance"
+    },
+    {
+      "name": "AWS Certificate Manager",
+      "category": "security",
+      "family": "Security, identity & compliance"
+    },
+    {
+      "name": "Amazon SQS",
+      "category": "integration",
+      "family": "Application integration"
+    },
+    {
+      "name": "Amazon SNS",
+      "category": "integration",
+      "family": "Application integration"
+    },
+    {
+      "name": "Amazon EventBridge",
+      "category": "integration",
+      "family": "Application integration"
+    },
+    {
+      "name": "AWS Step Functions",
+      "category": "integration",
+      "family": "Application integration"
+    },
+    {
+      "name": "Amazon MQ",
+      "category": "integration",
+      "family": "Application integration"
+    },
+    {
+      "name": "Amazon CloudWatch",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "AWS CloudFormation",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "AWS CloudTrail",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "AWS Systems Manager",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "AWS Config",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "AWS Organizations",
+      "category": "management",
+      "family": "Management & governance"
+    },
+    {
+      "name": "AWS CodePipeline",
+      "category": "devops",
+      "family": "Developer tools"
+    },
+    {
+      "name": "AWS CodeBuild",
+      "category": "devops",
+      "family": "Developer tools"
+    },
+    {
+      "name": "AWS CodeDeploy",
+      "category": "devops",
+      "family": "Developer tools"
+    }
+  ],
+  "notes": "Los paquetes oficiales se publican trimestralmente (sin publicación en Q4). Última versión observada: 31/07/2026."
+}
