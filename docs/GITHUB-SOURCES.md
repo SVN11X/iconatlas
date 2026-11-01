@@ -1,3 +1,39 @@
+## Actualización: fuentes adicionales y eliminación de solo-enlace
+
+IconAtlas **no publica fichas sin SVG** en el catálogo generado por defecto. El inventario
+original de las 246 fichas de referencia permanece en `public/catalog/report.json`, dentro
+de `unpublishedReferences`. Esto elimina enlaces muertos y resultados que no se pueden utilizar,
+pero **no implica que los SVG oficiales se hayan importado**. Para publicar recursos reales es
+necesario importar una colección aprobada mediante la Action.
+
+El registro ahora incluye 25 fuentes adicionales. Los estados `watch`, `approved` y `paused`
+indican seguimiento, autorización documentada y suspensión. Las fuentes `watch` se auditan,
+pero **no se importan ni se atribuye a sus archivos una licencia de código**.
+
+Fuentes aprobadas inicialmente con licencia MIT y carpeta SVG acotada:
+
+- `mapa-chile-svg`: `map_chile_full.svg`, `regions/` (MiPolitico.cl, conservar atribución).
+- `iconoir`: `icons/regular/`, `icons/solid/` (Iconoir, conservar copyright y licencia).
+- `circle-flags`: `flags/` (HatScripts, conservar copyright y licencia).
+
+Las tres necesitan **ejecutar la importación desde Actions y revisar/fusionar el PR** para
+que sus SVG aparezcan en el sitio. Los repositorios de marcas/logos con derechos mixtos,
+React Kawaii (componentes), cursores, y Game Icons (atribución por autor) siguen sujetos
+a adaptadores o permisos específicos. Unicons NO se autoriza para replicar su servicio.
+
+Ejecución individual: Actions → **Importar colección GitHub aprobada** → `source_id`.
+
+```text
+mapa-chile-svg
+iconoir
+circle-flags
+```
+
+Para automatizar descubrimiento y monitoreo, las Actions existentes leen el nuevo registro.
+La próxima ejecución examinará estas fuentes; registrar la fuente no equivale a descargarla.
+
+---
+
 # Fuentes GitHub: integración, vigilancia y descubrimiento
 
 ## Qué incluye esta actualización

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "notes": "Este registro es para vigilancia y descubrimiento. Ningún repositorio se importa sin aprobación explícita y licencia verificable.",
+  "notes": "Registro auditado de fuentes: agregar una fuente NO importa sus iconos; las aprobadas pueden importarse mediante Action revisada. Las licencias del código no sustituyen los permisos de cada activo.",
   "sources": [
     {
       "id": "gcp-kfkhalili",
@@ -331,6 +331,298 @@
       "redistributionApproved": false,
       "name": "Fluent",
       "notes": "Ya incluido mediante IconifyJSON."
+    },
+    {
+      "id": "mapa-chile-svg",
+      "repo": "contacto-mipolitico-source/mapa-chile-svg",
+      "category": "map",
+      "status": "approved",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/contacto-mipolitico-source/mapa-chile-svg/blob/HEAD/LICENSE",
+      "redistributionApproved": true,
+      "name": "Mapas SVG de Chile",
+      "notes": "SVG de Chile y regiones; MIT con atribución a MiPolitico.cl.",
+      "includePaths": [
+        "map_chile_full.svg",
+        "regions/"
+      ],
+      "attribution": "MiPolitico.cl",
+      "commercial": "yes"
+    },
+    {
+      "id": "browser-logos",
+      "repo": "alrra/browser-logos",
+      "category": "brand",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Browser Logos",
+      "notes": "Logotipos y marcas de navegadores: MIT no cubre los derechos de las marcas."
+    },
+    {
+      "id": "svgl",
+      "repo": "pheralb/svgl",
+      "category": "brand",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "SVGL",
+      "notes": "Catálogo de marcas; la licencia del código no necesariamente cubre cada logo."
+    },
+    {
+      "id": "dashboard-icons",
+      "repo": "homarr-labs/dashboard-icons",
+      "category": "brand",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Dashboard Icons",
+      "notes": "Cientos de logos de terceros. Verificar términos por marca."
+    },
+    {
+      "id": "css-gg",
+      "repo": "astrit/css.gg",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "CSS.GG",
+      "notes": "Colección UI; verificar licencia y ubicación real de SVG antes de importar."
+    },
+    {
+      "id": "supertinyicons",
+      "repo": "edent/SuperTinyIcons",
+      "category": "brand",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Super Tiny Icons",
+      "notes": "Licencias heterogéneas por logotipo; no importar como conjunto homogéneo."
+    },
+    {
+      "id": "evil-icons",
+      "repo": "evil-icons/evil-icons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Evil Icons",
+      "notes": "Verificar licencia y formatos SVG de distribución."
+    },
+    {
+      "id": "iconoir",
+      "repo": "iconoir-icons/iconoir",
+      "category": "ui",
+      "status": "approved",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/iconoir-icons/iconoir/blob/HEAD/LICENSE",
+      "redistributionApproved": true,
+      "name": "Iconoir",
+      "notes": "MIT verificada; SVG regulares y sólidos en carpetas específicas.",
+      "includePaths": [
+        "icons/regular/",
+        "icons/solid/"
+      ],
+      "attribution": "Luca Burgio / Iconoir",
+      "commercial": "yes"
+    },
+    {
+      "id": "bytesize-icons",
+      "repo": "danklammer/bytesize-icons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Bytesize Icons",
+      "notes": "Verificar licencia y formatos de la colección."
+    },
+    {
+      "id": "boxicons",
+      "repo": "box-icons/boxicons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Boxicons",
+      "notes": "MIT declarada; revisar subcarpetas de logos y evitar marcas de terceros."
+    },
+    {
+      "id": "react-kawaii",
+      "repo": "elizabetdev/react-kawaii",
+      "category": "illustration",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "React Kawaii",
+      "notes": "Ilustraciones generadas por componentes React: requiere adaptador; no son SVG estáticos directos."
+    },
+    {
+      "id": "cryptocurrency-icons",
+      "repo": "spothq/cryptocurrency-icons",
+      "category": "brand",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Cryptocurrency Icons",
+      "notes": "Logos de criptomonedas: derechos de marcas/activos por separado."
+    },
+    {
+      "id": "lobe-icons",
+      "repo": "lobehub/lobe-icons",
+      "category": "brand",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Lobe Icons",
+      "notes": "Logos de IA; marcas con condiciones particulares y posibles SVG React."
+    },
+    {
+      "id": "reicon",
+      "repo": "dqev/reicon",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Reicon",
+      "notes": "Auditar formato, licencia y duplicados antes de importar."
+    },
+    {
+      "id": "circle-flags",
+      "repo": "HatScripts/circle-flags",
+      "category": "flags",
+      "status": "approved",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/HatScripts/circle-flags/blob/HEAD/LICENSE.md",
+      "redistributionApproved": true,
+      "name": "Circle Flags",
+      "notes": "MIT verificada; banderas SVG por país, estado e idioma.",
+      "includePaths": [
+        "flags/"
+      ],
+      "attribution": "HatScripts",
+      "commercial": "yes"
+    },
+    {
+      "id": "unicons",
+      "repo": "Iconscout/unicons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Unicons",
+      "notes": "Licencia IconScout prohíbe compilar activos para un servicio competidor: NO importar."
+    },
+    {
+      "id": "game-icons",
+      "repo": "game-icons/icons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Game Icons",
+      "notes": "CC-BY 3.0 o CC0 según autor/carpeta; requiere preservar autoría por icono."
+    },
+    {
+      "id": "capitaine-cursors",
+      "repo": "keeferrourke/capitaine-cursors",
+      "category": "cursor",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Capitaine Cursors",
+      "notes": "Tema de cursores LGPLv3; requiere adaptador y verificación de condiciones."
+    },
+    {
+      "id": "ant-design-icons",
+      "repo": "ant-design/ant-design-icons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Ant Design Icons",
+      "notes": "Verificar activos, licencia y formato antes de importar."
+    },
+    {
+      "id": "svg-icon",
+      "repo": "leungwensen/svg-icon",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "SVG Icon",
+      "notes": "Revisar licencias de fuentes agregadas."
+    },
+    {
+      "id": "xyzicon",
+      "repo": "mjtpena/xyzicon",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "XYZicon",
+      "notes": "Auditar licencia y tipo de iconos."
+    },
+    {
+      "id": "credit-card-payment-icons",
+      "repo": "aaronfagan/svg-credit-card-payment-icons",
+      "category": "brand",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Credit Card Payment Icons",
+      "notes": "Marcas de tarjetas/pagos; comprobar permisos para redistribución."
+    },
+    {
+      "id": "icons-flat-osx",
+      "repo": "lucky-yoolk/icons-flat-osx",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Flat OSX Icons",
+      "notes": "Verificar origen de diseños y licencias por activo."
+    },
+    {
+      "id": "weather-underground-icons",
+      "repo": "manifestinteractive/weather-underground-icons",
+      "category": "weather",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Weather Underground Icons",
+      "notes": "Verificar autoría y restricciones de marca Weather Underground."
+    },
+    {
+      "id": "dracula-icons",
+      "repo": "m4thewz/dracula-icons",
+      "category": "theme",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Dracula Icons",
+      "notes": "GPL-3.0, diseños derivados de terceros; no activar importador genérico."
     }
   ]
 }

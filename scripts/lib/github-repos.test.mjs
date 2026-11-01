@@ -6,9 +6,10 @@ import { discoverRepositories } from '../github-discover.mjs';
 
 test('registro sin repositorios duplicados', () => {
   const sources = loadSources();
-  assert.ok(sources.length >= 15);
+  assert.ok(sources.length >= 55);
   assert.equal(new Set(sources.map((s) => s.repo.toLowerCase())).size, sources.length);
-  assert.equal(sources.filter((s) => s.redistributionApproved === true).length, 0);
+  assert.deepEqual(sources.filter((s) => s.redistributionApproved === true).map((s) => s.id).sort(), ['circle-flags','iconoir','mapa-chile-svg']);
+  assert.equal(sources.find((s) => s.id === 'unicons')?.redistributionApproved, false);
 });
 
 test('resumen de árbol: formatos y truncamiento', () => {

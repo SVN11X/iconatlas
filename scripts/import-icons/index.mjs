@@ -6,7 +6,7 @@
 //     --id mi-coleccion --name "Mi colección" --owner "Autor" --homepage https://... \
 //     --license MIT --license-url https://.../LICENSE --redistributable yes \
 //     [--provider community] [--kind ui|brand|architecture] [--customization free|brand-mono|none] \
-//     [--attribution "texto"] [--commercial yes|no|unverified] [--strip "regex"] [--official] [--dry-run]
+//     [--attribution "texto"] [--commercial yes|no|unverified] [--strip "regex"] [--include-paths "ruta/,archivo.svg"] [--strip-root] [--official] [--dry-run]
 //
 // El importador:
 //  1. Exige procedencia y licencia (no importa recursos cuya redistribución no esté confirmada).
@@ -33,6 +33,25 @@ function parseArgs(argv) {
     else { out[key] = next; i++; }
   }
   return out;
+}
+
+/** Rechaza rutas absolutas y traversal tanto POSIX como Windows antes de extraer. */
+function unsafeArchivePath(path) {
+  const normalized = String(path).replace(/\\/g, '/');
+  return normalized.startsWith('/') || /^[a-zA-Z]:\//.test(normalized)
+    || normalized.split('/').includes('..') || normalized.includes('\0');
+}
+
+/** Permite importar solo subdirectorios/archivos auditados, sin extraer el resto del ZIP. */
+export function sourcePathAllowed(path, args) {
+  const safe = String(path).replace(/\\/g, '/');
+  if (unsafeArchivePath(path)) return false;
+  const rel = args['strip-root'] ? safe.substring(safe.indexOf('/') + 1) : safe;
+  if (args['strip-root'] && rel === safe) return false;
+  if (!args['include-paths']) return true;
+  const prefixes = String(args['include-paths']).split(',').map((p) => p.trim()).filter(Boolean);
+  if (!prefixes.length || prefixes.some((p) => p.includes('..') || p.startsWith('/') || p.includes('\\'))) return false;
+  return prefixes.some((p) => p.endsWith('/') ? rel.startsWith(p) : rel === p);
 }
 
 const SPDX_OK = new Set(['MIT', 'ISC', 'Apache-2.0', 'BSD-2-Clause', 'BSD-3-Clause', 'CC0-1.0', 'CC-BY-4.0', 'CC-BY-3.0', 'OFL-1.1', 'MPL-2.0', 'Unlicense']);
@@ -76,14 +95,21 @@ export function runImport(args) {
       let selected = 0;
       let expanded = 0;
       const entries = unzipSync(new Uint8Array(readFileSync(source)), { filter: (file) => {
-        if (!/\.svg$/i.test(file.name) || file.originalSize > 512 * 1024) return false;
+        if (!/\.svg$/i.test(file.name)) return false;
+        // fflate omite las entradas rechazadas por filter: anotarlas aquí para que
+        // el informe de importación documente las rutas peligrosas descartadas.
+        if (unsafeArchivePath(file.name)) {
+          log.rejected.push({ name: file.name, issues: ['Ruta insegura en ZIP'] });
+          return false;
+        }
+        if (file.originalSize > 512 * 1024 || !sourcePathAllowed(file.name, args)) return false;
         selected++;
         expanded += file.originalSize;
         if (selected > 50000 || expanded > 100 * 1024 * 1024) throw new Error('Archivo ZIP demasiado grande (50.000 SVG o 100 MiB descomprimidos)');
         return true;
       } });
       for (const [path, data] of Object.entries(entries)) {
-        if (path.includes('..') || path.startsWith('/')) { log.rejected.push({ name: path, issues: ['Ruta insegura en ZIP'] }); continue; }
+        if (unsafeArchivePath(path)) { log.rejected.push({ name: path, issues: ['Ruta insegura en ZIP'] }); continue; }
         if (path.toLowerCase().endsWith('.svg')) files.push({ path, content: strFromU8(data) });
       }
     } else if (existsSync(source) && statSync(source).isDirectory()) {
@@ -94,7 +120,7 @@ export function runImport(args) {
           const stat = lstatSync(p);
           if (stat.isSymbolicLink()) continue;
           if (stat.isDirectory()) walk(p, depth + 1);
-          else if (stat.isFile() && f.toLowerCase().endsWith('.svg') && stat.size <= 512 * 1024) {
+          else if (stat.isFile() && f.toLowerCase().endsWith('.svg') && stat.size <= 512 * 1024 && sourcePathAllowed(relative(source, p), args)) {
             if (files.length >= 50000) throw new Error('Más de 50.000 SVG; divide esta colección en repositorios o lotes');
             files.push({ path: relative(source, p), content: readFileSync(p, 'utf8') });
           }

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Construye el catálogo estático de IconAtlas a partir de:
 //  - src/catalog/collections/*.json  (colecciones con recursos descargables)
-//  - src/catalog/manifests/reference/*.json (fichas oficiales solo-enlace)
+//  - src/catalog/manifests/reference/*.json (pendientes, sin publicar por defecto)
 //  - src/catalog/providers/providers.json, src/catalog/schemas/*.json
 // Salida: public/catalog/{index.json, icons.json, details/*.json, svg/<colección>/<n>.json, report.json}
 import { existsSync, mkdirSync, rmSync, writeFileSync, readFileSync, readdirSync } from 'node:fs';
@@ -32,8 +32,13 @@ const brandMatchers = providers.filter((p) => p.match).map((p) => ({ id: p.id, r
 
 const collectionDefs = listJson(join(ROOT, 'src/catalog/collections')).map(readJson);
 const referenceDefs = listJson(join(ROOT, 'src/catalog/manifests/reference')).map(readJson);
+// No publicar fichas sin SVG: cada resultado del catálogo debe ser utilizable en IconAtlas.
+// El inventario de fuentes sin derechos de redistribución permanece en report.json.
+const includeReferences = args.has('--include-references');
 
-const report = { generatedAt: new Date().toISOString(), collections: [], errors: [], warnings: [] };
+const report = { generatedAt: new Date().toISOString(), collections: [], errors: [], warnings: [],
+  unpublishedReferences: referenceDefs.map((def) => ({ id: def.id, name: def.name, count: def.entries.length,
+    reason: 'Sin SVG redistribuible; no se publica un resultado de solo enlace' })) };
 const STYLE_ORDER = ['original', 'multicolor', 'monochrome', 'outline', 'filled', 'duotone', 'rounded', 'sharp', 'thin', 'light', 'bold', 'wordmark', 'external'];
 
 // --- Fuentes --------------------------------------------------------------
@@ -226,7 +231,7 @@ for (const r of rows) {
   }
 }
 
-for (const def of referenceDefs) {
+for (const def of includeReferences ? referenceDefs : []) {
   const cIdx = collections.length;
   const details = {};
   const used = new Set();
@@ -320,6 +325,9 @@ report.totals = index.stats;
 report.durationMs = Date.now() - t0;
 writeFileSync(join(OUT, 'report.json'), JSON.stringify(report, null, 2));
 
+if (!includeReferences && report.unpublishedReferences.length) {
+  console.log(`[catalog] ${report.unpublishedReferences.reduce((n, item) => n + item.count, 0)} referencias sin SVG excluidas de la web (inventario en report.json)`);
+}
 console.log(`[catalog] Total: ${rows.length} recursos (${downloadable} descargables, ${references} fichas oficiales solo-enlace) en ${collections.length} colecciones. ${(report.durationMs / 1000).toFixed(1)} s`);
 if (report.warnings.length) console.warn(`[catalog] ${report.warnings.length} avisos (ver public/catalog/report.json)`);
 if (report.errors.length) {

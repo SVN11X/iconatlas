@@ -12,7 +12,7 @@ https://USUARIO.github.io/iconatlas/
 
 | Función | Estado |
 |---|---|
-| Catálogo de **52 104 recursos**: 51 858 iconos descargables de 14 bibliotecas + 246 fichas oficiales solo-enlace (Azure, AWS, Google Cloud, Databricks, Microsoft, SAP, Oracle) | ✅ |
+| Catálogo inicial de **51 858 iconos descargables** de 14 bibliotecas; las 246 fichas sin SVG se conservan solo como inventario técnico, no en la web | ✅ |
 | Búsqueda instantánea (Web Worker + MiniSearch) por nombre, proveedor, producto, categoría, etiquetas y sinónimos ES/EN, tolerante a errores, con autocompletado, búsquedas recientes y Ctrl+K / ⌘K | ✅ |
 | Filtros combinables (proveedor, categoría, estilo, colección, características) reflejados en la URL | ✅ |
 | Cuadrícula virtualizada con acciones rápidas (también en táctil) y navegación con flechas | ✅ |
@@ -78,7 +78,7 @@ Abre IconAtlas → escribe «hana cloud» → abre el icono → **Copiar imagen*
 - **Filtrar:** panel lateral (en móvil, botón «Filtros»). La URL guarda la búsqueda para compartirla.
 - **Descargar:** en la tarjeta (acciones rápidas) o en la ficha (tamaño, fondo, color, margen).
 - **Varios a la vez:** marca la casilla de cada tarjeta (o Mayús+clic, o «Seleccionar resultados») y pulsa **Descargar ZIP**.
-- **Recursos oficiales restringidos** (por ejemplo, *Azure Data Factory*): la ficha enlaza a la descarga oficial y muestra alternativas descargables verificadas cuando existen.
+- **Recursos restringidos** (por ejemplo, *Azure Data Factory*): no se publican como resultados sin SVG. Se conservan como inventario técnico hasta que exista una colección con derechos de redistribución verificados.
 
 ## Incorporar nuevas bibliotecas
 
@@ -96,10 +96,10 @@ Los nuevos iconos aparecen automáticamente en búsqueda, filtros, contadores, p
 
 ## Estado de los proveedores solicitados
 
-| Proveedor | Descargables | Fichas oficiales (solo enlace) | Nota |
+| Proveedor | Descargables actuales | Referencias pendientes (fuera del sitio) | Nota |
 |---|---|---|---|
-| Microsoft | 5 700 (Fluent UI, Codicons, logotipos de marca) | 108 (Azure + productos) | Los iconos de Azure/M365/Entra/Fabric/Power Platform/Dynamics solo permiten uso en diagramas y documentación: se enlazan. |
-| AWS | 4 (logotipos de marca) | 71 | AWS Architecture Icons: uso en diagramas y materiales; sin permiso de redistribución. |
+| Microsoft | 5 700 (Fluent UI, Codicons, logotipos de marca) | 108 (Azure + productos) | Los iconos sin licencia de redistribución verificada quedan en el inventario técnico y no aparecen como fichas vacías. |
+| AWS | 4 (logotipos de marca) | 71 | AWS Architecture Icons: condiciones específicas para diagramas; fichas no publicadas sin SVG autorizado. |
 | Google Cloud | 13 (logotipos) + Material Symbols (Google, 15 728) | 32 | Iconografía 2025+ en la fuente oficial; se distingue de los *legacy console icons*. |
 | Databricks | 3 (logotipos) | 12 | Sin iconos de producto con licencia redistribuible; no se fabrican versiones «oficiales». |
 | SAP | **835 oficiales** (128 iconos de servicios SAP BTP + 705 SAP Fiori/UI5, Apache-2.0) | 8 | Integrados desde repositorios oficiales de SAP con licencia Apache-2.0. |
@@ -109,7 +109,7 @@ Los nuevos iconos aparecen automáticamente en búsqueda, filtros, contadores, p
 
 ## Limitaciones conocidas
 
-- Los iconos oficiales de arquitectura de **Azure, AWS, Google Cloud y Oracle** y los recursos de marca de **Databricks** no se redistribuyen: sus términos no lo permiten. IconAtlas muestra fichas con enlace oficial.
+- Los iconos oficiales de arquitectura de **Azure, AWS, Google Cloud y Oracle** y los recursos de marca de **Databricks** requieren licencias específicas. Sus fichas sin archivo se conservan en `src/catalog/manifests/reference/` y aparecen en `public/catalog/report.json`, pero **no se publican como resultados de la web**.
 - Copiar imágenes requiere HTTPS y soporte de `ClipboardItem` (Chrome/Edge/Safari/Firefox recientes).
 - La categorización de bibliotecas genéricas es automática (palabras clave) y puede tener imprecisiones; ~20 % de los iconos quedan en «Otros».
 - Los favoritos se guardan por navegador (sin sincronización).
@@ -125,4 +125,4 @@ El código de IconAtlas se distribuye bajo licencia [MIT](LICENSE). Cada colecci
 
 ## Fuentes GitHub adicionales
 
-El registro de repositorios, las comprobaciones automáticas, el descubrimiento y la importación bajo revisión se explican en [docs/GITHUB-SOURCES.md](docs/GITHUB-SOURCES.md). Los repositorios vigilados **no están importados** por el hecho de figurar en el registro; requieren aprobación explícita de sus derechos sobre los SVG.
+El registro de 55 repositorios, las comprobaciones automáticas, el descubrimiento y la importación bajo revisión se explican en [docs/GITHUB-SOURCES.md](docs/GITHUB-SOURCES.md). Los repositorios vigilados **no están importados** por el hecho de figurar en el registro; requieren aprobación explícita de sus derechos sobre los SVG.

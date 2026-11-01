@@ -1,11 +1,14 @@
 name: Importar colección GitHub aprobada
 on:
+  schedule:
+    - cron: '17 6 * * 1'
   workflow_dispatch:
     inputs:
       source_id:
         description: ID de fuente aprobada en src/catalog/github-sources.json
         type: string
-        required: true
+        required: false
+        default: all
 
 permissions:
   contents: write
@@ -23,9 +26,14 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Importar SVG autorizados desde el commit de GitHub
-        run: npm run github:import -- --id "$SOURCE_ID"
+        run: |
+          if [ "$SOURCE_ID" = 'all' ]; then
+            npm run github:import -- --all
+          else
+            npm run github:import -- --id "$SOURCE_ID"
+          fi
         env:
-          SOURCE_ID: ${{ inputs.source_id }}
+          SOURCE_ID: ${{ inputs.source_id || 'all' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Generar catálogo y ejecutar pruebas
         run: |
@@ -37,13 +45,13 @@ jobs:
       - name: Abrir PR para revisar los nuevos archivos
         uses: peter-evans/create-pull-request@v7
         with:
-          branch: automation/icons-${{ inputs.source_id }}
+          branch: automation/icons-${{ inputs.source_id || 'all' }}
           delete-branch: true
-          title: 'Importación de iconos de ${{ inputs.source_id }}'
-          commit-message: 'chore(icons): importar fuente GitHub ${{ inputs.source_id }}'
+          title: "Importación de iconos de ${{ inputs.source_id || 'all' }}"
+          commit-message: "chore(icons): importar fuentes GitHub aprobadas ${{ inputs.source_id || 'all' }}"
           body: |
-            Importación manual de una fuente ya marcada como aprobada.
+            Importación programada o manual de las fuentes aprobadas en el registro.
             Revisar licencias, procedencia, cantidad y posibles duplicados antes de fusionar.
           add-paths: |
-            vendor/${{ inputs.source_id }}/
-            src/catalog/collections/${{ inputs.source_id }}.json
+            vendor/
+            src/catalog/collections/

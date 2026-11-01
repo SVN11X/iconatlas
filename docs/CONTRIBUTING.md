@@ -3,7 +3,7 @@
 ## Antes de añadir recursos
 
 1. **Verifica la licencia** del archivo *y* los términos del propietario de la marca. Una licencia abierta del repositorio no implica derechos sobre las marcas que contiene.
-2. Solo se incorporan archivos cuya **redistribución esté permitida de forma explícita**. Si hay dudas, añade una **ficha solo-enlace** en `src/catalog/manifests/reference/` en lugar del archivo.
+2. Solo se incorporan archivos cuya **redistribución esté permitida de forma explícita**. Si hay dudas, conserva el recurso únicamente en el **inventario técnico de referencias** en `src/catalog/manifests/reference/` en lugar del archivo.
 3. No marques un recurso como **oficial** sin una fuente verificable del propietario.
 4. No crees ni subas versiones «oficiales» inventadas de logotipos o iconos de producto.
 
@@ -24,7 +24,7 @@ npm run catalog && npm run catalog:validate
 
 Revisa y completa el JSON generado en `src/catalog/collections/<id>.json`: `provider`, `kind`, `customization`, `styles` (sufijos → estilo), `restrictions`, `attribution`, `official`.
 
-## Añadir fichas oficiales (solo enlace)
+## Registrar recursos oficiales pendientes (no publicados)
 
 Edita o crea `src/catalog/manifests/reference/<id>.json`:
 

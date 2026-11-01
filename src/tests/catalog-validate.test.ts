@@ -14,14 +14,14 @@ describe.skipIf(!ready)('catálogo generado', () => {
     expect(output).toMatch(/\[validate\] OK:/);
   });
 
-  it('las fichas oficiales restringidas no incluyen archivos descargables', () => {
+  it('no publica fichas sin SVG como resultados utilizables', () => {
     const index = JSON.parse(readFileSync(join(dir, 'index.json'), 'utf8'));
     const icons = JSON.parse(readFileSync(join(dir, 'icons.json'), 'utf8'));
-    const refIdx = new Set(index.collections.map((c: { kind: string }, i: number) => (c.kind === 'reference' ? i : -1)).filter((i: number) => i >= 0));
-    const refs = icons.icons.filter((r: unknown[]) => refIdx.has(r[1]));
-    expect(refs.length).toBeGreaterThan(200);
-    expect(refs.every((r: unknown[]) => r[6] === -1)).toBe(true);
-    for (const c of index.collections) if (c.kind === 'reference') expect(existsSync(join(dir, 'svg', c.id))).toBe(false);
+    expect(index.stats.references).toBe(0);
+    expect(index.collections.every((c: { kind: string }) => c.kind !== 'reference')).toBe(true);
+    expect(icons.icons.every((r: unknown[]) => typeof r[6] === 'number' && (r[6] as number) >= 0)).toBe(true);
+    const report = JSON.parse(readFileSync(join(dir, 'report.json'), 'utf8'));
+    expect(report.unpublishedReferences.length).toBeGreaterThan(0);
   });
 
   it('las estadísticas proceden del catálogo real', () => {

@@ -15,6 +15,9 @@ export function loadSources(path = REGISTRY) {
     if (!/^[a-z0-9][a-z0-9-]*$/.test(s.id) || ids.has(s.id)) throw new Error(`ID de fuente inválido o repetido: ${s.id}`);
     if (!REPO_RE.test(s.repo) || repos.has(s.repo.toLowerCase())) throw new Error(`Repositorio inválido o repetido: ${s.repo}`);
     if (!['watch','approved','paused'].includes(s.status)) throw new Error(`Estado inválido: ${s.id}`);
+    if (s.includePaths && (!Array.isArray(s.includePaths) || !s.includePaths.length ||
+      s.includePaths.some((path) => typeof path !== 'string' || !path || path.startsWith('/') || path.includes('..') || path.includes('\\'))))
+      throw new Error(`Rutas permitidas inválidas: ${s.id}`);
     ids.add(s.id);
     repos.add(s.repo.toLowerCase());
   }

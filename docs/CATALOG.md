@@ -6,7 +6,7 @@
 |---|---|---|
 | **Proveedor** | `src/catalog/providers/providers.json` | Propietario de productos/marcas (Microsoft, AWS, SAP…). Incluye `match` (regex para asignar logotipos de bibliotecas de marcas), `logoIcon` y `officialIcons` (fuentes oficiales revisadas, con términos y fecha). |
 | **Colección** | `src/catalog/collections/*.json` | Conjunto de archivos con licencia que permite redistribución (Iconify JSON, SVG vendorizados, UI5…). |
-| **Ficha oficial solo-enlace** | `src/catalog/manifests/reference/*.json` | Recursos oficiales cuyos términos no permiten redistribución: se publican nombre, categoría, familia, alias y enlace oficial, sin archivo. |
+| **Ficha oficial solo-enlace** | `src/catalog/manifests/reference/*.json` | Recursos oficiales cuyos términos no permiten redistribución: se conservan únicamente como inventario de recursos pendientes en `report.json`; por defecto NO se publican como resultados sin SVG. |
 | **Categoría** | `src/catalog/schemas/taxonomy.json` | Taxonomía unificada (34 categorías en 3 grupos) con palabras clave para la clasificación automática y mapeo de categorías nativas. |
 | **Sinónimos** | `src/catalog/schemas/synonyms.json` | Grupos de equivalencias ES/EN y abreviaturas usados por la búsqueda. |
 | **Nombres oficiales** | `src/catalog/schemas/title-overrides.json` | Nombres de marca que no se pueden deducir del identificador (p. ej. `dotnetcore` → «.NET Core»). |
@@ -27,7 +27,7 @@ Cada recurso tiene un identificador único `colección:nombre` (p. ej. `sap-btp:
 | `category` | Índice en `categories` |
 | `style` | Índice en `styles` (original, monochrome, outline, filled, duotone, …, external) |
 | `provider` | Índice en `providers` |
-| `shard` | Fragmento SVG (`svg/<colección>/<shard>.json`); `-1` = sin archivo (solo enlace) |
+| `shard` | Fragmento SVG (`svg/<colección>/<shard>.json`); `-1` = ficha de referencia solo con `--include-references` (no se publica por defecto) |
 | `flags` | Bits: 1 monocromo (`currentColor`), 2 oficial, 4 color de marca conocido, 8 histórico |
 | `tags` | Alias y etiquetas separados por `|` |
 | `group` | Nombre base para agrupar variantes (outline/filled/…) |

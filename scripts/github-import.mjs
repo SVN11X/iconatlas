@@ -62,7 +62,7 @@ export async function importGithubSource(source, { client = githubGet, fetcher =
     const zip = join(tmp, 'snapshot.zip');
     writeFileSync(zip, archive);
     const result = importer({
-      source: zip, id: source.id, name: source.name,
+      source: zip, ...(source.includePaths ? { 'strip-root': true, 'include-paths': source.includePaths.join(',') } : {}), id: source.id, name: source.name,
       owner: source.repo.split('/')[0], homepage: `https://github.com/${source.repo}`,
       license: source.license, 'license-url': source.licenseUrl,
       redistributable: 'yes', kind: ['cloud', 'diagram', 'architecture'].includes(source.category) ? 'architecture' : source.category === 'brand' ? 'brand' : 'ui',
@@ -88,16 +88,52 @@ export async function importGithubSource(source, { client = githubGet, fetcher =
   } finally { rmSync(tmp, { recursive: true, force: true }); }
 }
 
+/** Importación por lotes, siempre en modo PR/revisión; ninguna fuente `watch` se importa. */
+export async function importApprovedSources(sources, options = {}) {
+  const results = [];
+  const errors = [];
+  for (const source of sources.filter((s) => s.status === 'approved' && s.redistributionApproved === true)) {
+    try {
+      results.push(await importGithubSource(source, options));
+    } catch (e) {
+      errors.push({ repo: source.repo, error: String(e.message) });
+    }
+  }
+  return { results, errors };
+}
+
 if (isMainModule(import.meta.url)) {
+  const all = process.argv.includes('--all');
   const at = process.argv.indexOf('--id');
   const id = at >= 0 ? process.argv[at + 1] : null;
-  if (!id || !/^[a-z0-9-]+$/.test(id)) {
-    console.error('Uso: npm run github:import -- --id ID_APROBADO');
+  if (!all && (!id || !/^[a-z0-9-]+$/.test(id))) {
+    console.error('Uso: npm run github:import -- --id ID_APROBADO | --all');
     process.exit(2);
   }
-  const source = loadSources().find((s) => s.id === id);
   try {
-    const result = await importGithubSource(source);
-    console.log(JSON.stringify(result, null, 2));
-  } catch (e) { console.error(`Importación cancelada: ${e.message}`); process.exitCode = 1; }
+    const sources = loadSources();
+    if (all) {
+      const approved = sources.filter((s) => s.status === 'approved' && s.redistributionApproved === true);
+      if (!approved.length) throw new Error('No hay fuentes aprobadas en el registro');
+      const outcome = await importApprovedSources(approved);
+      console.log(JSON.stringify(outcome, null, 2));
+      if (outcome.errors.length) {
+        console.error(`[github-import] ${outcome.errors.length} fuente(s) con errores; revisar antes de fusionar`);
+        // Permitir PR con importaciones exitosas; no confundir un resultado parcial con éxito total.
+        if (process.env.GITHUB_STEP_SUMMARY) {
+          const { appendFileSync } = await import('node:fs');
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY,
+            `## Importación parcial\n${outcome.errors.map(({ repo, error }) => `- ${repo}: ${error}`).join('\n')}\n`);
+        }
+      }
+      if (!outcome.results.length) process.exitCode = 1;
+    } else {
+      const source = sources.find((s) => s.id === id);
+      if (!source) throw new Error(`Fuente no registrada: ${id}`);
+      console.log(JSON.stringify(await importGithubSource(source), null, 2));
+    }
+  } catch (e) {
+    console.error(`Importación cancelada: ${e.message}`);
+    process.exitCode = 1;
+  }
 }
