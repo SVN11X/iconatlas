@@ -95,3 +95,19 @@ npm run build
 ```
 
 Las dos comprobaciones de red requieren conectividad; para evitar el límite de 60 solicitudes por hora sin autenticar, usa `GITHUB_TOKEN` en el entorno.
+
+
+## Descubrimiento con registro automático (nueva mejora)
+
+La Action de descubrimiento registra automáticamente los candidatos nuevos en
+`src/catalog/github-sources.json` mediante una rama de revisión. Las nuevas entradas
+siempre tienen `status: watch`, `redistributionApproved: false` y `license: null`.
+Así todos los repositorios detectados forman parte del **inventario y monitoreo**,
+incluidos los que necesitan adaptadores especiales, pero **ningún archivo externo
+se publica sin comprobar permisos y compatibilidad**.
+
+Si GitHub bloquea crear PR, la Action ya habrá intentado publicar la rama; consulta
+el enlace de creación manual en su resumen. Activa en Settings > Actions > General >
+Workflow permissions la opción para que GitHub Actions pueda crear PR. Las dos
+Actions (descubrimiento e importación) informan la ruta de recuperación en su
+resumen en caso de restricción. No se recomienda deshabilitar la validación SVG.

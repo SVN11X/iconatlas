@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { loadSources, treeSummary, githubGet } from './github-repos.mjs';
 import { checkRepositories } from '../github-health.mjs';
 import { discoverRepositories } from '../github-discover.mjs';
+import { enrollCandidates } from '../github-enroll.mjs';
 
 test('registro sin repositorios duplicados', () => {
   const sources = loadSources();
@@ -55,4 +56,21 @@ test('descubridor no propone repositorios ya enlazados y no acepta fuentes sin a
 
 test('cliente GitHub bloquea rutas fuera de API', async () => {
   await assert.rejects(() => githubGet('https://evil.example/'), /Ruta de API/);
+});
+
+
+test('registra descubrimientos sin duplicar ni aprobar redistribución', () => {
+  const original = { schemaVersion: 1, sources: [{ id: 'existing', repo: 'org/already', status: 'watch' }] };
+  const report = { candidates: [
+    { repo: 'org/already', formats: { svg: 10 } },
+    { repo: 'new-org/svg-pack', formats: { svg: 40 }, licenseDetected: 'MIT' },
+    { repo: 'new-org/drawings', formats: { excalidrawlib: 6 } },
+    { repo: 'invalid url', formats: { svg: 5 } },
+  ] };
+  const first = enrollCandidates(original, report);
+  assert.equal(first.added.length, 2);
+  assert.equal(first.registry.sources.length, 3);
+  assert.ok(first.added.every(s => s.status === 'watch' && s.redistributionApproved === false && s.license === null));
+  assert.deepEqual(enrollCandidates(first.registry, report).registry, first.registry);
+  assert.equal(original.sources.length, 1);
 });

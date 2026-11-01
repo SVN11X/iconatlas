@@ -43,6 +43,8 @@ jobs:
           npm test
           npm run build
       - name: Abrir PR para revisar los nuevos archivos
+        id: import_pr
+        continue-on-error: true
         uses: peter-evans/create-pull-request@v7
         with:
           branch: automation/icons-${{ inputs.source_id || 'all' }}
@@ -55,3 +57,11 @@ jobs:
           add-paths: |
             vendor/
             src/catalog/collections/
+      - name: Informar cómo recuperar una PR bloqueada por GitHub
+        if: ${{ steps.import_pr.outcome == 'failure' }}
+        run: |
+          echo '::warning::El importador generó archivos, pero GitHub bloqueó la apertura automática de PR.'
+          echo 'Comprueba Settings > Actions > General > Workflow permissions y habilita la creación de Pull Requests.' >> "$GITHUB_STEP_SUMMARY"
+          echo "https://github.com/${GITHUB_REPOSITORY}/pull/new/automation/icons-${SOURCE_ID}" >> "$GITHUB_STEP_SUMMARY"
+        env:
+          SOURCE_ID: ${{ inputs.source_id || 'all' }}

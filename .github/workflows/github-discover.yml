@@ -5,7 +5,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
   issues: write
 
 concurrency:
@@ -49,3 +50,26 @@ jobs:
             ].join('\n').slice(0, 60000);
             if (old) await github.rest.issues.update({ owner, repo, issue_number: old.number, body });
             else if (report.candidates.length || report.errors.length) await github.rest.issues.create({ owner, repo, title, body });
+
+      - name: Registrar automáticamente candidatos como fuentes pendientes
+        run: node scripts/github-enroll.mjs --from github-discovery-report.json
+      - name: Proponer nuevas fuentes en Pull Request
+        id: source_pr
+        continue-on-error: true
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/new-icon-sources
+          delete-branch: true
+          title: "Catálogo: registrar repositorios descubiertos"
+          commit-message: "chore(sources): registrar candidatos GitHub"
+          body: |
+            Estos repositorios se incorporan solo a la auditoría.
+            La importación real de archivos requiere revisar derechos y formato.
+          add-paths: |
+            src/catalog/github-sources.json
+      - name: Informar cómo recuperar una PR bloqueada por GitHub
+        if: ${{ steps.source_pr.outcome == 'failure' }}
+        run: |
+          echo '::warning::GitHub impidió crear el Pull Request. Revisa Settings > Actions > General > Workflow permissions.'
+          echo 'La rama puede haberse publicado. Comprueba su existencia antes de repetir la Action.' >> "$GITHUB_STEP_SUMMARY"
+          echo "https://github.com/${GITHUB_REPOSITORY}/pull/new/automation/new-icon-sources" >> "$GITHUB_STEP_SUMMARY"
