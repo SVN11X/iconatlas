@@ -1,0 +1,1681 @@
+{
+  "importedAt": "2026-11-01T17:58:49.721Z",
+  "source": "/tmp/iconatlas-github-H07EL2/snapshot.zip",
+  "imported": [
+    "ad",
+    "ae",
+    "af-emirate",
+    "af",
+    "ag",
+    "ai",
+    "al",
+    "am",
+    "an",
+    "ao",
+    "aq-true-south",
+    "aq",
+    "ar",
+    "artsakh",
+    "as",
+    "at",
+    "au-aboriginal",
+    "au-act",
+    "au-nsw",
+    "au-nt",
+    "au-qld",
+    "au-sa",
+    "au-tas",
+    "au-torres-strait-islands",
+    "au-vic",
+    "au-wa",
+    "au",
+    "aw",
+    "ax",
+    "az",
+    "ba",
+    "bb",
+    "bd",
+    "be",
+    "bf",
+    "bg",
+    "bh",
+    "bi",
+    "bj",
+    "bl",
+    "bm",
+    "bn",
+    "bo",
+    "bq-bo",
+    "bq-sa",
+    "bq-se",
+    "br",
+    "bs",
+    "bt",
+    "bw",
+    "by-historical",
+    "by",
+    "bz",
+    "ca-bc",
+    "ca-qc",
+    "ca",
+    "cc",
+    "cd",
+    "cf",
+    "cg",
+    "ch-gr",
+    "ch",
+    "ci",
+    "ck",
+    "cl",
+    "cm",
+    "cn-xj",
+    "cn-xz",
+    "cn",
+    "co",
+    "cq",
+    "cr",
+    "cu",
+    "cv",
+    "cw",
+    "cx",
+    "cy",
+    "cz",
+    "de",
+    "dj",
+    "dk",
+    "dm",
+    "do",
+    "dz",
+    "east-african-federation",
+    "easter-island",
+    "ec-w",
+    "ec",
+    "ee",
+    "eg",
+    "eh",
+    "er",
+    "es-ar",
+    "es-ce",
+    "es-cn",
+    "es-ct",
+    "es-ga",
+    "es-ib",
+    "es-ml",
+    "es-pv",
+    "es-variant",
+    "es-vc",
+    "es",
+    "et-af",
+    "et-am",
+    "et-be",
+    "et-ga",
+    "et-ha",
+    "et-or",
+    "et-si",
+    "et-sn",
+    "et-so",
+    "et-sw",
+    "et-ti",
+    "et",
+    "european-union",
+    "ewe",
+    "fi",
+    "fj",
+    "fk",
+    "fm",
+    "fo",
+    "fr-20r",
+    "fr-bre",
+    "fr-cp",
+    "fr",
+    "ga",
+    "gb-con",
+    "gb-eng",
+    "gb-nir",
+    "gb-ork",
+    "gb-sct",
+    "gb-wls",
+    "gb",
+    "gd",
+    "ge-ab",
+    "ge",
+    "gf",
+    "gg",
+    "gh",
+    "gi",
+    "gl",
+    "gm",
+    "gn",
+    "gp",
+    "gq",
+    "gr",
+    "gs",
+    "gt",
+    "gu",
+    "guarani",
+    "gw",
+    "gy",
+    "hausa",
+    "hk",
+    "hmong",
+    "hn",
+    "hr",
+    "ht",
+    "hu",
+    "id-jb",
+    "id-jt",
+    "id",
+    "ie",
+    "il",
+    "im",
+    "in-as",
+    "in-gj",
+    "in-ka",
+    "in-mn",
+    "in-mz",
+    "in-or",
+    "in-tg",
+    "in-tn",
+    "in",
+    "io",
+    "iq-kr",
+    "iq",
+    "ir",
+    "is",
+    "it-21",
+    "it-23",
+    "it-25",
+    "it-32",
+    "it-34",
+    "it-36",
+    "it-42",
+    "it-45",
+    "it-52",
+    "it-55",
+    "it-57",
+    "it-62",
+    "it-65",
+    "it-67",
+    "it-72",
+    "it-75",
+    "it-77",
+    "it-78",
+    "it-82",
+    "it-88",
+    "it",
+    "je",
+    "jm",
+    "jo",
+    "jp",
+    "kanuri",
+    "ke",
+    "kg",
+    "kh",
+    "ki",
+    "kikuyu",
+    "km",
+    "kn",
+    "kongo",
+    "kp",
+    "kr",
+    "kw",
+    "ky",
+    "kz",
+    "la",
+    "ar-2",
+    "en-au",
+    "en-ca",
+    "en-gh",
+    "en-hk",
+    "en-ie",
+    "en-in",
+    "en-ke",
+    "en-ng",
+    "en-nz",
+    "en-ph",
+    "en-sg",
+    "en-tz",
+    "en-us",
+    "en-za",
+    "eo",
+    "es-mx",
+    "ia",
+    "ie-2",
+    "interslavic",
+    "io-2",
+    "la-2",
+    "mr",
+    "non",
+    "pt-br",
+    "vo",
+    "yi",
+    "lb",
+    "lc",
+    "li",
+    "lk",
+    "lr",
+    "ls",
+    "lt",
+    "lu",
+    "lv",
+    "ly",
+    "ma",
+    "malayali",
+    "maori",
+    "mc",
+    "md",
+    "me",
+    "mf",
+    "mg",
+    "mh",
+    "mk",
+    "ml",
+    "mm",
+    "mn",
+    "mo",
+    "mp",
+    "mq-old",
+    "mq",
+    "mr-2",
+    "ms",
+    "mt-civil-ensign",
+    "mt",
+    "mu",
+    "mv",
+    "mw",
+    "mx",
+    "my",
+    "mz",
+    "na",
+    "nc",
+    "ne",
+    "nf",
+    "ng",
+    "ni",
+    "nl-fr",
+    "nl",
+    "no",
+    "northern-cyprus",
+    "np",
+    "nr",
+    "nu",
+    "nz",
+    "occitania",
+    "om",
+    "checkered",
+    "earth",
+    "klingon",
+    "lgbt-progress",
+    "lgbt-transgender",
+    "lgbt",
+    "mars",
+    "nato",
+    "olympics",
+    "pirate",
+    "united-nations",
+    "otomi",
+    "pa",
+    "pe",
+    "pf",
+    "pg",
+    "ph",
+    "pk-jk",
+    "pk-sd",
+    "pk",
+    "pl",
+    "pm",
+    "pn",
+    "pr",
+    "ps",
+    "pt-20",
+    "pt-30",
+    "pt",
+    "pw",
+    "py",
+    "qa",
+    "quechua",
+    "re",
+    "ro",
+    "rs",
+    "ru-ba",
+    "ru-ce",
+    "ru-cu",
+    "ru-da",
+    "ru-dpr",
+    "ru-ko",
+    "ru-lpr",
+    "ru-ta",
+    "ru-ud",
+    "ru",
+    "rw",
+    "sa",
+    "sami",
+    "sb",
+    "sc",
+    "sd",
+    "se",
+    "sealand",
+    "sg",
+    "sh-ac",
+    "sh-hl",
+    "sh-ta",
+    "si",
+    "sk",
+    "sl",
+    "sm",
+    "sn",
+    "so",
+    "somaliland",
+    "south-ossetia",
+    "soviet-union",
+    "sr",
+    "ss",
+    "st",
+    "sv",
+    "sx",
+    "sy",
+    "sz",
+    "tc",
+    "td",
+    "tf",
+    "tg",
+    "th",
+    "tj",
+    "tk",
+    "tl",
+    "tm",
+    "tn",
+    "to",
+    "tr",
+    "transnistria",
+    "tt",
+    "tv",
+    "tw",
+    "tz-zanzibar",
+    "tz",
+    "ua-bpr",
+    "ua-kpr",
+    "ua",
+    "ug",
+    "us-ak",
+    "us-al",
+    "us-ar",
+    "us-az",
+    "us-betsy-ross",
+    "us-ca",
+    "us-co",
+    "us-confederate-battle",
+    "us-dc",
+    "us-fl",
+    "us-ga",
+    "us-hi",
+    "us-in",
+    "us-md",
+    "us-mn",
+    "us-mo",
+    "us-ms",
+    "us-nc",
+    "us-nm",
+    "us-or",
+    "us-ri",
+    "us-sc",
+    "us-tn",
+    "us-tx",
+    "us-wa",
+    "us-wi",
+    "us-wy",
+    "us",
+    "uy",
+    "uz",
+    "va",
+    "vc",
+    "ve",
+    "vg",
+    "vi",
+    "vn",
+    "vu",
+    "wf",
+    "wiphala",
+    "ws",
+    "xk",
+    "xx",
+    "ye",
+    "yorubaland",
+    "yt",
+    "yu",
+    "za",
+    "zm",
+    "zw"
+  ],
+  "skippedDuplicates": [],
+  "renamedVariants": [
+    {
+      "file": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ar.svg",
+      "name": "ar-2"
+    },
+    {
+      "file": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ie.svg",
+      "name": "ie-2"
+    },
+    {
+      "file": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/io.svg",
+      "name": "io-2"
+    },
+    {
+      "file": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/la.svg",
+      "name": "la-2"
+    },
+    {
+      "file": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/mr.svg",
+      "name": "mr-2"
+    }
+  ],
+  "rejected": [
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/ac.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/bq.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/bv.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/cn-hk.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/cp.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/dg.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/ea.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/eu.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/fx.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/hm.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/ic.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/aa.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ab.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/af.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ak.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/am.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/an.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/as.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/av.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ay.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/az.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ba.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/be.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/bg.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/bi.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/bm.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/bn.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/bo.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/br.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/bs.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ca.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ce.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ceb.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ch.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/chm.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ckb.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/co.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/cs.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/cv.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/cy.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/da.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/de.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/dv.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/dz.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ee.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/el.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/en-gb.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/en.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/es-es.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/es.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/et.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/eu.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/fa.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/fi.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/fil.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/fj.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/fo.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/fr.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/fy.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ga.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/gd.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/gl.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/gn.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/gu.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/gv.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ha.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/haw.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/he.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/hi.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/hmn.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ho.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/hr.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ht.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/hu.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/hy.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/id.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ig.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ilo.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/is.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/it.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ja.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/jv.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ka.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/kg.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ki.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/kk.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/kl.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/km.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/kn.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ko.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/kr.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/kri.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ks.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ku.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/kv.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/kw.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ky.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/lb.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/lg.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ln.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/lo.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/lt.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/lu.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/lus.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/lv.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/mg.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/mh.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/mi.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/mk.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ml.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/mn.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/mni.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/mrj.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ms.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/mt.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/my.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/na.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/nb.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/nd.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ne.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/nl.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/nn.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/no.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/nr.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ny.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/oc.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/om.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/or.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/os.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/oto.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/pa.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/pap.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/pl.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/pms.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ps.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/pt-pt.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/pt.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/qu.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/rm.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/rn.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ro.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ru.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/rw.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sc.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sd.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/se.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sg.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/si.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sk.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sl.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sm.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sn.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/so.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sq.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sr.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ss.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/st.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/su.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sv.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/sw.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ta.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/te.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/tg.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/th.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ti.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/tk.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/tl.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/tn.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/to.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/tr.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/translingual.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/tt.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ty.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/udm.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ug.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/uk.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/ur.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/uz.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/vi.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/xh.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/xx.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/yo.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/yua.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/zh.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/language/zu.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/other/chequered.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/other/jolly_roger.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/other/un.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/sh.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/sj.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/su.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/ta.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/uk.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/um.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/un.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/us-as.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/us-gu.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/us-mp.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/us-pr.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/us-um.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    },
+    {
+      "name": "circle-flags-379588b5da95482d6bbf10bd45644a35b0609ea6/flags/us-vi.svg",
+      "issues": [
+        "<input>:1:1: Non-whitespace before first tag."
+      ]
+    }
+  ]
+}

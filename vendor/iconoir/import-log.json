@@ -1,0 +1,2833 @@
+{
+  "importedAt": "2026-11-01T17:58:48.203Z",
+  "source": "/tmp/iconatlas-github-S4X5tV/snapshot.zip",
+  "imported": [
+    "accessibility-sign",
+    "accessibility-tech",
+    "accessibility",
+    "activity",
+    "adobe-after-effects",
+    "adobe-illustrator",
+    "adobe-indesign",
+    "adobe-lightroom",
+    "adobe-photoshop",
+    "adobe-xd",
+    "african-tree",
+    "agile",
+    "air-conditioner",
+    "airplane-helix-45deg",
+    "airplane-helix",
+    "airplane-off",
+    "airplane-rotation",
+    "airplane",
+    "airplay",
+    "alarm",
+    "album-carousel",
+    "album-list",
+    "album-open",
+    "album",
+    "align-bottom-box",
+    "align-center",
+    "align-horizontal-centers",
+    "align-horizontal-spacing",
+    "align-justify",
+    "align-left-box",
+    "align-left",
+    "align-right-box",
+    "align-right",
+    "align-top-box",
+    "align-vertical-centers",
+    "align-vertical-spacing",
+    "angle-tool",
+    "antenna-off",
+    "antenna-signal-tag",
+    "antenna-signal",
+    "antenna",
+    "app-notification",
+    "app-store",
+    "app-window",
+    "apple-half",
+    "apple-imac-2021-side",
+    "apple-imac-2021",
+    "apple-mac",
+    "apple-shortcuts",
+    "apple-swift",
+    "apple-wallet",
+    "apple",
+    "ar-tag",
+    "arc-3d-center-point",
+    "arc-3d",
+    "arcade",
+    "archery-match",
+    "archery",
+    "archive",
+    "area-search",
+    "arrow-archery",
+    "arrow-down-circle",
+    "arrow-down-left-circle",
+    "arrow-down-left-square",
+    "arrow-down-left",
+    "arrow-down-right-circle",
+    "arrow-down-right-square",
+    "arrow-down-right",
+    "arrow-down-tag",
+    "arrow-down",
+    "arrow-email-forward",
+    "arrow-enlarge-tag",
+    "arrow-left-circle",
+    "arrow-left-tag",
+    "arrow-left",
+    "arrow-reduce-tag",
+    "arrow-right-circle",
+    "arrow-right-tag",
+    "arrow-right",
+    "arrow-separate-vertical",
+    "arrow-separate",
+    "arrow-union-vertical",
+    "arrow-union",
+    "arrow-up-circle",
+    "arrow-up-left-circle",
+    "arrow-up-left-square",
+    "arrow-up-left",
+    "arrow-up-right-circle",
+    "arrow-up-right-square",
+    "arrow-up-right",
+    "arrow-up-tag",
+    "arrow-up",
+    "arrows-up-from-line",
+    "asana",
+    "asterisk",
+    "at-sign-circle",
+    "at-sign",
+    "atom",
+    "attachment",
+    "augmented-reality",
+    "auto-flash",
+    "avi-format",
+    "axes",
+    "backward-15-seconds",
+    "badge-check",
+    "bag",
+    "balcony",
+    "bank",
+    "barcode",
+    "basketball-field",
+    "basketball",
+    "bathroom",
+    "battery-25",
+    "battery-50",
+    "battery-75",
+    "battery-charging",
+    "battery-empty",
+    "battery-full",
+    "battery-indicator",
+    "battery-slash",
+    "battery-warning",
+    "bbq",
+    "beach-bag",
+    "bed-ready",
+    "bed",
+    "behance-tag",
+    "behance",
+    "bell-notification",
+    "bell-off",
+    "bell",
+    "bicycle",
+    "bin-full",
+    "bin-half",
+    "bin-minus-in",
+    "bin-plus-in",
+    "bin",
+    "binocular",
+    "birthday-cake",
+    "bishop",
+    "bitbucket",
+    "bitcoin-circle",
+    "bitcoin-rotate-out",
+    "bluetooth-tag",
+    "bluetooth",
+    "bold-square",
+    "bold",
+    "bonfire",
+    "book-lock",
+    "book-stack",
+    "book",
+    "bookmark-book",
+    "bookmark-circle",
+    "bookmark",
+    "border-bl",
+    "border-bottom",
+    "border-br",
+    "border-inner",
+    "border-left",
+    "border-out",
+    "border-right",
+    "border-tl",
+    "border-top",
+    "border-tr",
+    "bounce-left",
+    "bounce-right",
+    "bowling-ball",
+    "box-3d-center",
+    "box-3d-point",
+    "box-3d-three-points",
+    "box-iso",
+    "box",
+    "boxing-glove",
+    "brain-electricity",
+    "brain-research",
+    "brain-warning",
+    "brain",
+    "bread-slice",
+    "bridge-3d",
+    "bridge-surface",
+    "bright-crown",
+    "bright-star",
+    "brightness-window",
+    "brightness",
+    "bubble-download",
+    "bubble-income",
+    "bubble-outcome",
+    "bubble-search",
+    "bubble-star",
+    "bubble-upload",
+    "bubble-warning",
+    "bubble-xmark",
+    "bug",
+    "building",
+    "bus-green",
+    "bus-stop",
+    "bus",
+    "c-square",
+    "cable-tag",
+    "calculator",
+    "calendar-arrow-down",
+    "calendar-arrow-up",
+    "calendar-check",
+    "calendar-minus",
+    "calendar-plus",
+    "calendar-rotate",
+    "calendar-xmark",
+    "calendar",
+    "camera",
+    "candlestick-chart",
+    "car",
+    "card-lock",
+    "card-no-access",
+    "card-reader",
+    "card-shield",
+    "card-wallet",
+    "cart-alt",
+    "cart-minus",
+    "cart-plus",
+    "cart",
+    "cash",
+    "cell-2x2",
+    "cellar",
+    "center-align",
+    "chat-bubble-check",
+    "chat-bubble-empty",
+    "chat-bubble-question",
+    "chat-bubble-translate",
+    "chat-bubble-warning",
+    "chat-bubble-xmark",
+    "chat-bubble",
+    "chat-lines",
+    "chat-minus-in",
+    "chat-plus-in",
+    "check-circle",
+    "check-square",
+    "check",
+    "chocolate",
+    "chromecast-active",
+    "chromecast",
+    "church-side",
+    "church",
+    "cigarette-slash",
+    "cinema-old",
+    "circle-spark",
+    "circle",
+    "city",
+    "clipboard-check",
+    "clock-rotate-right",
+    "clock",
+    "closed-captions-tag",
+    "closet",
+    "cloud-bookmark",
+    "cloud-check",
+    "cloud-desync",
+    "cloud-download",
+    "cloud-square",
+    "cloud-sunny",
+    "cloud-sync",
+    "cloud-upload",
+    "cloud-xmark",
+    "cloud",
+    "code-brackets-square",
+    "code-brackets",
+    "code",
+    "codepen",
+    "coffee-cup",
+    "coin-slash",
+    "coins-swap",
+    "coins",
+    "collage-frame",
+    "collapse",
+    "color-filter",
+    "color-picker",
+    "color-wheel",
+    "combine",
+    "commodity",
+    "community",
+    "comp-align-bottom",
+    "comp-align-left",
+    "comp-align-right",
+    "comp-align-top",
+    "compact-disc",
+    "compass",
+    "component",
+    "compress-lines",
+    "compress",
+    "computer",
+    "constrained-surface",
+    "consumable",
+    "contactless",
+    "control-slider",
+    "cookie",
+    "cooling-square",
+    "copy",
+    "copyright",
+    "corner-bottom-left",
+    "corner-bottom-right",
+    "corner-top-left",
+    "corner-top-right",
+    "cpu-warning",
+    "cpu",
+    "cracked-egg",
+    "creative-commons",
+    "credit-card-slash",
+    "credit-card",
+    "credit-cards",
+    "crib",
+    "crop-rotate-bl",
+    "crop-rotate-br",
+    "crop-rotate-tl",
+    "crop-rotate-tr",
+    "crop",
+    "crown-circle",
+    "crown",
+    "css3",
+    "cube-bandage",
+    "cube-cut-with-curve",
+    "cube-dots",
+    "cube-hole",
+    "cube-replace-face",
+    "cube-scan",
+    "cube",
+    "cursor-pointer",
+    "curve-array",
+    "cut",
+    "cutlery",
+    "cycling",
+    "cylinder",
+    "dash-flag",
+    "dashboard-dots",
+    "dashboard-speed",
+    "dashboard",
+    "data-transfer-both",
+    "data-transfer-check",
+    "data-transfer-down",
+    "data-transfer-up",
+    "data-transfer-warning",
+    "database-backup",
+    "database-check",
+    "database-export",
+    "database-monitor",
+    "database-restore",
+    "database-script-minus",
+    "database-script-plus",
+    "database-script",
+    "database-search",
+    "database-settings",
+    "database-star",
+    "database-stats",
+    "database-tag",
+    "database-warning",
+    "database-xmark",
+    "database",
+    "de-compress",
+    "delivery-truck",
+    "delivery",
+    "depth",
+    "design-nib",
+    "design-pencil",
+    "desk",
+    "developer",
+    "dew-point",
+    "dialpad",
+    "diameter",
+    "dice-five",
+    "dice-four",
+    "dice-one",
+    "dice-six",
+    "dice-three",
+    "dice-two",
+    "dimmer-switch",
+    "director-chair",
+    "discord",
+    "dishwasher",
+    "display-4k",
+    "divide-three",
+    "divide",
+    "dna",
+    "dns",
+    "doc-magnifying-glass-in",
+    "doc-magnifying-glass",
+    "doc-star-in",
+    "doc-star",
+    "dogecoin-circle",
+    "dogecoin-rotate-out",
+    "dollar-circle",
+    "dollar",
+    "domotic-warning",
+    "donate",
+    "dot-arrow-down",
+    "dot-arrow-left",
+    "dot-arrow-right",
+    "dot-arrow-up",
+    "dots-grid-3x3",
+    "double-check",
+    "download-circle",
+    "download-data-window",
+    "download-square",
+    "download",
+    "drag-hand-gesture",
+    "drag",
+    "drawer",
+    "dribbble",
+    "drone-charge-full",
+    "drone-charge-half",
+    "drone-charge-low",
+    "drone-check",
+    "drone-landing",
+    "drone-refresh",
+    "drone-take-off",
+    "drone-xmark",
+    "drone",
+    "droplet-check",
+    "droplet-half",
+    "droplet-snow-flake-in",
+    "droplet",
+    "ease-curve-control-points",
+    "ease-in-control-point",
+    "ease-in-out",
+    "ease-in",
+    "ease-out-control-point",
+    "ease-out",
+    "ecology-book",
+    "edit-pencil",
+    "edit",
+    "egg",
+    "eject",
+    "electronics-chip",
+    "electronics-transistor",
+    "elevator",
+    "ellipse-3d-three-points",
+    "ellipse-3d",
+    "emoji-ball",
+    "emoji-blink-left",
+    "emoji-blink-right",
+    "emoji-look-down",
+    "emoji-look-left",
+    "emoji-look-right",
+    "emoji-look-up",
+    "emoji-puzzled",
+    "emoji-quite",
+    "emoji-really",
+    "emoji-sad",
+    "emoji-satisfied",
+    "emoji-sing-left-note",
+    "emoji-sing-left",
+    "emoji-sing-right-note",
+    "emoji-sing-right",
+    "emoji-surprise-alt",
+    "emoji-surprise",
+    "emoji-talking-angry",
+    "emoji-talking-happy",
+    "emoji-think-left",
+    "emoji-think-right",
+    "emoji",
+    "empty-page",
+    "energy-usage-window",
+    "enlarge",
+    "erase",
+    "ethereum-circle",
+    "ethereum-rotate-out",
+    "euro-square",
+    "euro",
+    "ev-charge-alt",
+    "ev-charge",
+    "ev-plug-charging",
+    "ev-plug-xmark",
+    "ev-plug",
+    "ev-station",
+    "ev-tag",
+    "exclude",
+    "expand-lines",
+    "expand",
+    "extrude",
+    "eye-closed",
+    "eye",
+    "f-square",
+    "face-3d-draft",
+    "face-id",
+    "facebook-tag",
+    "facebook",
+    "facetime",
+    "farm",
+    "fast-arrow-down-square",
+    "fast-arrow-down",
+    "fast-arrow-left-square",
+    "fast-arrow-left",
+    "fast-arrow-right-square",
+    "fast-arrow-right",
+    "fast-arrow-up-square",
+    "fast-arrow-up",
+    "fast-down-circle",
+    "fast-left-circle",
+    "fast-right-circle",
+    "fast-up-circle",
+    "favourite-book",
+    "favourite-window",
+    "female",
+    "figma",
+    "file-not-found",
+    "fill-color",
+    "fillet-3d",
+    "filter-alt",
+    "filter-list-circle",
+    "filter-list",
+    "filter",
+    "finder",
+    "fingerprint-check-circle",
+    "fingerprint-circle",
+    "fingerprint-lock-circle",
+    "fingerprint-scan",
+    "fingerprint-square",
+    "fingerprint-window",
+    "fingerprint-xmark-circle",
+    "fingerprint",
+    "fire-flame",
+    "fish",
+    "fishing",
+    "flare",
+    "flash-off",
+    "flash",
+    "flask",
+    "flip-reverse",
+    "flip",
+    "floppy-disk-arrow-in",
+    "floppy-disk-arrow-out",
+    "floppy-disk",
+    "flower",
+    "fog",
+    "folder-minus",
+    "folder-plus",
+    "folder-settings",
+    "folder-warning",
+    "folder",
+    "font-question",
+    "football-ball",
+    "football",
+    "forward-15-seconds",
+    "forward-message",
+    "forward",
+    "frame-alt-empty",
+    "frame-alt",
+    "frame-minus-in",
+    "frame-plus-in",
+    "frame-select",
+    "frame-simple",
+    "frame-tool",
+    "frame",
+    "fridge",
+    "fx-tag",
+    "fx",
+    "gamepad",
+    "garage",
+    "gas-tank-droplet",
+    "gas-tank",
+    "gas",
+    "gif-format",
+    "gift",
+    "git-branch",
+    "git-cherry-pick-commit",
+    "git-commit",
+    "git-compare",
+    "git-fork",
+    "git-merge",
+    "git-pull-request-closed",
+    "git-pull-request",
+    "git",
+    "github-circle",
+    "github",
+    "gitlab-full",
+    "glass-empty",
+    "glass-fragile",
+    "glass-half-alt",
+    "glass-half",
+    "glasses",
+    "globe",
+    "golf",
+    "google-circle",
+    "google-docs",
+    "google-drive-check",
+    "google-drive-sync",
+    "google-drive-warning",
+    "google-drive",
+    "google-home",
+    "google-one",
+    "google",
+    "gps",
+    "graduation-cap",
+    "graph-down",
+    "graph-up",
+    "grid-minus",
+    "grid-plus",
+    "grid-xmark",
+    "group",
+    "gym",
+    "h-square",
+    "half-cookie",
+    "half-moon",
+    "hammer",
+    "hand-brake",
+    "hand-card",
+    "hand-cash",
+    "hand-contactless",
+    "handbag",
+    "hard-drive",
+    "hashtag",
+    "hat",
+    "hd-display",
+    "hd",
+    "hdr",
+    "headset-bolt",
+    "headset-help",
+    "headset-warning",
+    "headset",
+    "health-shield",
+    "healthcare",
+    "heart-arrow-down",
+    "heart",
+    "heating-square",
+    "heavy-rain",
+    "help-circle",
+    "help-square",
+    "heptagon",
+    "hexagon-dice",
+    "hexagon-plus",
+    "hexagon",
+    "historic-shield-alt",
+    "historic-shield",
+    "home-alt-slim-horiz",
+    "home-alt-slim",
+    "home-alt",
+    "home-hospital",
+    "home-sale",
+    "home-secure",
+    "home-shield",
+    "home-simple-door",
+    "home-simple",
+    "home-table",
+    "home-temperature-in",
+    "home-temperature-out",
+    "home-user",
+    "home",
+    "horiz-distribution-left",
+    "horiz-distribution-right",
+    "horizontal-merge",
+    "horizontal-split",
+    "hospital-circle",
+    "hospital",
+    "hot-air-balloon",
+    "hourglass",
+    "house-rooms",
+    "html5",
+    "ice-cream",
+    "iconoir",
+    "import",
+    "inclination",
+    "industry",
+    "infinite",
+    "info-circle",
+    "input-field",
+    "input-output",
+    "input-search",
+    "instagram",
+    "internet",
+    "intersect-alt",
+    "intersect",
+    "ios-settings",
+    "ip-address-tag",
+    "iris-scan",
+    "italic-square",
+    "italic",
+    "jellyfish",
+    "journal-page",
+    "journal",
+    "jpeg-format",
+    "jpg-format",
+    "kanban-board",
+    "key-back",
+    "key-command",
+    "key-minus",
+    "key-plus",
+    "key-xmark",
+    "key",
+    "keyframe-align-center",
+    "keyframe-align-horizontal",
+    "keyframe-align-vertical",
+    "keyframe-minus-in",
+    "keyframe-minus",
+    "keyframe-plus-in",
+    "keyframe-plus",
+    "keyframe-position",
+    "keyframe",
+    "keyframes-couple",
+    "keyframes-minus",
+    "keyframes-plus",
+    "keyframes",
+    "label",
+    "lamp",
+    "language",
+    "laptop-charging",
+    "laptop-dev-mode",
+    "laptop-fix",
+    "laptop-warning",
+    "laptop",
+    "layout-left",
+    "layout-right",
+    "leaderboard-star",
+    "leaderboard",
+    "leaf",
+    "learning",
+    "lens-plus",
+    "lens",
+    "lifebelt",
+    "light-bulb-off",
+    "light-bulb-on",
+    "light-bulb",
+    "line-space",
+    "linear",
+    "link-slash",
+    "link-xmark",
+    "link",
+    "linkedin",
+    "linux",
+    "list-select",
+    "list",
+    "litecoin-circle",
+    "litecoin-rotate-out",
+    "lock-slash",
+    "lock-square",
+    "lock",
+    "loft-3d",
+    "log-in",
+    "log-no-access",
+    "log-out",
+    "long-arrow-down-left",
+    "long-arrow-down-right",
+    "long-arrow-left-down",
+    "long-arrow-left-up",
+    "long-arrow-right-down",
+    "long-arrow-right-up",
+    "long-arrow-up-left",
+    "long-arrow-up-right",
+    "lot-of-cash",
+    "lullaby",
+    "mac-control-key",
+    "mac-dock",
+    "mac-option-key",
+    "mac-os-window",
+    "magic-wand",
+    "magnet-energy",
+    "magnet",
+    "mail-in",
+    "mail-open",
+    "mail-out",
+    "mail",
+    "male",
+    "map-pin-minus",
+    "map-pin-plus",
+    "map-pin-xmark",
+    "map-pin",
+    "map-xmark",
+    "map",
+    "maps-arrow-diagonal",
+    "maps-arrow-xmark",
+    "maps-arrow",
+    "maps-go-straight",
+    "maps-turn-back",
+    "maps-turn-left",
+    "maps-turn-right",
+    "mask-square",
+    "mastercard-card",
+    "mastodon",
+    "math-book",
+    "maximize",
+    "medal-1st",
+    "medal",
+    "media-image-folder",
+    "media-image-list",
+    "media-image-plus",
+    "media-image-xmark",
+    "media-image",
+    "media-video-folder",
+    "media-video-list",
+    "media-video-plus",
+    "media-video-xmark",
+    "media-video",
+    "medium",
+    "megaphone",
+    "menu-scale",
+    "menu",
+    "message-alert",
+    "message-text",
+    "message",
+    "meter-arrow-down-right",
+    "metro",
+    "microphone-check",
+    "microphone-minus",
+    "microphone-mute",
+    "microphone-plus",
+    "microphone-speaking",
+    "microphone-warning",
+    "microphone",
+    "microscope",
+    "minus-circle",
+    "minus-hexagon",
+    "minus-square-dashed",
+    "minus-square",
+    "minus",
+    "mirror",
+    "mobile-dev-mode",
+    "mobile-fingerprint",
+    "mobile-voice",
+    "modern-tv-4k",
+    "modern-tv",
+    "money-square",
+    "moon-sat",
+    "more-horiz-circle",
+    "more-horiz",
+    "more-vert-circle",
+    "more-vert",
+    "motorcycle",
+    "mouse-button-left",
+    "mouse-button-right",
+    "mouse-scroll-wheel",
+    "movie",
+    "mpeg-format",
+    "multi-bubble",
+    "multi-mac-os-window",
+    "multi-window",
+    "multiple-pages-empty",
+    "multiple-pages-minus",
+    "multiple-pages-plus",
+    "multiple-pages-xmark",
+    "multiple-pages",
+    "music-double-note-plus",
+    "music-double-note",
+    "music-note-plus",
+    "music-note",
+    "n-square",
+    "nav-arrow-down",
+    "nav-arrow-left",
+    "nav-arrow-right",
+    "nav-arrow-up",
+    "navigator-alt",
+    "navigator",
+    "neighbourhood",
+    "network-left",
+    "network-reverse",
+    "network-right",
+    "network",
+    "new-tab",
+    "nintendo-switch",
+    "no-smoking-circle",
+    "non-binary",
+    "notes",
+    "npm-square",
+    "npm",
+    "number-0-square",
+    "number-1-square",
+    "number-2-square",
+    "number-3-square",
+    "number-4-square",
+    "number-5-square",
+    "number-6-square",
+    "number-7-square",
+    "number-8-square",
+    "number-9-square",
+    "numbered-list-left",
+    "numbered-list-right",
+    "o-square",
+    "octagon",
+    "off-tag",
+    "oil-industry",
+    "okrs",
+    "on-tag",
+    "one-finger-select-hand-gesture",
+    "one-point-circle",
+    "open-book",
+    "open-in-browser",
+    "open-in-window",
+    "open-new-window",
+    "open-select-hand-gesture",
+    "open-vpn",
+    "orange-half",
+    "orange-slice-alt",
+    "orange-slice",
+    "organic-food-square",
+    "organic-food",
+    "orthogonal-view",
+    "package-lock",
+    "package",
+    "packages",
+    "pacman",
+    "page-down",
+    "page-edit",
+    "page-flip",
+    "page-left",
+    "page-minus-in",
+    "page-minus",
+    "page-plus-in",
+    "page-plus",
+    "page-right",
+    "page-search",
+    "page-star",
+    "page-up",
+    "page",
+    "palette",
+    "panorama-enlarge",
+    "panorama-reduce",
+    "pants-pockets",
+    "pants",
+    "parking",
+    "password-check",
+    "password-cursor",
+    "password-xmark",
+    "paste-clipboard",
+    "path-arrow",
+    "pause-window",
+    "pause",
+    "paypal",
+    "pc-check",
+    "pc-firewall",
+    "pc-mouse",
+    "pc-no-entry",
+    "pc-warning",
+    "peace-hand",
+    "peerlist",
+    "pen-connect-bluetooth",
+    "pen-connect-wifi",
+    "pen-tablet-connect-usb",
+    "pen-tablet-connect-wifi",
+    "pen-tablet",
+    "pentagon",
+    "people-tag",
+    "percent-rotate-out",
+    "percentage-circle",
+    "percentage-square",
+    "percentage",
+    "perspective-view",
+    "pharmacy-cross-circle",
+    "pharmacy-cross-tag",
+    "phone-disabled",
+    "phone-income",
+    "phone-minus",
+    "phone-outcome",
+    "phone-paused",
+    "phone-plus",
+    "phone-xmark",
+    "phone",
+    "piggy-bank",
+    "pillow",
+    "pin-slash",
+    "pin",
+    "pine-tree",
+    "pinterest",
+    "pipe-3d",
+    "pizza-slice",
+    "planet-alt",
+    "planet-sat",
+    "planet",
+    "planimetry",
+    "play",
+    "playlist-play",
+    "playlist-plus",
+    "playlist",
+    "playstation-gamepad",
+    "plug-type-a",
+    "plug-type-c",
+    "plug-type-g",
+    "plug-type-l",
+    "plus-circle",
+    "plus-square-dashed",
+    "plus-square",
+    "plus",
+    "png-format",
+    "pocket",
+    "podcast",
+    "pokeball",
+    "polar-sh",
+    "position-align",
+    "position",
+    "post",
+    "potion",
+    "pound",
+    "precision-tool",
+    "presentation",
+    "printer",
+    "printing-page",
+    "priority-down",
+    "priority-high",
+    "priority-medium",
+    "priority-up",
+    "privacy-policy",
+    "private-wifi",
+    "profile-circle",
+    "prohibition",
+    "project-curve-3d",
+    "puzzle",
+    "qr-code",
+    "question-mark",
+    "quote-message",
+    "quote",
+    "radiation",
+    "radius",
+    "rain",
+    "raw-format",
+    "receive-dollars",
+    "receive-euros",
+    "receive-pounds",
+    "receive-yens",
+    "redo-action",
+    "redo-circle",
+    "redo",
+    "reduce",
+    "refresh-circle",
+    "refresh-double",
+    "refresh",
+    "reload-window",
+    "reminder-hand-gesture",
+    "repeat-once",
+    "repeat",
+    "reply-to-message",
+    "reply",
+    "report-columns",
+    "reports",
+    "repository",
+    "restart",
+    "rewind",
+    "rhombus-arrow-right",
+    "rhombus",
+    "rings",
+    "rocket",
+    "rook",
+    "rotate-camera-left",
+    "rotate-camera-right",
+    "round-flask",
+    "rounded-mirror",
+    "rss-feed-tag",
+    "rss-feed",
+    "rubik-cube",
+    "ruler-arrows",
+    "ruler-combine",
+    "ruler-minus",
+    "ruler-plus",
+    "ruler",
+    "running",
+    "safari",
+    "safe-arrow-left",
+    "safe-arrow-right",
+    "safe-open",
+    "safe",
+    "sandals",
+    "scale-frame-enlarge",
+    "scale-frame-reduce",
+    "scan-barcode",
+    "scan-qr-code",
+    "scanning",
+    "scarf",
+    "scissor-alt",
+    "scissor",
+    "screenshot",
+    "sea-and-sun",
+    "sea-waves",
+    "search-engine",
+    "search-window",
+    "search",
+    "secure-window",
+    "security-pass",
+    "select-edge-3d",
+    "select-face-3d",
+    "select-point-3d",
+    "select-window",
+    "selective-tool",
+    "send-diagonal",
+    "send-dollars",
+    "send-euros",
+    "send-mail",
+    "send-pounds",
+    "send-yens",
+    "send",
+    "server-connection",
+    "server",
+    "settings-profiles",
+    "settings",
+    "share-android",
+    "share-ios",
+    "shield-alert",
+    "shield-alt",
+    "shield-broken",
+    "shield-check",
+    "shield-download",
+    "shield-eye",
+    "shield-loading",
+    "shield-minus",
+    "shield-plus-in",
+    "shield-question",
+    "shield-search",
+    "shield-upload",
+    "shield-xmark",
+    "shield",
+    "shirt-tank-top",
+    "shirt",
+    "shop-four-tiles-window",
+    "shop-four-tiles",
+    "shop-window",
+    "shop",
+    "shopping-bag-arrow-down",
+    "shopping-bag-arrow-up",
+    "shopping-bag-check",
+    "shopping-bag-minus",
+    "shopping-bag-plus",
+    "shopping-bag-pocket",
+    "shopping-bag-warning",
+    "shopping-bag",
+    "shopping-code-check",
+    "shopping-code-xmark",
+    "shopping-code",
+    "short-pants-pockets",
+    "short-pants",
+    "shortcut-square",
+    "shuffle",
+    "sidebar-collapse",
+    "sidebar-expand",
+    "sigma-function",
+    "simple-cart",
+    "sine-wave",
+    "single-tap-gesture",
+    "skateboard",
+    "skateboarding",
+    "skip-next",
+    "skip-prev",
+    "slash-square",
+    "slash",
+    "sleeper-chair",
+    "slips",
+    "small-lamp-alt",
+    "small-lamp",
+    "smartphone-device",
+    "smoking",
+    "snapchat",
+    "snow-flake",
+    "snow",
+    "soap",
+    "soccer-ball",
+    "sofa",
+    "soil-alt",
+    "soil",
+    "sort-down",
+    "sort-up",
+    "sort",
+    "sound-high",
+    "sound-low",
+    "sound-min",
+    "sound-off",
+    "spades",
+    "spark",
+    "sparks",
+    "sphere",
+    "spiral",
+    "split-area",
+    "split-square-dashed",
+    "spock-hand-gesture",
+    "spotify",
+    "square-3d-corner-to-corner",
+    "square-3d-from-center",
+    "square-3d-three-points",
+    "square-cursor",
+    "square-dashed",
+    "square-wave",
+    "square",
+    "stackoverflow",
+    "star-dashed",
+    "star-half-dashed",
+    "star",
+    "stat-down",
+    "stat-up",
+    "stats-down-square",
+    "stats-report",
+    "stats-up-square",
+    "strategy",
+    "stretching",
+    "strikethrough",
+    "stroller",
+    "style-border",
+    "submit-document",
+    "substract",
+    "suggestion",
+    "suitcase",
+    "sun-light",
+    "svg-format",
+    "sweep-3d",
+    "swimming",
+    "swipe-down-gesture",
+    "swipe-left-gesture",
+    "swipe-right-gesture",
+    "swipe-two-fingers-down-gesture",
+    "swipe-two-fingers-left-gesture",
+    "swipe-two-fingers-right-gesture",
+    "swipe-two-fingers-up-gesture",
+    "swipe-up-gesture",
+    "switch-off",
+    "switch-on",
+    "system-restart",
+    "system-shut",
+    "table-2-columns",
+    "table-rows",
+    "table",
+    "task-list",
+    "telegram-circle",
+    "telegram",
+    "temperature-down",
+    "temperature-high",
+    "temperature-low",
+    "temperature-up",
+    "tennis-ball-alt",
+    "tennis-ball",
+    "terminal-tag",
+    "terminal",
+    "test-tube",
+    "text-arrows-up-down",
+    "text-box",
+    "text-magnifying-glass",
+    "text-size",
+    "text-square",
+    "text",
+    "threads",
+    "three-points-circle",
+    "three-stars",
+    "thumbs-down",
+    "thumbs-up",
+    "thunderstorm",
+    "tif-format",
+    "tiff-format",
+    "tiktok",
+    "time-zone",
+    "timer-off",
+    "timer",
+    "tools",
+    "tournament",
+    "tower-check",
+    "tower-no-access",
+    "tower-warning",
+    "tower",
+    "trademark",
+    "train",
+    "tram",
+    "transition-down",
+    "transition-left",
+    "transition-right",
+    "transition-up",
+    "translate",
+    "trash",
+    "treadmill",
+    "tree",
+    "trekking",
+    "trello",
+    "triangle-flag-circle",
+    "triangle-flag-two-stripes",
+    "triangle-flag",
+    "triangle",
+    "trophy",
+    "truck-green",
+    "truck-length",
+    "truck",
+    "tunnel",
+    "tv-fix",
+    "tv-warning",
+    "tv",
+    "twitter",
+    "two-points-circle",
+    "two-seater-sofa",
+    "type",
+    "u-turn-arrow-left",
+    "u-turn-arrow-right",
+    "umbrella",
+    "underline-square",
+    "underline",
+    "undo-action",
+    "undo-circle",
+    "undo",
+    "union-alt",
+    "union-horiz-alt",
+    "union",
+    "unity-5",
+    "unity",
+    "unjoin-3d",
+    "upload-data-window",
+    "upload-square",
+    "upload",
+    "usb",
+    "user-badge-check",
+    "user-bag",
+    "user-cart",
+    "user-circle",
+    "user-crown",
+    "user-love",
+    "user-plus",
+    "user-scan",
+    "user-square",
+    "user-star",
+    "user-xmark",
+    "user",
+    "vegan-circle",
+    "vegan-square",
+    "vegan",
+    "vehicle-green",
+    "vertical-merge",
+    "vertical-split",
+    "vials",
+    "video-camera-off",
+    "video-camera",
+    "video-projector",
+    "view-360",
+    "view-columns-2",
+    "view-columns-3",
+    "view-grid",
+    "view-structure-down",
+    "view-structure-up",
+    "voice-check",
+    "voice-circle",
+    "voice-lock-circle",
+    "voice-scan",
+    "voice-square",
+    "voice-xmark",
+    "voice",
+    "vr-tag",
+    "vue-js",
+    "waist",
+    "walking",
+    "wallet",
+    "warning-circle",
+    "warning-hexagon",
+    "warning-square",
+    "warning-triangle",
+    "warning-window",
+    "wash",
+    "washing-machine",
+    "watering-soil",
+    "web-window-energy-consumption",
+    "web-window-xmark",
+    "web-window",
+    "webp-format",
+    "weight-alt",
+    "weight",
+    "whatsapp",
+    "white-flag",
+    "wifi-off",
+    "wifi-signal-none",
+    "wifi-tag",
+    "wifi-warning",
+    "wifi-xmark",
+    "wifi",
+    "wind",
+    "window-check",
+    "window-lock",
+    "window-no-access",
+    "window-tabs",
+    "window-xmark",
+    "windows",
+    "wolf",
+    "wrap-text",
+    "wrench",
+    "wristwatch",
+    "www",
+    "x-square",
+    "x",
+    "xbox-a",
+    "xbox-b",
+    "xbox-x",
+    "xbox-y",
+    "xmark-circle",
+    "xmark-square",
+    "xmark",
+    "xray-view",
+    "y-square",
+    "yelp",
+    "yen-square",
+    "yen",
+    "yoga",
+    "youtube",
+    "z-square",
+    "zoom-in",
+    "zoom-out",
+    "adobe-after-effects-2",
+    "adobe-illustrator-2",
+    "adobe-indesign-2",
+    "adobe-lightroom-2",
+    "adobe-photoshop-2",
+    "adobe-xd-2",
+    "airplay-2",
+    "alarm-2",
+    "align-bottom-box-2",
+    "align-horizontal-centers-2",
+    "align-horizontal-spacing-2",
+    "align-left-box-2",
+    "align-right-box-2",
+    "align-top-box-2",
+    "align-vertical-centers-2",
+    "align-vertical-spacing-2",
+    "app-notification-2",
+    "app-store-2",
+    "apple-shortcuts-2",
+    "arrow-down-circle-2",
+    "arrow-down-left-circle-2",
+    "arrow-down-left-square-2",
+    "arrow-down-right-circle-2",
+    "arrow-down-right-square-2",
+    "arrow-left-circle-2",
+    "arrow-left-tag-2",
+    "arrow-right-circle-2",
+    "arrow-right-tag-2",
+    "arrow-up-circle-2",
+    "arrow-up-left-circle-2",
+    "arrow-up-left-square-2",
+    "arrow-up-right-circle-2",
+    "arrow-up-right-square-2",
+    "bathroom-2",
+    "bell-notification-2",
+    "bitcoin-circle-2",
+    "bluetooth-tag-2",
+    "bold-square-2",
+    "book-2",
+    "bookmark-circle-2",
+    "bookmark-2",
+    "bubble-search-2",
+    "bubble-xmark-2",
+    "bug-2",
+    "cable-tag-2",
+    "calendar-arrow-down-2",
+    "calendar-arrow-up-2",
+    "calendar-check-2",
+    "calendar-minus-2",
+    "calendar-plus-2",
+    "calendar-rotate-2",
+    "calendar-xmark-2",
+    "camera-2",
+    "cash-2",
+    "center-align-2",
+    "chat-bubble-check-2",
+    "chat-bubble-empty-2",
+    "chat-bubble-question-2",
+    "chat-bubble-translate-2",
+    "chat-bubble-warning-2",
+    "chat-bubble-xmark-2",
+    "chat-bubble-2",
+    "chat-lines-2",
+    "chat-minus-in-2",
+    "chat-plus-in-2",
+    "check-circle-2",
+    "check-square-2",
+    "clock-2",
+    "closed-captions-tag-2",
+    "cloud-square-2",
+    "comp-align-bottom-2",
+    "comp-align-left-2",
+    "comp-align-right-2",
+    "comp-align-top-2",
+    "compass-2",
+    "component-2",
+    "cooling-square-2",
+    "credit-card-2",
+    "cube-dots-2",
+    "cube-scan-2",
+    "database-check-2",
+    "database-tag-2",
+    "database-xmark-2",
+    "database-2",
+    "design-nib-2",
+    "diameter-2",
+    "divide-three-2",
+    "divide-2",
+    "dogecoin-circle-2",
+    "dollar-circle-2",
+    "dots-grid-3x3-2",
+    "download-circle-2",
+    "download-square-2",
+    "drag-2",
+    "droplet-snow-flake-in-2",
+    "droplet-2",
+    "erase-2",
+    "ethereum-circle-2",
+    "euro-square-2",
+    "eye-2",
+    "facetime-2",
+    "fast-arrow-down-square-2",
+    "fast-arrow-left-square-2",
+    "fast-arrow-right-square-2",
+    "fast-arrow-up-square-2",
+    "fill-color-2",
+    "filter-list-circle-2",
+    "filter-2",
+    "flash-2",
+    "flask-2",
+    "forward-2",
+    "frame-tool-2",
+    "fx-tag-2",
+    "git-2",
+    "google-circle-2",
+    "graduation-cap-2",
+    "hd-display-2",
+    "headset-bolt-2",
+    "headset-warning-2",
+    "headset-2",
+    "heart-2",
+    "heating-square-2",
+    "help-circle-2",
+    "help-square-2",
+    "horiz-distribution-left-2",
+    "horiz-distribution-right-2",
+    "hospital-circle-2",
+    "ice-cream-2",
+    "info-circle-2",
+    "italic-square-2",
+    "keyframe-align-center-2",
+    "keyframe-align-horizontal-2",
+    "keyframe-align-vertical-2",
+    "keyframe-minus-in-2",
+    "keyframe-minus-2",
+    "keyframe-plus-in-2",
+    "keyframe-plus-2",
+    "keyframe-position-2",
+    "keyframe-2",
+    "keyframes-couple-2",
+    "keyframes-2",
+    "label-2",
+    "litecoin-circle-2",
+    "long-arrow-down-left-2",
+    "long-arrow-down-right-2",
+    "long-arrow-left-down-2",
+    "long-arrow-left-up-2",
+    "long-arrow-right-down-2",
+    "long-arrow-right-up-2",
+    "long-arrow-up-left-2",
+    "long-arrow-up-right-2",
+    "magnet-2",
+    "mail-in-2",
+    "mail-open-2",
+    "mail-out-2",
+    "mail-2",
+    "medal-1st-2",
+    "medal-2",
+    "message-alert-2",
+    "message-text-2",
+    "message-2",
+    "microphone-check-2",
+    "microphone-minus-2",
+    "microphone-mute-2",
+    "microphone-plus-2",
+    "microphone-speaking-2",
+    "microphone-warning-2",
+    "microphone-2",
+    "microscope-2",
+    "minus-circle-2",
+    "minus-square-2",
+    "money-square-2",
+    "multi-bubble-2",
+    "music-note-plus-2",
+    "music-note-2",
+    "nav-arrow-down-2",
+    "nav-arrow-left-2",
+    "nav-arrow-right-2",
+    "nav-arrow-up-2",
+    "network-left-2",
+    "network-reverse-2",
+    "network-right-2",
+    "network-2",
+    "number-0-square-2",
+    "number-1-square-2",
+    "number-2-square-2",
+    "number-3-square-2",
+    "number-4-square-2",
+    "number-5-square-2",
+    "number-6-square-2",
+    "number-7-square-2",
+    "number-8-square-2",
+    "number-9-square-2",
+    "page-down-2",
+    "page-left-2",
+    "page-right-2",
+    "page-up-2",
+    "path-arrow-2",
+    "pause-2",
+    "peerlist-2",
+    "percentage-circle-2",
+    "percentage-square-2",
+    "phone-income-2",
+    "phone-minus-2",
+    "phone-outcome-2",
+    "phone-paused-2",
+    "phone-plus-2",
+    "phone-xmark-2",
+    "phone-2",
+    "pin-slash-2",
+    "pin-2",
+    "planet-2",
+    "play-2",
+    "plus-circle-2",
+    "plus-square-2",
+    "pocket-2",
+    "podcast-2",
+    "post-2",
+    "presentation-2",
+    "priority-down-2",
+    "priority-high-2",
+    "priority-medium-2",
+    "priority-up-2",
+    "quote-message-2",
+    "quote-2",
+    "radiation-2",
+    "radius-2",
+    "redo-circle-2",
+    "refresh-circle-2",
+    "reports-2",
+    "rewind-2",
+    "rhombus-arrow-right-2",
+    "round-flask-2",
+    "rss-feed-tag-2",
+    "send-diagonal-2",
+    "send-mail-2",
+    "send-2",
+    "server-connection-2",
+    "server-2",
+    "share-android-2",
+    "shortcut-square-2",
+    "skip-next-2",
+    "skip-prev-2",
+    "snapchat-2",
+    "sound-high-2",
+    "sound-low-2",
+    "sound-min-2",
+    "sound-off-2",
+    "spark-2",
+    "sparks-2",
+    "square-cursor-2",
+    "star-2",
+    "stats-down-square-2",
+    "stats-up-square-2",
+    "style-border-2",
+    "test-tube-2",
+    "text-square-2",
+    "three-stars-2",
+    "tiktok-2",
+    "timer-2",
+    "transition-down-2",
+    "transition-left-2",
+    "transition-right-2",
+    "transition-up-2",
+    "trash-2",
+    "underline-square-2",
+    "undo-circle-2",
+    "upload-square-2",
+    "usb-2",
+    "vials-2",
+    "wallet-2",
+    "warning-circle-2",
+    "warning-square-2",
+    "warning-triangle-2",
+    "web-window-energy-consumption-2",
+    "web-window-xmark-2",
+    "web-window-2",
+    "whatsapp-2",
+    "white-flag-2",
+    "wifi-signal-none-2",
+    "wifi-tag-2",
+    "wifi-warning-2",
+    "window-tabs-2",
+    "wolf-2",
+    "xmark-circle-2",
+    "xmark-square-2",
+    "yen-square-2",
+    "youtube-2"
+  ],
+  "skippedDuplicates": [],
+  "renamedVariants": [
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/adobe-after-effects.svg",
+      "name": "adobe-after-effects-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/adobe-illustrator.svg",
+      "name": "adobe-illustrator-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/adobe-indesign.svg",
+      "name": "adobe-indesign-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/adobe-lightroom.svg",
+      "name": "adobe-lightroom-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/adobe-photoshop.svg",
+      "name": "adobe-photoshop-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/adobe-xd.svg",
+      "name": "adobe-xd-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/airplay.svg",
+      "name": "airplay-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/alarm.svg",
+      "name": "alarm-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/align-bottom-box.svg",
+      "name": "align-bottom-box-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/align-horizontal-centers.svg",
+      "name": "align-horizontal-centers-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/align-horizontal-spacing.svg",
+      "name": "align-horizontal-spacing-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/align-left-box.svg",
+      "name": "align-left-box-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/align-right-box.svg",
+      "name": "align-right-box-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/align-top-box.svg",
+      "name": "align-top-box-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/align-vertical-centers.svg",
+      "name": "align-vertical-centers-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/align-vertical-spacing.svg",
+      "name": "align-vertical-spacing-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/app-notification.svg",
+      "name": "app-notification-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/app-store.svg",
+      "name": "app-store-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/apple-shortcuts.svg",
+      "name": "apple-shortcuts-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-down-circle.svg",
+      "name": "arrow-down-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-down-left-circle.svg",
+      "name": "arrow-down-left-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-down-left-square.svg",
+      "name": "arrow-down-left-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-down-right-circle.svg",
+      "name": "arrow-down-right-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-down-right-square.svg",
+      "name": "arrow-down-right-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-left-circle.svg",
+      "name": "arrow-left-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-left-tag.svg",
+      "name": "arrow-left-tag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-right-circle.svg",
+      "name": "arrow-right-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-right-tag.svg",
+      "name": "arrow-right-tag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-up-circle.svg",
+      "name": "arrow-up-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-up-left-circle.svg",
+      "name": "arrow-up-left-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-up-left-square.svg",
+      "name": "arrow-up-left-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-up-right-circle.svg",
+      "name": "arrow-up-right-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/arrow-up-right-square.svg",
+      "name": "arrow-up-right-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/bathroom.svg",
+      "name": "bathroom-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/bell-notification.svg",
+      "name": "bell-notification-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/bitcoin-circle.svg",
+      "name": "bitcoin-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/bluetooth-tag.svg",
+      "name": "bluetooth-tag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/bold-square.svg",
+      "name": "bold-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/book.svg",
+      "name": "book-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/bookmark-circle.svg",
+      "name": "bookmark-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/bookmark.svg",
+      "name": "bookmark-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/bubble-search.svg",
+      "name": "bubble-search-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/bubble-xmark.svg",
+      "name": "bubble-xmark-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/bug.svg",
+      "name": "bug-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/cable-tag.svg",
+      "name": "cable-tag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/calendar-arrow-down.svg",
+      "name": "calendar-arrow-down-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/calendar-arrow-up.svg",
+      "name": "calendar-arrow-up-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/calendar-check.svg",
+      "name": "calendar-check-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/calendar-minus.svg",
+      "name": "calendar-minus-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/calendar-plus.svg",
+      "name": "calendar-plus-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/calendar-rotate.svg",
+      "name": "calendar-rotate-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/calendar-xmark.svg",
+      "name": "calendar-xmark-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/camera.svg",
+      "name": "camera-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/cash.svg",
+      "name": "cash-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/center-align.svg",
+      "name": "center-align-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/chat-bubble-check.svg",
+      "name": "chat-bubble-check-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/chat-bubble-empty.svg",
+      "name": "chat-bubble-empty-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/chat-bubble-question.svg",
+      "name": "chat-bubble-question-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/chat-bubble-translate.svg",
+      "name": "chat-bubble-translate-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/chat-bubble-warning.svg",
+      "name": "chat-bubble-warning-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/chat-bubble-xmark.svg",
+      "name": "chat-bubble-xmark-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/chat-bubble.svg",
+      "name": "chat-bubble-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/chat-lines.svg",
+      "name": "chat-lines-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/chat-minus-in.svg",
+      "name": "chat-minus-in-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/chat-plus-in.svg",
+      "name": "chat-plus-in-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/check-circle.svg",
+      "name": "check-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/check-square.svg",
+      "name": "check-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/clock.svg",
+      "name": "clock-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/closed-captions-tag.svg",
+      "name": "closed-captions-tag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/cloud-square.svg",
+      "name": "cloud-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/comp-align-bottom.svg",
+      "name": "comp-align-bottom-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/comp-align-left.svg",
+      "name": "comp-align-left-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/comp-align-right.svg",
+      "name": "comp-align-right-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/comp-align-top.svg",
+      "name": "comp-align-top-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/compass.svg",
+      "name": "compass-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/component.svg",
+      "name": "component-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/cooling-square.svg",
+      "name": "cooling-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/credit-card.svg",
+      "name": "credit-card-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/cube-dots.svg",
+      "name": "cube-dots-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/cube-scan.svg",
+      "name": "cube-scan-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/database-check.svg",
+      "name": "database-check-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/database-tag.svg",
+      "name": "database-tag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/database-xmark.svg",
+      "name": "database-xmark-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/database.svg",
+      "name": "database-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/design-nib.svg",
+      "name": "design-nib-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/diameter.svg",
+      "name": "diameter-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/divide-three.svg",
+      "name": "divide-three-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/divide.svg",
+      "name": "divide-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/dogecoin-circle.svg",
+      "name": "dogecoin-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/dollar-circle.svg",
+      "name": "dollar-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/dots-grid-3x3.svg",
+      "name": "dots-grid-3x3-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/download-circle.svg",
+      "name": "download-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/download-square.svg",
+      "name": "download-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/drag.svg",
+      "name": "drag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/droplet-snow-flake-in.svg",
+      "name": "droplet-snow-flake-in-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/droplet.svg",
+      "name": "droplet-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/erase.svg",
+      "name": "erase-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/ethereum-circle.svg",
+      "name": "ethereum-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/euro-square.svg",
+      "name": "euro-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/eye.svg",
+      "name": "eye-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/facetime.svg",
+      "name": "facetime-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/fast-arrow-down-square.svg",
+      "name": "fast-arrow-down-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/fast-arrow-left-square.svg",
+      "name": "fast-arrow-left-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/fast-arrow-right-square.svg",
+      "name": "fast-arrow-right-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/fast-arrow-up-square.svg",
+      "name": "fast-arrow-up-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/fill-color.svg",
+      "name": "fill-color-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/filter-list-circle.svg",
+      "name": "filter-list-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/filter.svg",
+      "name": "filter-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/flash.svg",
+      "name": "flash-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/flask.svg",
+      "name": "flask-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/forward.svg",
+      "name": "forward-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/frame-tool.svg",
+      "name": "frame-tool-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/fx-tag.svg",
+      "name": "fx-tag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/git.svg",
+      "name": "git-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/google-circle.svg",
+      "name": "google-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/graduation-cap.svg",
+      "name": "graduation-cap-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/hd-display.svg",
+      "name": "hd-display-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/headset-bolt.svg",
+      "name": "headset-bolt-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/headset-warning.svg",
+      "name": "headset-warning-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/headset.svg",
+      "name": "headset-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/heart.svg",
+      "name": "heart-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/heating-square.svg",
+      "name": "heating-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/help-circle.svg",
+      "name": "help-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/help-square.svg",
+      "name": "help-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/horiz-distribution-left.svg",
+      "name": "horiz-distribution-left-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/horiz-distribution-right.svg",
+      "name": "horiz-distribution-right-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/hospital-circle.svg",
+      "name": "hospital-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/ice-cream.svg",
+      "name": "ice-cream-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/info-circle.svg",
+      "name": "info-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/italic-square.svg",
+      "name": "italic-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframe-align-center.svg",
+      "name": "keyframe-align-center-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframe-align-horizontal.svg",
+      "name": "keyframe-align-horizontal-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframe-align-vertical.svg",
+      "name": "keyframe-align-vertical-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframe-minus-in.svg",
+      "name": "keyframe-minus-in-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframe-minus.svg",
+      "name": "keyframe-minus-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframe-plus-in.svg",
+      "name": "keyframe-plus-in-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframe-plus.svg",
+      "name": "keyframe-plus-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframe-position.svg",
+      "name": "keyframe-position-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframe.svg",
+      "name": "keyframe-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframes-couple.svg",
+      "name": "keyframes-couple-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/keyframes.svg",
+      "name": "keyframes-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/label.svg",
+      "name": "label-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/litecoin-circle.svg",
+      "name": "litecoin-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/long-arrow-down-left.svg",
+      "name": "long-arrow-down-left-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/long-arrow-down-right.svg",
+      "name": "long-arrow-down-right-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/long-arrow-left-down.svg",
+      "name": "long-arrow-left-down-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/long-arrow-left-up.svg",
+      "name": "long-arrow-left-up-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/long-arrow-right-down.svg",
+      "name": "long-arrow-right-down-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/long-arrow-right-up.svg",
+      "name": "long-arrow-right-up-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/long-arrow-up-left.svg",
+      "name": "long-arrow-up-left-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/long-arrow-up-right.svg",
+      "name": "long-arrow-up-right-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/magnet.svg",
+      "name": "magnet-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/mail-in.svg",
+      "name": "mail-in-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/mail-open.svg",
+      "name": "mail-open-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/mail-out.svg",
+      "name": "mail-out-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/mail.svg",
+      "name": "mail-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/medal-1st.svg",
+      "name": "medal-1st-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/medal.svg",
+      "name": "medal-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/message-alert.svg",
+      "name": "message-alert-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/message-text.svg",
+      "name": "message-text-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/message.svg",
+      "name": "message-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/microphone-check.svg",
+      "name": "microphone-check-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/microphone-minus.svg",
+      "name": "microphone-minus-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/microphone-mute.svg",
+      "name": "microphone-mute-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/microphone-plus.svg",
+      "name": "microphone-plus-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/microphone-speaking.svg",
+      "name": "microphone-speaking-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/microphone-warning.svg",
+      "name": "microphone-warning-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/microphone.svg",
+      "name": "microphone-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/microscope.svg",
+      "name": "microscope-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/minus-circle.svg",
+      "name": "minus-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/minus-square.svg",
+      "name": "minus-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/money-square.svg",
+      "name": "money-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/multi-bubble.svg",
+      "name": "multi-bubble-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/music-note-plus.svg",
+      "name": "music-note-plus-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/music-note.svg",
+      "name": "music-note-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/nav-arrow-down.svg",
+      "name": "nav-arrow-down-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/nav-arrow-left.svg",
+      "name": "nav-arrow-left-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/nav-arrow-right.svg",
+      "name": "nav-arrow-right-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/nav-arrow-up.svg",
+      "name": "nav-arrow-up-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/network-left.svg",
+      "name": "network-left-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/network-reverse.svg",
+      "name": "network-reverse-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/network-right.svg",
+      "name": "network-right-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/network.svg",
+      "name": "network-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/number-0-square.svg",
+      "name": "number-0-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/number-1-square.svg",
+      "name": "number-1-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/number-2-square.svg",
+      "name": "number-2-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/number-3-square.svg",
+      "name": "number-3-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/number-4-square.svg",
+      "name": "number-4-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/number-5-square.svg",
+      "name": "number-5-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/number-6-square.svg",
+      "name": "number-6-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/number-7-square.svg",
+      "name": "number-7-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/number-8-square.svg",
+      "name": "number-8-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/number-9-square.svg",
+      "name": "number-9-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/page-down.svg",
+      "name": "page-down-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/page-left.svg",
+      "name": "page-left-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/page-right.svg",
+      "name": "page-right-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/page-up.svg",
+      "name": "page-up-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/path-arrow.svg",
+      "name": "path-arrow-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/pause.svg",
+      "name": "pause-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/peerlist.svg",
+      "name": "peerlist-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/percentage-circle.svg",
+      "name": "percentage-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/percentage-square.svg",
+      "name": "percentage-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/phone-income.svg",
+      "name": "phone-income-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/phone-minus.svg",
+      "name": "phone-minus-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/phone-outcome.svg",
+      "name": "phone-outcome-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/phone-paused.svg",
+      "name": "phone-paused-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/phone-plus.svg",
+      "name": "phone-plus-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/phone-xmark.svg",
+      "name": "phone-xmark-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/phone.svg",
+      "name": "phone-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/pin-slash.svg",
+      "name": "pin-slash-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/pin.svg",
+      "name": "pin-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/planet.svg",
+      "name": "planet-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/play.svg",
+      "name": "play-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/plus-circle.svg",
+      "name": "plus-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/plus-square.svg",
+      "name": "plus-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/pocket.svg",
+      "name": "pocket-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/podcast.svg",
+      "name": "podcast-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/post.svg",
+      "name": "post-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/presentation.svg",
+      "name": "presentation-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/priority-down.svg",
+      "name": "priority-down-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/priority-high.svg",
+      "name": "priority-high-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/priority-medium.svg",
+      "name": "priority-medium-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/priority-up.svg",
+      "name": "priority-up-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/quote-message.svg",
+      "name": "quote-message-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/quote.svg",
+      "name": "quote-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/radiation.svg",
+      "name": "radiation-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/radius.svg",
+      "name": "radius-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/redo-circle.svg",
+      "name": "redo-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/refresh-circle.svg",
+      "name": "refresh-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/reports.svg",
+      "name": "reports-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/rewind.svg",
+      "name": "rewind-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/rhombus-arrow-right.svg",
+      "name": "rhombus-arrow-right-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/round-flask.svg",
+      "name": "round-flask-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/rss-feed-tag.svg",
+      "name": "rss-feed-tag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/send-diagonal.svg",
+      "name": "send-diagonal-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/send-mail.svg",
+      "name": "send-mail-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/send.svg",
+      "name": "send-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/server-connection.svg",
+      "name": "server-connection-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/server.svg",
+      "name": "server-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/share-android.svg",
+      "name": "share-android-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/shortcut-square.svg",
+      "name": "shortcut-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/skip-next.svg",
+      "name": "skip-next-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/skip-prev.svg",
+      "name": "skip-prev-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/snapchat.svg",
+      "name": "snapchat-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/sound-high.svg",
+      "name": "sound-high-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/sound-low.svg",
+      "name": "sound-low-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/sound-min.svg",
+      "name": "sound-min-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/sound-off.svg",
+      "name": "sound-off-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/spark.svg",
+      "name": "spark-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/sparks.svg",
+      "name": "sparks-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/square-cursor.svg",
+      "name": "square-cursor-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/star.svg",
+      "name": "star-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/stats-down-square.svg",
+      "name": "stats-down-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/stats-up-square.svg",
+      "name": "stats-up-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/style-border.svg",
+      "name": "style-border-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/test-tube.svg",
+      "name": "test-tube-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/text-square.svg",
+      "name": "text-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/three-stars.svg",
+      "name": "three-stars-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/tiktok.svg",
+      "name": "tiktok-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/timer.svg",
+      "name": "timer-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/transition-down.svg",
+      "name": "transition-down-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/transition-left.svg",
+      "name": "transition-left-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/transition-right.svg",
+      "name": "transition-right-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/transition-up.svg",
+      "name": "transition-up-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/trash.svg",
+      "name": "trash-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/underline-square.svg",
+      "name": "underline-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/undo-circle.svg",
+      "name": "undo-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/upload-square.svg",
+      "name": "upload-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/usb.svg",
+      "name": "usb-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/vials.svg",
+      "name": "vials-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/wallet.svg",
+      "name": "wallet-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/warning-circle.svg",
+      "name": "warning-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/warning-square.svg",
+      "name": "warning-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/warning-triangle.svg",
+      "name": "warning-triangle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/web-window-energy-consumption.svg",
+      "name": "web-window-energy-consumption-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/web-window-xmark.svg",
+      "name": "web-window-xmark-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/web-window.svg",
+      "name": "web-window-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/whatsapp.svg",
+      "name": "whatsapp-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/white-flag.svg",
+      "name": "white-flag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/wifi-signal-none.svg",
+      "name": "wifi-signal-none-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/wifi-tag.svg",
+      "name": "wifi-tag-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/wifi-warning.svg",
+      "name": "wifi-warning-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/window-tabs.svg",
+      "name": "window-tabs-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/wolf.svg",
+      "name": "wolf-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/xmark-circle.svg",
+      "name": "xmark-circle-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/xmark-square.svg",
+      "name": "xmark-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/yen-square.svg",
+      "name": "yen-square-2"
+    },
+    {
+      "file": "iconoir-285be69c1972e7df06e5342a616ac72241a56e71/icons/solid/youtube.svg",
+      "name": "youtube-2"
+    }
+  ],
+  "rejected": []
+}

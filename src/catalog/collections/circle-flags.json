@@ -1,0 +1,34 @@
+{
+  "id": "circle-flags",
+  "name": "Circle Flags",
+  "kind": "ui",
+  "provider": "community",
+  "source": {
+    "type": "svg-folder",
+    "path": "vendor/circle-flags/svg",
+    "upstream": "https://github.com/HatScripts/circle-flags",
+    "commit": "379588b5da95482d6bbf10bd45644a35b0609ea6"
+  },
+  "owner": "HatScripts",
+  "homepage": "https://github.com/HatScripts/circle-flags",
+  "license": {
+    "spdx": "MIT",
+    "title": "MIT",
+    "url": "https://github.com/HatScripts/circle-flags/blob/HEAD/LICENSE.md"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": false,
+    "commercial": "yes",
+    "attribution": true
+  },
+  "customization": "none",
+  "defaultStyle": "outline",
+  "styles": [],
+  "brandMatching": false,
+  "restrictions": [],
+  "attribution": "HatScripts",
+  "reviewed": "2026-11-01"
+}
