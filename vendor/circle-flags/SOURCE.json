@@ -1,0 +1,12 @@
+{
+  "source": "https://github.com/HatScripts/circle-flags",
+  "commit": "379588b5da95482d6bbf10bd45644a35b0609ea6",
+  "owner": "HatScripts",
+  "homepage": "https://github.com/HatScripts/circle-flags",
+  "license": {
+    "spdx": "MIT",
+    "title": "MIT",
+    "url": "https://github.com/HatScripts/circle-flags/blob/HEAD/LICENSE.md"
+  },
+  "importedAt": "2026-11-01T17:58:50.034Z"
+}

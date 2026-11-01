@@ -1,0 +1,34 @@
+{
+  "id": "mapa-chile-svg",
+  "name": "Mapas SVG de Chile",
+  "kind": "ui",
+  "provider": "community",
+  "source": {
+    "type": "svg-folder",
+    "path": "vendor/mapa-chile-svg/svg",
+    "upstream": "https://github.com/contacto-mipolitico-source/mapa-chile-svg",
+    "commit": "2e634bacf13c7dd6f8b8d7fa22e7b188463fcfc6"
+  },
+  "owner": "contacto-mipolitico-source",
+  "homepage": "https://github.com/contacto-mipolitico-source/mapa-chile-svg",
+  "license": {
+    "spdx": "MIT",
+    "title": "MIT",
+    "url": "https://github.com/contacto-mipolitico-source/mapa-chile-svg/blob/HEAD/LICENSE"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": false,
+    "commercial": "yes",
+    "attribution": true
+  },
+  "customization": "none",
+  "defaultStyle": "outline",
+  "styles": [],
+  "brandMatching": false,
+  "restrictions": [],
+  "attribution": "MiPolitico.cl",
+  "reviewed": "2026-11-01"
+}

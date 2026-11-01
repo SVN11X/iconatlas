@@ -1,0 +1,34 @@
+{
+  "id": "iconoir",
+  "name": "Iconoir",
+  "kind": "ui",
+  "provider": "community",
+  "source": {
+    "type": "svg-folder",
+    "path": "vendor/iconoir/svg",
+    "upstream": "https://github.com/iconoir-icons/iconoir",
+    "commit": "285be69c1972e7df06e5342a616ac72241a56e71"
+  },
+  "owner": "iconoir-icons",
+  "homepage": "https://github.com/iconoir-icons/iconoir",
+  "license": {
+    "spdx": "MIT",
+    "title": "MIT",
+    "url": "https://github.com/iconoir-icons/iconoir/blob/HEAD/LICENSE"
+  },
+  "official": false,
+  "permissions": {
+    "download": true,
+    "redistribute": true,
+    "modify": true,
+    "commercial": "yes",
+    "attribution": true
+  },
+  "customization": "free",
+  "defaultStyle": "outline",
+  "styles": [],
+  "brandMatching": false,
+  "restrictions": [],
+  "attribution": "Luca Burgio / Iconoir",
+  "reviewed": "2026-11-01"
+}
