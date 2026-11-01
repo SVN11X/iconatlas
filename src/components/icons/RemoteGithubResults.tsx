@@ -67,7 +67,7 @@ export function RemoteGithubResults({ query }: { query: string }) {
         {hits.matches.length > 0 && <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
           {hits.matches.map(hit => {
             const src = (hit.asset.kind === 'svg' || hit.asset.kind === 'raster') ? upstreamImageUrl(hit.source.repo, hit.source.sha, hit.asset.path) : null;
-            return <button type="button" key={hit.key} onClick={() => { setSelected(hit); setError(''); }} className="card group min-w-0 p-3 text-left transition-colors hover:border-accent focus-ring" aria-label={`Abrir ${hit.asset.path} de ${hit.source.name}`}>
+            return <button type="button" key={hit.key} onClick={() => { setSelected(hit); setError(''); }} className="card group min-w-0 p-3 text-left transition-colors hover:border-accent focus-ring" data-testid="remote-github-card">
               <span className="flex h-20 items-center justify-center rounded-lg bg-white p-3">
                 {src ? <img src={src} alt="" className="max-h-full max-w-full object-contain" loading="lazy" referrerPolicy="no-referrer" /> : <span className="text-xs font-semibold text-slate-700">{hit.asset.kind === 'library' ? 'Excalidraw' : 'Cursor'}</span>}
               </span>
