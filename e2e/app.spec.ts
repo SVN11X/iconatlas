@@ -153,18 +153,28 @@ test('filtros combinables reflejados en la URL', async ({ page }) => {
   await expect(page).toHaveURL(/provider=sap/);
 });
 
-test('recursos oficiales restringidos: búsqueda interna sin redirección y sin descarga', async ({ page }) => {
-  await page.goto('./#/explore?q=azure%20data%20factory');
-  await waitForCatalog(page);
-  await page.locator('[data-icon-id="azure-architecture:azure-data-factory"] button[data-idx]').first().click();
+test('las referencias sin SVG no se publican y los iconos disponibles permanecen en IconAtlas', async ({ page, request }) => {
+  // Las 246 fichas oficiales sin archivo SVG se mantienen en el informe de compilación,
+  // pero no forman parte del catálogo público ni de sus resultados de búsqueda.
+  const [indexResponse, iconsResponse] = await Promise.all([
+    request.get('catalog/index.json'),
+    request.get('catalog/icons.json'),
+  ]);
+  expect(indexResponse.ok()).toBe(true);
+  expect(iconsResponse.ok()).toBe(true);
+  const index = await indexResponse.json();
+  const icons = await iconsResponse.json();
+  expect(index.stats.references).toBe(0);
+  expect(index.collections.every((collection: { kind: string }) => collection.kind !== 'reference')).toBe(true);
+  expect(icons.collections).not.toContain('azure-architecture');
+  expect(icons.icons.every((row: unknown[]) => typeof row[6] === 'number' && row[6] >= 0)).toBe(true);
+
+  // Un icono publicado se abre y permite descargar directamente, sin panel de enlace externo.
+  await page.goto('./#/explore?icon=lucide:server');
   const detail = page.getByTestId('icon-detail');
-  await expect(detail.getByTestId('external-panel')).toBeVisible();
-  await expect(detail.getByTestId('detail-download-png')).toHaveCount(0);
-  const link = detail.getByRole('link', { name: /find icons inside iconatlas|buscar iconos dentro de iconatlas/i });
-  await expect(link).toHaveAttribute('href', /#\/explore\?q=/);
-  await link.click();
-  await expect(page).toHaveURL(/#\/explore\?q=/);
-  await expect(page.getByTestId('icon-detail')).toHaveCount(0);
+  await expect(detail.getByTestId('detail-preview')).toBeVisible();
+  await expect(detail.getByTestId('external-panel')).toHaveCount(0);
+  await expect(detail.getByTestId('detail-download-svg')).toBeEnabled();
 });
 
 test('búsqueda: atajo Ctrl+K, autocompletado y sinónimos', async ({ page }) => {
