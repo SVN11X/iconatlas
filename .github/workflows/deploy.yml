@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * 1'
 
 permissions:
   contents: read
@@ -45,6 +47,20 @@ jobs:
 
       - name: Pruebas unitarias
         run: npm test
+
+      - name: Construir índice universal de recursos GitHub (71 fuentes)
+        run: npm run github:index
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Subir informe de cobertura del índice GitHub
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-universal-index-report
+          path: public/github-index/report.json
+          if-no-files-found: ignore
+          retention-days: 14
 
       - name: Compilar
         run: npm run build

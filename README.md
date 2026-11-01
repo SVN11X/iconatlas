@@ -142,3 +142,7 @@ individuales previsualizables; esos formatos requieren adaptadores separados.
 automáticamente un archivo a nuestro catálogo ni conceden derechos para descargarlo
 o redistribuirlo. Las descargas integradas del catálogo continúan dependiendo de
 importaciones autorizadas. Las fuentes originales siguen atribuidas.
+
+## Índice universal de todas las fuentes GitHub
+
+La búsqueda principal incorpora también los recursos SVG, imágenes y otros archivos reconocidos de todas las fuentes registradas en GitHub, mediante un índice de rutas generado por GitHub Actions. Consulta [la guía del índice universal](docs/UNIVERSAL-GITHUB-INDEX.md) para conocer las descargas directas, los adaptadores pendientes y los límites de cobertura.

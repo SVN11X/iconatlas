@@ -24,9 +24,10 @@
     "typecheck": "tsc -b",
     "lint": "tsc -b --noEmit",
     "test": "vitest run && npm run test:scripts",
-    "test:scripts": "node --test scripts/lib/svg-safety.test.mjs scripts/lib/github-repos.test.mjs scripts/import-icons/import.test.mjs",
+    "test:scripts": "node --test scripts/lib/svg-safety.test.mjs scripts/lib/github-repos.test.mjs scripts/import-icons/import.test.mjs scripts/github-index.test.mjs",
     "test:watch": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "github:index": "node scripts/github-index.mjs"
   },
   "dependencies": {
     "@tanstack/react-virtual": "^3.14.21",

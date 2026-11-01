@@ -15,6 +15,7 @@ import { useIconActions } from '../hooks/useIconActions';
 import { useOpenIcon } from '../hooks/useOpenIcon';
 import { useFavorites } from '../services/storage/favorites';
 import { useSelection } from '../services/storage/selection';
+import { RemoteGithubResults } from '../components/icons/RemoteGithubResults';
 
 export const MAX_SELECT = 1000;
 const KIND_ORDER: Record<string, number> = { architecture: 0, brand: 1, reference: 2, ui: 3 };
@@ -146,6 +147,7 @@ export function ExplorePage() {
             <IconGrid icons={results} label={title} />
           </>
         )}
+        {q && <RemoteGithubResults query={q} />}
       </section>
     </div>
   );

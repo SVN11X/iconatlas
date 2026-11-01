@@ -9,3 +9,6 @@ coverage
 .DS_Store
 github-health-report.json
 github-discovery-report.json
+
+# Informe generado por GitHub Actions (el bootstrap index sí queda en control de versiones)
+public/github-index/report.json
