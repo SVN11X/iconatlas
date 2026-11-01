@@ -8,7 +8,7 @@ const csp: Plugin = {
   name: 'iconatlas-csp',
   apply: 'build',
   transformIndexHtml(html) {
-    const policy = "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; worker-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'";
+    const policy = "default-src 'self'; img-src 'self' data: blob: https://raw.githubusercontent.com;  style-src 'self' 'unsafe-inline'; script-src 'self'; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'; form-action 'none'";
     return html.replace('<meta charset="UTF-8" />', `<meta charset="UTF-8" />\n    <meta http-equiv="Content-Security-Policy" content="${policy}" />`);
   },
 };

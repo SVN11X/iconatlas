@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { CheckSquare, Loader2, SearchX, SlidersHorizontal, X } from 'lucide-react';
 import { useCatalog } from '../app/CatalogContext';
 import { useI18n } from '../app/i18n';
@@ -102,6 +102,7 @@ export function ExplorePage() {
               {waitingSearch ? t('search.indexing') : t('explore.count', { n: fmt(results.length) })}
             </p>
           </div>
+          <Link to={`/sources${q ? `?q=${encodeURIComponent(q)}` : ''}`} className="btn-secondary" aria-label="Explorar todas las fuentes GitHub">Fuentes GitHub</Link>
           <button className="btn-secondary lg:hidden" onClick={() => setDrawer(true)} aria-label={t('filters.show')}>
             <SlidersHorizontal className="h-4 w-4" />{t('filters.title')}{nFilters > 0 && <span className="rounded bg-accent px-1.5 text-xs text-accent-fg">{nFilters}</span>}
           </button>

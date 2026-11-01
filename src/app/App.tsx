@@ -10,6 +10,7 @@ import { IconDetail } from '../components/preview/IconDetail';
 import { HomePage } from '../pages/HomePage';
 import { ExplorePage } from '../pages/ExplorePage';
 import { CollectionsPage } from '../pages/CollectionsPage';
+import { GithubSourcesPage } from '../pages/GithubSourcesPage';
 import { FavoritesPage } from '../pages/FavoritesPage';
 import { AboutPage } from '../pages/AboutPage';
 import { useOpenIcon } from '../hooks/useOpenIcon';
@@ -41,6 +42,7 @@ function Shell() {
           <Route path="/" element={<HomePage />} />
           <Route path="/explore" element={<ExplorePage />} />
           <Route path="/collections" element={<CollectionsPage />} />
+          <Route path="/sources" element={<GithubSourcesPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

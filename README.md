@@ -126,3 +126,19 @@ El código de IconAtlas se distribuye bajo licencia [MIT](LICENSE). Cada colecci
 ## Fuentes GitHub adicionales
 
 El registro de 55 repositorios, las comprobaciones automáticas, el descubrimiento y la importación bajo revisión se explican en [docs/GITHUB-SOURCES.md](docs/GITHUB-SOURCES.md). Los repositorios vigilados **no están importados** por el hecho de figurar en el registro; requieren aprobación explícita de sus derechos sobre los SVG.
+
+
+## Explorador de todas las fuentes GitHub
+
+La ruta `#/sources` muestra **todos los repositorios registrados** (71 en la revisión
+de noviembre de 2026). Selecciona cualquier repositorio para consultar sus archivos
+SVG/PNG/WebP en GitHub y previsualizarlos **dentro de IconAtlas**, sin abrir otra
+página. La consulta se hace bajo demanda (dos llamadas REST por repositorio),
+por lo que GitHub puede limitar temporalmente el acceso anónimo. Algunos repositorios
+usan sprites, componentes, iconos-font o `.excalidrawlib` y no tienen archivos
+individuales previsualizables; esos formatos requieren adaptadores separados.
+
+**Diferencia importante:** exploración y previsualización remota no incorporan
+automáticamente un archivo a nuestro catálogo ni conceden derechos para descargarlo
+o redistribuirlo. Las descargas integradas del catálogo continúan dependiendo de
+importaciones autorizadas. Las fuentes originales siguen atribuidas.

@@ -22,6 +22,11 @@ export function CollectionsPage() {
       <h1 className="text-2xl font-semibold tracking-tight">{t('collections.title')}</h1>
       <p className="mt-1 max-w-3xl text-sm text-muted">{t('collections.intro')}</p>
 
+      <div className="mt-5 rounded-xl border border-border bg-surface p-4">
+        <h2 className="font-semibold">Todas las fuentes GitHub</h2>
+        <p className="mt-1 text-sm text-muted">Explora los repositorios registrados desde IconAtlas, incluidos los que todavía no tienen archivos incorporados al catálogo principal.</p>
+        <Link to="/sources" className="btn-secondary mt-3 inline-flex">Abrir explorador de fuentes</Link>
+      </div>
       <section className="mt-8" aria-labelledby="libs-h">
         <h2 id="libs-h" className="mb-3 text-lg font-semibold">{t('collections.libraries')}</h2>
         <div className="overflow-x-auto rounded-xl border border-border">

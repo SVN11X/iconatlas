@@ -23,6 +23,7 @@ export function Header() {
         <nav className="hidden items-center gap-0.5 md:flex" aria-label="Principal">
           <NavLink to="/explore" className={navCls}>{t('nav.explore')}</NavLink>
           <NavLink to="/collections" className={navCls}>{t('nav.collections')}</NavLink>
+          <NavLink to="/sources" className={navCls}>GitHub</NavLink>
           <NavLink to="/about" className={navCls}>{t('nav.about')}</NavLink>
         </nav>
         <div className="min-w-0 flex-1">
@@ -46,6 +47,7 @@ export function Header() {
       <nav className="flex gap-1 overflow-x-auto border-t border-border px-4 py-1.5 md:hidden" aria-label="Principal móvil">
         <NavLink to="/explore" className={navCls}>{t('nav.explore')}</NavLink>
         <NavLink to="/collections" className={navCls}>{t('nav.collections')}</NavLink>
+          <NavLink to="/sources" className={navCls}>GitHub</NavLink>
         <NavLink to="/favorites" className={navCls}>{t('nav.favorites')}</NavLink>
         <NavLink to="/about" className={navCls}>{t('nav.about')}</NavLink>
       </nav>
