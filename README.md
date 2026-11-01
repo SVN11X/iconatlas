@@ -122,3 +122,7 @@ Los nuevos iconos aparecen automáticamente en búsqueda, filtros, contadores, p
 ## Licencia
 
 El código de IconAtlas se distribuye bajo licencia [MIT](LICENSE). Cada colección de iconos conserva su propia licencia (ver [docs/LICENSES.md](docs/LICENSES.md)). Las marcas y logotipos pertenecen a sus respectivos propietarios.
+
+## Fuentes GitHub adicionales
+
+El registro de repositorios, las comprobaciones automáticas, el descubrimiento y la importación bajo revisión se explican en [docs/GITHUB-SOURCES.md](docs/GITHUB-SOURCES.md). Los repositorios vigilados **no están importados** por el hecho de figurar en el registro; requieren aprobación explícita de sus derechos sobre los SVG.

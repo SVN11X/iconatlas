@@ -1,0 +1,49 @@
+name: Importar colección GitHub aprobada
+on:
+  workflow_dispatch:
+    inputs:
+      source_id:
+        description: ID de fuente aprobada en src/catalog/github-sources.json
+        type: string
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Importar SVG autorizados desde el commit de GitHub
+        run: npm run github:import -- --id "$SOURCE_ID"
+        env:
+          SOURCE_ID: ${{ inputs.source_id }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generar catálogo y ejecutar pruebas
+        run: |
+          npm run catalog -- --strict
+          npm run catalog:validate
+          npm run typecheck
+          npm test
+          npm run build
+      - name: Abrir PR para revisar los nuevos archivos
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/icons-${{ inputs.source_id }}
+          delete-branch: true
+          title: 'Importación de iconos de ${{ inputs.source_id }}'
+          commit-message: 'chore(icons): importar fuente GitHub ${{ inputs.source_id }}'
+          body: |
+            Importación manual de una fuente ya marcada como aprobada.
+            Revisar licencias, procedencia, cantidad y posibles duplicados antes de fusionar.
+          add-paths: |
+            vendor/${{ inputs.source_id }}/
+            src/catalog/collections/${{ inputs.source_id }}.json

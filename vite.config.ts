@@ -37,7 +37,7 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: ['./src/tests/setup.ts'],
-    include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.mjs'],
+    include: ['src/**/*.test.{ts,tsx}'], // Los scripts CLI se prueban con el ejecutor nativo de Node.
     exclude: ['e2e/**', 'node_modules/**'],
     testTimeout: 30000,
   },

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { AlertTriangle, BadgeCheck, Clipboard, Code2, Copy, Download, ExternalLink, FileImage, Lock, Minus, Plus, Star, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { AlertTriangle, BadgeCheck, Clipboard, Code2, Copy, Download, FileImage, Lock, Minus, Plus, Star, X } from 'lucide-react';
 import type { Icon, IconDetail as Detail, SvgData } from '../../types/catalog';
 import { FLAG_LEGACY, FLAG_OFFICIAL } from '../../types/catalog';
 import { useCatalog } from '../../app/CatalogContext';
@@ -321,7 +322,7 @@ function DetailBody({ icon, onClose, onOpen, t, lang, fmt }: { icon: Icon; onClo
               <section className="card space-y-3 border-warn/40 p-4" data-testid="external-panel">
                 <h3 className="flex items-center gap-2 text-sm font-semibold"><Lock className="h-4 w-4 text-warn" aria-hidden />{t('detail.externalTitle')}</h3>
                 <p className="text-sm text-muted">{coll.terms ?? t('detail.externalText')}</p>
-                {sourceUrl && <a className="btn-primary w-full" href={sourceUrl} target="_blank" rel="noopener noreferrer"><ExternalLink className="h-4 w-4" />{t('detail.openOfficial')}</a>}
+                <Link className="btn-primary w-full" to={`/explore?q=${encodeURIComponent(icon.title)}`}>{t('detail.findInAtlas')}</Link>
                 <button className="btn-ghost w-full justify-start" onClick={() => void actions.copyName(icon)}><Copy className="h-4 w-4" />{t('detail.copyName')}</button>
                 {detail.note && <p className="text-xs text-muted"><strong>{t('detail.note')}:</strong> {detail.note}</p>}
                 <div>

@@ -1,15 +1,17 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-// @ts-expect-error módulo JS de los scripts de compilación
-import { validateCatalog } from '../../scripts/validate-icons/index.mjs';
+import { execFileSync } from 'node:child_process';
 
 const dir = join(__dirname, '../../public/catalog');
 const ready = existsSync(join(dir, 'index.json'));
 
 describe.skipIf(!ready)('catálogo generado', () => {
   it('pasa la validación completa (IDs únicos, categorías, rutas, SVG seguros, permisos)', () => {
-    const { errors } = validateCatalog(dir) as { errors: string[] };
-    expect(errors).toEqual([]);
+    // Ejecutar el CLI Node evita cargar scripts ESM de compilación dentro del runtime de Vitest/jsdom.
+    const output = execFileSync(process.execPath, ['scripts/validate-icons/index.mjs'], {
+      cwd: process.cwd(), encoding: 'utf8', timeout: 60000,
+    });
+    expect(output).toMatch(/\[validate\] OK:/);
   });
 
   it('las fichas oficiales restringidas no incluyen archivos descargables', () => {

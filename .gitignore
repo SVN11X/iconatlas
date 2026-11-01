@@ -7,3 +7,5 @@ playwright-report
 coverage
 *.local
 .DS_Store
+github-health-report.json
+github-discovery-report.json

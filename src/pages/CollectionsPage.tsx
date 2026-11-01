@@ -14,8 +14,8 @@ export function CollectionsPage() {
   const providers = [...catalog.index.providers].filter((p) => p.id !== 'community').sort((a, b) => (a.featured ?? 99) - (b.featured ?? 99) || b.count - a.count);
   const libs = catalog.index.collections;
   const kindLabel: Record<string, string> = lang === 'es'
-    ? { ui: 'Interfaz', brand: 'Marcas', architecture: 'Arquitectura oficial', reference: 'Fichas oficiales (solo enlace)' }
-    : { ui: 'Interface', brand: 'Brands', architecture: 'Official architecture', reference: 'Official entries (link only)' };
+    ? { ui: 'Interfaz', brand: 'Marcas', architecture: 'Arquitectura oficial', reference: 'Fichas sin SVG local' }
+    : { ui: 'Interface', brand: 'Brands', architecture: 'Official architecture', reference: 'Entries without local SVG' };
 
   return (
     <div className="mx-auto max-w-[1400px] px-4 py-8 sm:px-6">

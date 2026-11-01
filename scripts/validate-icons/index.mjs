@@ -2,7 +2,7 @@
 // Valida el catálogo generado en public/catalog. Sale con código 1 si hay errores.
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { ROOT, readJson } from '../lib/catalog-utils.mjs';
+import { ROOT, readJson, isMainModule } from '../lib/catalog-utils.mjs';
 import { findSvgIssues } from '../lib/svg-safety.mjs';
 
 export function validateCatalog(dir = join(ROOT, 'public/catalog')) {
@@ -72,7 +72,7 @@ export function validateCatalog(dir = join(ROOT, 'public/catalog')) {
   return { errors, warnings: warn, total: icons.icons.length };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (isMainModule(import.meta.url)) {
   const t = Date.now();
   const { errors, warnings, total } = validateCatalog();
   warnings.forEach((w) => console.warn('[validate] aviso: ' + w));

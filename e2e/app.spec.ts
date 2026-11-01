@@ -153,15 +153,18 @@ test('filtros combinables reflejados en la URL', async ({ page }) => {
   await expect(page).toHaveURL(/provider=sap/);
 });
 
-test('recursos oficiales restringidos: ficha con enlace y sin descarga', async ({ page }) => {
+test('recursos oficiales restringidos: búsqueda interna sin redirección y sin descarga', async ({ page }) => {
   await page.goto('./#/explore?q=azure%20data%20factory');
   await waitForCatalog(page);
   await page.locator('[data-icon-id="azure-architecture:azure-data-factory"] button[data-idx]').first().click();
   const detail = page.getByTestId('icon-detail');
   await expect(detail.getByTestId('external-panel')).toBeVisible();
   await expect(detail.getByTestId('detail-download-png')).toHaveCount(0);
-  const link = detail.getByRole('link', { name: /official source|fuente oficial/i });
-  await expect(link).toHaveAttribute('href', 'https://learn.microsoft.com/en-us/azure/architecture/icons/');
+  const link = detail.getByRole('link', { name: /find icons inside iconatlas|buscar iconos dentro de iconatlas/i });
+  await expect(link).toHaveAttribute('href', /#\/explore\?q=/);
+  await link.click();
+  await expect(page).toHaveURL(/#\/explore\?q=/);
+  await expect(page.getByTestId('icon-detail')).toHaveCount(0);
 });
 
 test('búsqueda: atajo Ctrl+K, autocompletado y sinónimos', async ({ page }) => {

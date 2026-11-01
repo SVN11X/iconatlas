@@ -1,8 +1,15 @@
 // Utilidades compartidas por los scripts del catálogo.
 import { readFileSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
-export const ROOT = new URL('../../', import.meta.url).pathname;
+// fileURLToPath conserva las rutas Windows (C:\\...) y decodifica URLs file: correctamente.
+export const ROOT = fileURLToPath(new URL('../../', import.meta.url));
+
+/** Comprueba el punto de entrada de un script ESM en Windows, Linux y macOS. */
+export function isMainModule(moduleUrl, argvPath = process.argv[1]) {
+  return Boolean(argvPath) && moduleUrl === pathToFileURL(resolve(argvPath)).href;
+}
 
 export function readJson(path) {
   return JSON.parse(readFileSync(path, 'utf8'));

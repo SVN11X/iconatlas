@@ -15,11 +15,11 @@
 //  4. Normaliza nombres, detecta duplicados (mismo nombre → variante -2; mismo contenido → se omite y se registra).
 //  5. Copia los archivos a vendor/<id>/, escribe SOURCE.json e import-log.json
 //     y genera src/catalog/collections/<id>.json. Después: `npm run catalog`.
-import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, lstatSync, statSync, writeFileSync, rmSync } from 'node:fs';
 import { join, extname, basename, relative } from 'node:path';
 import { createHash } from 'node:crypto';
 import { unzipSync, strFromU8 } from 'fflate';
-import { ROOT, slugify } from '../lib/catalog-utils.mjs';
+import { ROOT, slugify, isMainModule } from '../lib/catalog-utils.mjs';
 import { findSvgIssues, sanitizeSvgDocument, splitSvg } from '../lib/svg-safety.mjs';
 
 function parseArgs(argv) {
@@ -72,23 +72,40 @@ export function runImport(args) {
     // Carpeta o ZIP de SVG
     const files = [];
     if (extname(source).toLowerCase() === '.zip') {
-      const entries = unzipSync(new Uint8Array(readFileSync(source)));
+      if (statSync(source).size > 75 * 1024 * 1024) return { ok: false, errors: ['ZIP superior a 75 MiB'] };
+      let selected = 0;
+      let expanded = 0;
+      const entries = unzipSync(new Uint8Array(readFileSync(source)), { filter: (file) => {
+        if (!/\.svg$/i.test(file.name) || file.originalSize > 512 * 1024) return false;
+        selected++;
+        expanded += file.originalSize;
+        if (selected > 50000 || expanded > 100 * 1024 * 1024) throw new Error('Archivo ZIP demasiado grande (50.000 SVG o 100 MiB descomprimidos)');
+        return true;
+      } });
       for (const [path, data] of Object.entries(entries)) {
         if (path.includes('..') || path.startsWith('/')) { log.rejected.push({ name: path, issues: ['Ruta insegura en ZIP'] }); continue; }
         if (path.toLowerCase().endsWith('.svg')) files.push({ path, content: strFromU8(data) });
       }
     } else if (existsSync(source) && statSync(source).isDirectory()) {
-      const walk = (d) => {
+      const walk = (d, depth = 0) => {
+        if (depth > 30) throw new Error('Carpetas demasiado anidadas');
         for (const f of readdirSync(d)) {
           const p = join(d, f);
-          if (statSync(p).isDirectory()) walk(p);
-          else if (f.toLowerCase().endsWith('.svg')) files.push({ path: relative(source, p), content: readFileSync(p, 'utf8') });
+          const stat = lstatSync(p);
+          if (stat.isSymbolicLink()) continue;
+          if (stat.isDirectory()) walk(p, depth + 1);
+          else if (stat.isFile() && f.toLowerCase().endsWith('.svg') && stat.size <= 512 * 1024) {
+            if (files.length >= 50000) throw new Error('Más de 50.000 SVG; divide esta colección en repositorios o lotes');
+            files.push({ path: relative(source, p), content: readFileSync(p, 'utf8') });
+          }
         }
       };
       walk(source);
     } else {
       return { ok: false, errors: [`Fuente no encontrada o formato no soportado: ${source}`] };
     }
+    if (!files.length) return { ok: false, errors: ['La fuente no contiene SVG importables; no se sustituyó ninguna colección'] };
+    if (files.length > 50000) return { ok: false, errors: ['Más de 50.000 SVG; divide esta colección'] };
     const strip = args.strip ? new RegExp(String(args.strip), 'g') : null;
     const byName = new Map();
     const byHash = new Map();
@@ -118,6 +135,7 @@ export function runImport(args) {
       byHash.set(hash, finalName);
       outFiles.push({ name: finalName, svg: clean });
     }
+    if (!outFiles.length) return { ok: false, errors: ['Todos los SVG fueron rechazados; no se reemplazó la colección anterior'] };
     if (!args['dry-run']) {
       rmSync(join(vendorDir, 'svg'), { recursive: true, force: true });
       mkdirSync(join(vendorDir, 'svg'), { recursive: true });
@@ -157,7 +175,7 @@ export function runImport(args) {
   return { ok: true, def, log };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (isMainModule(import.meta.url)) {
   const args = parseArgs(process.argv.slice(2));
   if (args.help || Object.keys(args).length === 0) {
     console.log(readFileSync(new URL(import.meta.url), 'utf8').split('\n').filter((l) => l.startsWith('//')).map((l) => l.slice(3)).join('\n'));

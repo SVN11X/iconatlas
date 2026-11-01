@@ -1,4 +1,4 @@
-import { ExternalLink, ImageOff } from 'lucide-react';
+import { LockKeyhole, ImageOff } from 'lucide-react';
 import type { Icon } from '../../types/catalog';
 import { useIconPreview } from '../../hooks/useIconPreview';
 import { useCatalog } from '../../app/CatalogContext';
@@ -24,7 +24,7 @@ export function IconImage({ icon, className = 'h-8 w-8', color, alt = '', style 
   return <img src={uri} alt={alt} className={`${className} object-contain`} draggable={false} decoding="async" style={style} />;
 }
 
-/** Marcador para fichas oficiales solo-enlace: iniciales + logotipo del proveedor (de una colección abierta). */
+/** Marcador de recurso sin vector local: la tarjeta abre un detalle interno, no otra web. */
 function ExternalPlaceholder({ icon, className, alt, style }: Props) {
   const { catalog } = useCatalog();
   const logoId = catalog?.providers.get(icon.provider)?.logoIcon;
@@ -36,7 +36,7 @@ function ExternalPlaceholder({ icon, className, alt, style }: Props) {
         {logo && logo.shard >= 0 ? (
           <span className="absolute -bottom-1.5 -left-1.5 flex h-[45%] w-[45%] items-center justify-center rounded bg-surface p-px"><IconImage icon={logo} className="h-full w-full" /></span>
         ) : null}
-        <ExternalLink className="absolute -bottom-1 -right-1 h-3 w-3 rounded-sm bg-surface text-muted" aria-hidden />
+        <LockKeyhole className="absolute -bottom-1 -right-1 h-3 w-3 rounded-sm bg-surface text-muted" aria-hidden />
       </span>
     );
 }

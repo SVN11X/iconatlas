@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { BadgeCheck, Check, Clipboard, Code2, Download, ExternalLink, FileImage, Star } from 'lucide-react';
+import { BadgeCheck, Check, Clipboard, Code2, Download, LockKeyhole, FileImage, Star } from 'lucide-react';
 import type { Icon } from '../../types/catalog';
 import { FLAG_OFFICIAL } from '../../types/catalog';
 import { IconImage } from './IconImage';
@@ -66,7 +66,7 @@ export const IconCard = memo(function IconCard({ icon, idx, selected, favorite, 
       {/* Indicadores */}
       <div className="pointer-events-none absolute right-1.5 top-1.5 flex gap-1">
         {official && <span className="flex items-center gap-0.5 rounded bg-accent/10 px-1 py-px text-[10px] font-medium text-accent" title={t('card.official')}><BadgeCheck className="h-3 w-3" aria-hidden /></span>}
-        {!downloadable && <span className="flex items-center rounded bg-warn/10 px-1 py-px text-[10px] font-medium text-warn" title={t('card.restricted')}><ExternalLink className="h-3 w-3" aria-hidden /></span>}
+        {!downloadable && <span className="flex items-center rounded bg-warn/10 px-1 py-px text-[10px] font-medium text-warn" title={t('card.restricted')}><LockKeyhole className="h-3 w-3" aria-hidden /></span>}
         {favorite && <Star className="h-3.5 w-3.5 fill-warn text-warn" aria-label={t('nav.favorites')} />}
       </div>
 
@@ -93,7 +93,7 @@ export const IconCard = memo(function IconCard({ icon, idx, selected, favorite, 
           </>
         ) : (
           <button type="button" className="inline-flex h-7 items-center gap-1 rounded-md px-2 text-[11px] font-medium text-warn hover:bg-warn/10 focus-ring" onClick={() => h.onOpen(icon)} title={t('card.restricted')}>
-            <ExternalLink className="h-3.5 w-3.5" aria-hidden />{t('card.external')}
+            <LockKeyhole className="h-3.5 w-3.5" aria-hidden />{t('card.external')}
           </button>
         )}
         <ActionBtn label={favorite ? t('card.unfavorite') : t('card.favorite')} onClick={() => h.onFavorite(icon)} testId="action-favorite">
