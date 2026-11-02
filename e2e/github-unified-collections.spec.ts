@@ -36,5 +36,4 @@ test('muestra todas las bibliotecas y agrega Google Cloud remoto al buscador', a
   await expect(page).toHaveURL(/remoteSource=gcp-awesome/);
   const remote = page.getByTestId('remote-github-results');
   await expect(remote.getByTestId('remote-github-card')).toHaveCount(2);
-  await expect(remote).toContainText('2 archivos remotos encontrados');
 });

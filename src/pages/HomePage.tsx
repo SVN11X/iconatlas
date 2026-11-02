@@ -6,7 +6,7 @@ import { useI18n } from '../app/i18n';
 import { SearchBox } from '../components/search/SearchBox';
 import { IconImage } from '../components/icons/IconImage';
 import type { Icon } from '../types/catalog';
-import { cloudSourceByProvider, githubSourceCount, githubSources, uniqueLibraryCount, useGithubCoverage } from '../utils/githubCoverage';
+import { cloudSourceByProvider, githubSourceCount, uniqueLibraryCount, useGithubCoverage } from '../utils/githubCoverage';
 
 export function HomePage() {
   const { catalog } = useCatalog();
@@ -55,9 +55,9 @@ export function HomePage() {
           {catalog && (
             <dl className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-5" data-testid="stats">
               {[
-                { k: t('stats.icons'), v: catalog.index.stats.icons, sub: `${fmt(catalog.index.stats.downloadable)} locales descargables` },
-                { k: t('stats.libraries'), v: uniqueLibraryCount(catalog.index.collections.map(c => c.id)), sub: `${catalog.index.collections.length} locales · ${githubSources.length} fuentes GitHub (sin duplicar)` },
-                { k: 'Recursos en GitHub', v: githubCoverage?.stats.indexedSources ? githubCoverage.stats.indexedAssets : null, sub: githubCoverage ? `${githubCoverage.stats.indexedSources} de ${githubCoverage.stats.registeredSources} fuentes indexadas · archivos remotos` : 'Cargando cobertura remota…' },
+                { k: t('stats.icons'), v: catalog.index.stats.icons, sub: `${fmt(catalog.index.stats.downloadable)} SVG listos para exportar` },
+                { k: t('stats.libraries'), v: uniqueLibraryCount(catalog.index.collections.map(c => c.id)), sub: 'Bibliotecas disponibles para explorar'  },
+                { k: 'Recursos indexados', v: githubCoverage?.stats.indexedSources ? githubCoverage.stats.indexedAssets : null, sub: githubCoverage ? `${githubCoverage.stats.indexedSources} bibliotecas analizadas` : 'Cargando índice…' },
                 { k: t('stats.providers'), v: catalog.index.stats.providers },
                 { k: t('stats.categories'), v: catalog.index.stats.categories },
               ].map((s) => (
@@ -105,7 +105,7 @@ export function HomePage() {
                   <span className="min-w-0 flex-1">
                     <span className="block font-medium">{p.name}</span>
                     <span className="block text-xs text-muted">
-                      {t('home.downloadableN', { n: fmt(p.downloadable) })}{remoteCount !== null ? ` · ${fmt(remoteCount)} archivos en GitHub` : ''}{p.references ? ` · ${t('home.officialOnly', { n: fmt(p.references) })}` : ''}
+                      {fmt(p.downloadable + (remoteCount ?? 0))} recursos disponibles{p.references ? ` · ${t('home.officialOnly', { n: fmt(p.references) })}` : ''}
                     </span>
                   </span>
                   <ArrowRight className="h-4 w-4 text-muted transition-transform group-hover:translate-x-0.5" aria-hidden />

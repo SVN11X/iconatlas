@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, CloudDownload, Download, Loader2, Search, ShieldAlert } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, CloudDownload, Download, Loader2, Search } from 'lucide-react';
 import registry from '../catalog/github-sources.json';
 import { getAssets, matchSources, REPO_PATTERN, upstreamImageUrl, type RepoAsset, type SourceRecord } from '../utils/githubSourceGallery';
 import { useCatalog } from '../app/CatalogContext';
 import { downloadBlob } from '../services/export/svg';
 import { prepareRemoteAssetDownload } from '../utils/githubAssetDownload';
 import { RemoteSvgDetail } from '../components/preview/RemoteSvgDetail';
+import { RemoteIconCard } from '../components/icons/RemoteIconCard';
 import type { RemoteHit } from '../utils/universalGithubIndex';
 
 const sources = registry.sources as SourceRecord[];
@@ -85,9 +86,9 @@ function RepositoryGallery({ source }: { source: SourceRecord }) {
           <h2 className="font-semibold">{source.name}</h2>
           <p className="break-all text-xs text-muted">{source.repo}</p>
         </div>
-        <span className="rounded-md border border-border px-2 py-1 text-xs text-muted">{source.redistributionApproved ? 'Importación autorizada' : 'Vista de fuente externa'}</span>
+
       </div>
-      <p className="mt-2 text-xs text-muted">Explora los iconos directamente desde GitHub. Los SVG se abren en el editor de IconAtlas para copiar, personalizar y exportar; revisa sus derechos de uso.</p>
+
       {loading && <p className="mt-4 flex items-center gap-2 text-sm" role="status"><Loader2 className="h-4 w-4 animate-spin"/>Consultando los archivos públicos de GitHub…</p>}
       {error && <p className="mt-4 text-sm text-warn" role="alert">{error}</p>}
       {view && <>
@@ -95,17 +96,16 @@ function RepositoryGallery({ source }: { source: SourceRecord }) {
           <p className="text-sm">{filtered.length.toLocaleString('es-CL')} archivos detectados {view.truncated && <span className="text-warn">(árbol parcial)</span>}</p>
           <label className="ml-auto flex min-w-0 items-center gap-2 rounded-lg border border-border px-2 py-1"><Search className="h-4 w-4 text-muted"/><span className="sr-only">Filtrar archivos</span><input className="min-w-0 bg-transparent text-sm outline-none" value={filter} placeholder="Buscar SVG, imágenes, bibliotecas o cursores" onChange={e => { setFilter(e.target.value); setVisible(48); }}/></label>
         </div>
-        {filtered.length > 0 ? <div className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-8">
-          {filtered.slice(0, visible).map(asset => {
-            const src = upstreamImageUrl(view.repo, view.branch, asset.path);
-            return src && <button type="button" onClick={() => { setSelected(asset); setDownloadError(''); }} key={asset.path} title={asset.path} className="flex min-w-0 flex-col items-center rounded-lg border border-border bg-bg p-2 transition-colors hover:border-accent focus-ring" aria-label={`Previsualizar ${asset.path}`}>
-              <span className="flex h-16 w-full items-center justify-center rounded bg-white p-2">{['svg', 'raster'].includes(asset.kind) ? <img src={src} alt="" loading="lazy" decoding="async" referrerPolicy="no-referrer" className="max-h-full max-w-full object-contain" /> : <span className="text-xs font-semibold text-slate-600">{asset.kind === 'library' ? 'Excalidraw' : 'Cursor'}</span>}</span>
-              <span className="mt-1 w-full truncate text-[10px] text-muted">{asset.path.split('/').pop()}</span>
-            </button>;
-          })}
-        </div> : <p className="mt-4 text-sm text-muted">No se detectaron archivos de iconos compatibles. Esta fuente podría usar sprites, componentes React, fuentes o un formato que requiere un adaptador.</p>}
+        {filtered.length > 0 ? <div className="mt-4 grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(128px, 1fr))' }}>
+          {filtered.slice(0, visible).map(asset => <RemoteIconCard key={asset.path} hit={{
+            key: `${source.id}:${asset.path}`,
+            source: { id: source.id, name: source.name, repo: view.repo, category: source.category, status: source.status,
+              redistributionApproved: source.redistributionApproved, sha: view.branch, count: view.assets.length, partial: view.truncated, error: '' },
+            asset, score: 0,
+          }} onOpen={() => { setSelected(asset); setDownloadError(''); }} />)}
+        </div> : <p className="mt-4 text-sm text-muted">Esta biblioteca no contiene recursos de los formatos reconocidos.</p>}
         {visible < filtered.length && <button type="button" className="btn-secondary mt-4" onClick={() => setVisible(n => Math.min(n + 48, filtered.length))}>Ver 48 archivos más</button>}
-        {remoteSvgHit && <RemoteSvgDetail hit={remoteSvgHit} onClose={() => setSelected(null)} />}
+        {remoteSvgHit && <RemoteSvgDetail key={remoteSvgHit.key} hit={remoteSvgHit} onClose={() => setSelected(null)} />}
         {selected && selected.kind !== 'svg' && view && <div role="dialog" aria-modal="true" aria-label={`Vista previa: ${selected.path}`} className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4" onClick={() => setSelected(null)}>
           <div className="w-full max-w-xl rounded-xl bg-bg p-5" onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between gap-3"><h3 className="break-all text-sm font-semibold">{selected.path}</h3><button className="btn-secondary" onClick={() => setSelected(null)}>Cerrar</button></div>
@@ -116,7 +116,7 @@ function RepositoryGallery({ source }: { source: SourceRecord }) {
           </div>
         </div>}
       </>}
-      <div className="mt-4 flex items-center gap-2 text-xs text-muted"><ShieldAlert className="h-4 w-4 shrink-0"/>Las descargas remotas se solicitan directamente a GitHub. No se incorporan automáticamente al catálogo local ni se concede una licencia sobre marcas o terceros.</div>
+
     </section>
   );
 }

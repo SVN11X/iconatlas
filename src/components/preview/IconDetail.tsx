@@ -15,6 +15,8 @@ import { exportPrefsStore, useExportPrefs, useTheme } from '../../services/stora
 import { previewColor } from '../../hooks/useIconPreview';
 import { IconImage } from '../icons/IconImage';
 
+export interface RemoteEditorState { icon: Icon; svg: SvgData | null; details: Detail; error?: string; onRetry?: () => void }
+
 type BgMode = 'checker' | 'white' | 'black' | 'custom';
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
@@ -39,7 +41,7 @@ function Segmented<T extends string>({ value, options, onChange, label }: { valu
   );
 }
 
-export function IconDetail({ id, onClose, onOpen, remote }: { id: string; onClose: () => void; onOpen: (id: string) => void; remote?: { icon: Icon; svg: SvgData; details: Detail } }) {
+export function IconDetail({ id, onClose, onOpen, remote }: { id: string; onClose: () => void; onOpen: (id: string) => void; remote?: RemoteEditorState }) {
   const { catalog } = useCatalog();
   const { t, lang, fmt } = useI18n();
   const icon = remote?.icon ?? catalog?.byId.get(id) ?? null;
@@ -89,14 +91,18 @@ export function IconDetail({ id, onClose, onOpen, remote }: { id: string; onClos
   );
 }
 
-function DetailBody({ icon, onClose, onOpen, t, lang, fmt, remote }: { remote?: { icon: Icon; svg: SvgData; details: Detail }; icon: Icon; onClose: () => void; onOpen: (id: string) => void; t: ReturnType<typeof useI18n>['t']; lang: 'es' | 'en'; fmt: (n: number) => string }) {
+function DetailBody({ icon, onClose, onOpen, t, lang, fmt, remote }: { remote?: RemoteEditorState; icon: Icon; onClose: () => void; onOpen: (id: string) => void; t: ReturnType<typeof useI18n>['t']; lang: 'es' | 'en'; fmt: (n: number) => string }) {
   const { catalog } = useCatalog();
   const theme = useTheme();
   const prefs = useExportPrefs();
-  const actions = useIconActions(remote ? async () => remote.svg : undefined);
+  const actions = useIconActions(remote ? async () => {
+    if (!remote.svg) throw new Error(remote.error || 'Este icono aún se está cargando.');
+    return remote.svg;
+  } : undefined);
   const favs = useFavorites();
   const fav = favs.includes(icon.id);
   const downloadable = isDownloadable(icon);
+  const editorBusy = !!remote && !remote.svg;
   const policy = customizationFor(icon);
   const mono = isMono(icon);
   const coll = icon.collection;
@@ -121,7 +127,7 @@ function DetailBody({ icon, onClose, onOpen, t, lang, fmt, remote }: { remote?: 
   useEffect(() => {
     setData(null); setLoadError(null); setColor(defaultColor(icon)); setPadding(0); setZoom(100);
     let alive = true;
-    if (remote) { setDetail(remote.details); setData(remote.svg); }
+    if (remote) { setDetail(remote.details); setData(remote.svg); setLoadError(remote.error ?? null); }
     else {
       getDetails(icon).then((d) => alive && setDetail(d)).catch(() => alive && setDetail({}));
       if (icon.shard >= 0) getSvgData(icon).then((d) => alive && setData(d)).catch((e: Error) => alive && setLoadError(e.message));
@@ -183,9 +189,9 @@ function DetailBody({ icon, onClose, onOpen, t, lang, fmt, remote }: { remote?: 
           </div>
           <p className="truncate text-sm text-muted">{provider && icon.provider !== 'community' ? `${provider.name} · ` : ''}{coll.name} · {category?.labels[lang] ?? (remote ? icon.category : '')}</p>
         </div>
-        {!remote && <button className="icon-btn" onClick={() => actions.favorite(icon)} aria-pressed={fav} aria-label={fav ? t('card.unfavorite') : t('card.favorite')} data-testid="detail-favorite">
+        <button className="icon-btn" onClick={() => actions.favorite(icon)} aria-pressed={fav} aria-label={fav ? t('card.unfavorite') : t('card.favorite')} data-testid="detail-favorite">
           <Star className={`h-5 w-5 ${fav ? 'fill-warn text-warn' : ''}`} />
-        </button>}
+        </button>
         <button className="icon-btn" onClick={onClose} aria-label={t('detail.close')} data-autofocus><X className="h-5 w-5" /></button>
       </div>
 
@@ -200,11 +206,17 @@ function DetailBody({ icon, onClose, onOpen, t, lang, fmt, remote }: { remote?: 
                   <p className="max-w-xs text-sm text-muted">{t('detail.externalText')}</p>
                 </div>
               ) : previewUri ? (
-                <img src={previewUri} alt={icon.title} className="max-h-none object-contain transition-[width,height] duration-150" style={{ width: `${Math.round(zoom * 0.6)}%`, height: `${Math.round(zoom * 0.6)}%` }} data-testid="detail-preview" />
+                <img src={previewUri} alt={icon.title} className="max-h-none animate-fade-in object-contain transition-[width,height] duration-200 motion-reduce:animate-none" style={{ width: `${Math.round(zoom * 0.6)}%`, height: `${Math.round(zoom * 0.6)}%` }} data-testid="detail-preview" />
               ) : loadError ? (
-                <p className="flex items-center gap-2 text-sm text-danger"><AlertTriangle className="h-4 w-4" />{loadError}</p>
+                <div className="flex max-w-xs flex-col items-center gap-3 p-4 text-center">
+                  <p role="alert" className="flex items-center gap-2 text-sm text-danger"><AlertTriangle className="h-4 w-4 shrink-0" />{loadError}</p>
+                  {remote?.onRetry && <button type="button" className="btn-secondary" onClick={remote.onRetry}>Reintentar</button>}
+                </div>
               ) : (
-                <span className="h-24 w-24 animate-pulse rounded-xl bg-fg/10" />
+                <div className="flex flex-col items-center gap-3" role="status" data-testid="remote-editor-loading">
+                  <span className="h-24 w-24 animate-pulse rounded-xl bg-fg/10" />
+                  <span className="text-xs text-muted">Preparando vista previa…</span>
+                </div>
               )}
             </div>
             {icon.shard >= 0 && (
@@ -255,10 +267,10 @@ function DetailBody({ icon, onClose, onOpen, t, lang, fmt, remote }: { remote?: 
             {downloadable ? (
               <>
                 <div className="grid grid-cols-2 gap-2">
-                  <button className="btn-primary" onClick={() => void actions.downloadPng(icon, pngOpts, svgOpts)} data-testid="detail-download-png"><FileImage className="h-4 w-4" />{t('card.downloadPng')}</button>
-                  <button className="btn-secondary" onClick={() => void actions.downloadSvg(icon, svgOpts)} data-testid="detail-download-svg"><Download className="h-4 w-4" />{t('card.downloadSvg')}</button>
-                  <button className="btn-secondary" onClick={() => void actions.copyImage(icon, size === 'custom' ? pngOpts : { size: Math.min(size, 2048), background: exportBackground }, svgOpts)} disabled={!imageClipboard} title={imageClipboard ? undefined : t('detail.imageClipboardUnsupported')} data-testid="detail-copy-image"><Clipboard className="h-4 w-4" />{t('card.copyImage')}</button>
-                  <button className="btn-secondary" onClick={() => void actions.copySvg(icon, svgOpts)} data-testid="detail-copy-svg"><Code2 className="h-4 w-4" />{t('card.copySvg')}</button>
+                  <button className="btn-primary" onClick={() => void actions.downloadPng(icon, pngOpts, svgOpts)} disabled={editorBusy} data-testid="detail-download-png"><FileImage className="h-4 w-4" />{t('card.downloadPng')}</button>
+                  <button className="btn-secondary" onClick={() => void actions.downloadSvg(icon, svgOpts)} disabled={editorBusy} data-testid="detail-download-svg"><Download className="h-4 w-4" />{t('card.downloadSvg')}</button>
+                  <button className="btn-secondary" onClick={() => void actions.copyImage(icon, size === 'custom' ? pngOpts : { size: Math.min(size, 2048), background: exportBackground }, svgOpts)} disabled={!imageClipboard || editorBusy} title={imageClipboard ? undefined : t('detail.imageClipboardUnsupported')} data-testid="detail-copy-image"><Clipboard className="h-4 w-4" />{t('card.copyImage')}</button>
+                  <button className="btn-secondary" onClick={() => void actions.copySvg(icon, svgOpts)} disabled={editorBusy} data-testid="detail-copy-svg"><Code2 className="h-4 w-4" />{t('card.copySvg')}</button>
                   <button className="btn-ghost col-span-2 justify-start" onClick={() => void actions.copyName(icon)}><Copy className="h-4 w-4" />{t('detail.copyName')}: <span className="truncate text-fg">{icon.title}</span></button>
                 </div>
                 {!imageClipboard && <p className="text-xs text-muted">{t('detail.imageClipboardUnsupported')}</p>}

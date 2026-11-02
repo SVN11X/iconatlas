@@ -10,21 +10,66 @@ export function safeDownloadName(repo: string, path: string): string {
   return `${repo.replace('/', '-')}-${normalized}`;
 }
 
+/** Verifica CSS embebido; solo admite referencias a elementos del mismo SVG. */
+function isSafeLocalCss(value: string): boolean {
+  if (/@(?:import|charset|namespace|font-face|supports|document)\b|expression\s*\(|(?:javascript|vbscript|data)\s*:|(?:-moz-binding|behavior)\s*:/i.test(value)) return false;
+  const withoutLocalReferences = value.replace(/url\(\s*(['"]?)#[a-zA-Z0-9_:.-]+\1\s*\)/gi, '');
+  return !/url\s*\(/i.test(withoutLocalReferences);
+}
+
+/** Admite estilos internos legítimos sin ejecutar scripts ni importar recursos externos. */
 export function sanitizeExternalSvg(input: string): string {
   if (!/<svg(?:\s|>)/i.test(input)) throw new Error('El archivo no contiene un SVG válido.');
-  // Conserva referencias internas (#id), pero bloquea contenidos activos y enlaces externos.
-  if (/<\s*(?:script|foreignObject|iframe|object|embed|image|style)\b|\bon\w+\s*=|@import\b/i.test(input))
-    throw new Error('El SVG contiene contenido activo o elementos no compatibles.');
-  for (const m of input.matchAll(/\b(?:href|xlink:href)\s*=\s*(["'])(.*?)\1/gi)) {
-    if (!/^#[a-zA-Z0-9_:.-]+$/.test(m[2].trim())) throw new Error('El SVG contiene referencias externas.');
+  if (/<!DOCTYPE|<!ENTITY|<\?xml-stylesheet/i.test(input)) throw new Error('El SVG contiene declaraciones externas no permitidas.');
+  const doc = new DOMParser().parseFromString(input, 'image/svg+xml');
+  if (doc.documentElement.localName !== 'svg' || doc.querySelector('parsererror')) throw new Error('El SVG no tiene una estructura XML válida.');
+
+  for (const element of Array.from(doc.querySelectorAll('*'))) {
+    const tag = element.localName.toLowerCase();
+    if (['script', 'foreignobject', 'iframe', 'object', 'embed'].includes(tag))
+      throw new Error('El SVG incluye elementos ejecutables no permitidos.');
+    if (tag === 'style' && !isSafeLocalCss(element.textContent || ''))
+      throw new Error('El SVG incluye estilos que cargan recursos externos.');
+    for (const attr of Array.from(element.attributes)) {
+      const name = attr.name.toLowerCase();
+      const value = attr.value.trim();
+      if (/^on[a-z]/.test(name) || name === 'xml:base' || name === 'src')
+        throw new Error('El SVG contiene eventos o rutas externas no permitidos.');
+      if (name === 'href' || name.endsWith(':href')) {
+        const internal = /^#[a-zA-Z0-9_:.-]+$/.test(value);
+        // Los PNG/JPEG embebidos no ejecutan SVG/JavaScript y no dependen de una URL externa.
+        const embeddedRaster = tag === 'image' && /^data:image\/(?:png|jpe?g|gif|webp);base64,[a-z0-9+/=]+$/i.test(value) && value.length <= 5 * 1024 * 1024;
+        if (!internal && !embeddedRaster) throw new Error('El SVG contiene referencias externas no permitidas.');
+      } else if ((name === 'style' || /url\s*\(/i.test(value)) && !isSafeLocalCss(value)) {
+        throw new Error('El SVG contiene referencias CSS externas.');
+      }
+      if (/javascript\s*:|vbscript\s*:/i.test(value)) throw new Error('El SVG contiene instrucciones no permitidas.');
+    }
   }
-  if (/\b(?:href|xlink:href)\s*=\s*[^"'\s]/i.test(input) || /url\(\s*(?!["']?#)/i.test(input))
-    throw new Error('El SVG contiene referencias no seguras.');
+
   const clean = DOMPurify.sanitize(input, {
     USE_PROFILES: { svg: true, svgFilters: true },
-    FORBID_TAGS: ['script', 'foreignObject', 'iframe', 'image', 'style'],
+    ADD_TAGS: ['style', 'image', 'use'],
+    FORBID_TAGS: ['script', 'foreignObject', 'iframe', 'object', 'embed'],
   });
   if (typeof clean !== 'string' || !/<svg(?:\s|>)/i.test(clean)) throw new Error('No se pudo sanitizar el SVG.');
+  // Defensa adicional tras la sanitización: ningún vínculo remoto puede sobrevivir.
+  const sanitized = new DOMParser().parseFromString(clean, 'image/svg+xml');
+  if (sanitized.querySelector('parsererror')) throw new Error('El SVG sanitizado no es válido.');
+  for (const element of Array.from(sanitized.querySelectorAll('*'))) {
+    if (element.localName.toLowerCase() === 'style' && !isSafeLocalCss(element.textContent || ''))
+      throw new Error('El SVG contiene estilos no seguros.');
+    for (const attr of Array.from(element.attributes)) {
+      const name = attr.name.toLowerCase();
+      const value = attr.value.trim();
+      if (/^on[a-z]/.test(name) || name === 'xml:base') throw new Error('El SVG contiene un evento no permitido.');
+      if ((name === 'href' || name.endsWith(':href')) && !/^#[a-zA-Z0-9_:.-]+$/.test(value) &&
+        !(element.localName.toLowerCase() === 'image' && /^data:image\/(?:png|jpe?g|gif|webp);base64,[a-z0-9+/=]+$/i.test(value)))
+        throw new Error('El SVG sanitizado tiene una referencia externa.');
+      if ((name === 'style' || /url\s*\(/i.test(value)) && !isSafeLocalCss(value))
+        throw new Error('El SVG sanitizado tiene estilos externos.');
+    }
+  }
   return clean;
 }
 

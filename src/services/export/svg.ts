@@ -97,7 +97,7 @@ export function buildSvg(icon: Icon, data: SvgData, opts: SvgOptions = {}): stri
  */
 export function assertSafeSvg(svg: string) {
   if (typeof window === 'undefined' || !DOMPurify.isSupported) return;
-  DOMPurify.sanitize(svg, { USE_PROFILES: { svg: true, svgFilters: true }, ADD_TAGS: ['use'], WHOLE_DOCUMENT: false });
+  DOMPurify.sanitize(svg, { USE_PROFILES: { svg: true, svgFilters: true }, ADD_TAGS: ['use', 'style', 'image'], WHOLE_DOCUMENT: false });
   const removed = (DOMPurify.removed || []).filter((r: unknown) => {
     const rr = r as { element?: Element; attribute?: Attr | null };
     // DOMPurify puede informar del propio nodo raíz o de nodos de texto vacíos; solo cuentan elementos/atributos reales

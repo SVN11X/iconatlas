@@ -61,7 +61,7 @@ test('desde la galería de una fuente GitHub también se abre el editor SVG', as
     contentType: 'image/svg+xml', headers: { 'access-control-allow-origin': '*' }, body: svg,
   }));
   await page.goto('./#/sources?source=gcp-awesome');
-  await page.getByRole('button', { name: 'Previsualizar docs/favicon.svg' }).click();
+  await page.getByTestId('remote-github-card').getByRole('button').first().click();
   await expect(page.getByTestId('icon-detail')).toBeVisible();
   await expect(page.getByTestId('detail-download-png')).toBeVisible();
 });

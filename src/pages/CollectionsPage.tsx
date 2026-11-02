@@ -25,16 +25,16 @@ export function CollectionsPage() {
   return (
     <div className="mx-auto max-w-[1400px] px-4 py-8 sm:px-6">
       <h1 className="text-2xl font-semibold tracking-tight">{t('collections.title')}</h1>
-      <p className="mt-1 max-w-3xl text-sm text-muted">{t('collections.intro')}</p>
+      <p className="mt-1 max-w-3xl text-sm text-muted">Explora las bibliotecas de IconAtlas y abre sus recursos con las mismas herramientas de vista previa y exportación.</p>
 
       <div className="mt-5 rounded-xl border border-border bg-surface p-4">
-        <h2 className="font-semibold">Todas las fuentes GitHub</h2>
-        <p className="mt-1 text-sm text-muted">Explora los repositorios registrados desde IconAtlas, incluidos los que todavía no tienen archivos incorporados al catálogo principal.</p>
-        <Link to="/sources" className="btn-secondary mt-3 inline-flex">Abrir explorador de fuentes</Link>
+        <h2 className="font-semibold">Explorar todas las bibliotecas</h2>
+        <p className="mt-1 text-sm text-muted">Consulta los recursos disponibles en todas las bibliotecas desde un solo lugar.</p>
+        <Link to="/sources" className="btn-secondary mt-3 inline-flex">Explorar bibliotecas</Link>
       </div>
       <section className="mt-8" aria-labelledby="libs-h">
         <h2 id="libs-h" className="mb-3 text-lg font-semibold">{t('collections.libraries')} · {fmt(uniqueLibraryCount(libs.map(c => c.id)))}</h2>
-        <p className="mb-3 text-sm text-muted">{libs.length} bibliotecas locales y {githubSources.length} fuentes GitHub registradas, con coincidencias contadas una sola vez. Los recuentos remotos se consultan del índice publicado; no son copias locales.</p>
+        <p className="mb-3 text-sm text-muted">Los recuentos reflejan recursos detectados por biblioteca y pueden contener variantes o archivos coincidentes.</p>
         <div className="overflow-x-auto rounded-xl border border-border">
           <table className="w-full min-w-[760px] text-left text-sm">
             <thead className="bg-surface text-xs text-muted">
@@ -55,7 +55,7 @@ export function CollectionsPage() {
                     <div className="text-xs text-muted">{c.owner ?? catalog.providers.get(c.provider)?.name}</div>
                   </td>
                   <td className="px-3 py-2 text-xs">{kindLabel[c.kind]}</td>
-                  <td className="px-3 py-2 text-right tabular-nums">{fmt(c.count)} <span className="block text-[11px] text-muted">locales{remoteCounts.get(c.id) && ` · ${fmt(remoteCounts.get(c.id)!.count)} GitHub`}</span></td>
+                  <td className="px-3 py-2 text-right tabular-nums">{fmt(c.count)} {remoteCounts.get(c.id) && <span className="block text-[11px] text-muted">+ {fmt(remoteCounts.get(c.id)!.count)} en el índice</span>}</td>
                   <td className="px-3 py-2 text-xs"><a href={c.license.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{c.license.title}</a></td>
                   <td className="px-3 py-2 font-mono text-xs text-muted">{c.version ?? '—'}</td>
                   <td className="px-3 py-2 text-xs">
@@ -69,11 +69,11 @@ export function CollectionsPage() {
                 const info = remoteCounts.get(s.id);
                 return <tr key={`github-${s.id}`} className="bg-bg">
                   <td className="px-3 py-2"><Link to={`/explore?remoteSource=${encodeURIComponent(s.id)}`} className="font-medium hover:text-accent hover:underline">{s.name}</Link><div className="text-xs text-muted">{s.repo}</div></td>
-                  <td className="px-3 py-2 text-xs">GitHub · {s.category}</td>
-                  <td className="px-3 py-2 text-right tabular-nums">{info ? fmt(info.count) : '—'}<span className="block text-[11px] text-muted">archivos remotos</span></td>
+                  <td className="px-3 py-2 text-xs">{s.category === 'cloud' ? 'Nube' : s.category === 'ui' ? 'Interfaz' : s.category === 'brands' ? 'Marcas' : s.category}</td>
+                  <td className="px-3 py-2 text-right tabular-nums">{info ? fmt(info.count) : '—'}</td>
                   <td className="px-3 py-2 text-xs">{s.licenseUrl ? <a href={s.licenseUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">{s.license ?? 'Ver licencia'}</a> : <span className="text-muted">Verificar derechos</span>}</td>
                   <td className="px-3 py-2 font-mono text-xs text-muted">—</td>
-                  <td className="px-3 py-2 text-xs">{info?.error ? <span className="text-warn">No disponible</span> : info?.partial ? <span className="text-warn">Índice parcial</span> : info?.count === 0 ? <span className="text-muted">Sin archivos compatibles</span> : <span className="text-muted">Explorar y descargar desde GitHub</span>}</td>
+                  <td className="px-3 py-2 text-xs">{info?.error ? <span className="text-warn">No disponible</span> : info?.partial ? <span className="text-warn">Índice parcial</span> : info?.count === 0 ? <span className="text-muted">Sin archivos compatibles</span> : <span className="inline-flex items-center gap-1 text-success"><CheckCircle2 className="h-3.5 w-3.5" aria-hidden/>Disponible</span>}</td>
                 </tr>;
               })}
             </tbody>
@@ -95,7 +95,7 @@ export function CollectionsPage() {
                   <div className="min-w-0 flex-1">
                     <h3 id={`p-${p.id}`} className="font-medium">{p.name}</h3>
                     <p className="text-xs text-muted">
-                      {fmt(p.downloadable)} {t('stats.downloadable')}{cloudSourceByProvider[p.id] && githubSourceCount(githubCoverage, cloudSourceByProvider[p.id]) !== null ? ` · ${fmt(githubSourceCount(githubCoverage, cloudSourceByProvider[p.id])!)} archivos GitHub` : ''}{p.references ? ` · ${t('home.officialOnly', { n: fmt(p.references) })}` : ''}
+                      {fmt(p.downloadable + (cloudSourceByProvider[p.id] ? (githubSourceCount(githubCoverage, cloudSourceByProvider[p.id]) ?? 0) : 0))} recursos disponibles{p.references ? ` · ${t('home.officialOnly', { n: fmt(p.references) })}` : ''}
                     </p>
                   </div>
                   {p.count > 0 && <Link to={`/explore?provider=${p.id}${cloudSourceByProvider[p.id] ? `&remoteSource=${cloudSourceByProvider[p.id]}` : ''}`} className="btn-secondary h-8 text-xs">{t('collections.view')}</Link>}

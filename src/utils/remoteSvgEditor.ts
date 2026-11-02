@@ -1,7 +1,7 @@
 import type { Icon, IconDetail, SvgData } from '../types/catalog';
 import { FLAG_MONO } from '../types/catalog';
 import { parseViewBox } from '../services/export/svg';
-import { sanitizeExternalSvg } from './githubAssetDownload';
+import { sanitizeExternalSvg, prepareRemoteAssetDownload } from './githubAssetDownload';
 import type { RemoteHit } from './universalGithubIndex';
 import registry from '../catalog/github-sources.json';
 
@@ -57,4 +57,18 @@ export function makeRemoteSvgIcon(hit: RemoteHit, data: SvgData): { icon: Icon; 
     },
     details: { sourceUrl, note: 'Archivo cargado desde GitHub y sanitizado en el navegador. No se almacena en IconAtlas.', license: { type: licenseName, url: licenseUrl } },
   };
+}
+
+// Caché LRU simple: abrir un icono o usar varias acciones no repite la solicitud a GitHub.
+const cache = new Map<string, Promise<SvgData>>();
+export function loadRemoteSvg(hit: RemoteHit): Promise<SvgData> {
+  const key = `${hit.source.repo}@${hit.source.sha}/${hit.asset.path}`;
+  const existing = cache.get(key);
+  if (existing) { cache.delete(key); cache.set(key, existing); return existing; }
+  const load = prepareRemoteAssetDownload(hit.source.repo, hit.source.sha, hit.asset)
+    .then(({ blob }) => blob.text()).then(remoteSvgToData);
+  cache.set(key, load);
+  if (cache.size > 80) cache.delete(cache.keys().next().value!);
+  load.catch(() => { if (cache.get(key) === load) cache.delete(key); });
+  return load;
 }

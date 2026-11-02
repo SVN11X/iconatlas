@@ -33,7 +33,7 @@ export default {
       animation: {
         'fade-in': 'fade-in .15s ease-out',
         'slide-up': 'slide-up .18s ease-out',
-        'slide-left': 'slide-left .2s ease-out',
+        'slide-left': 'slide-left .28s cubic-bezier(.22,1,.36,1)',
       },
     },
   },

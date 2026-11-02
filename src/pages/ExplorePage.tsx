@@ -32,6 +32,7 @@ export function ExplorePage() {
   const validRemoteSource = githubSources.some(s => s.id === remoteSource) ? remoteSource : '';
   const [hits, setHits] = useState<{ q: string; ids: number[] } | null>(null);
   const [drawer, setDrawer] = useState(false);
+  const [additionalCount, setAdditionalCount] = useState(0);
 
   // Orden por defecto: iconos oficiales de arquitectura y marcas primero
   const defaultOrder = useMemo(() => {
@@ -106,10 +107,10 @@ export function ExplorePage() {
           <div className="mr-auto min-w-0">
             <h1 id="explore-title" className="truncate text-xl font-semibold tracking-tight">{title}</h1>
             <p className="text-sm text-muted" aria-live="polite" data-testid="result-count">
-              {waitingSearch ? t('search.indexing') : validRemoteSource && !filters.provider.length && !q ? 'Biblioteca GitHub · consulta los recursos más abajo' : `${t('explore.count', { n: fmt(results.length) })} del catálogo local`}
+              {waitingSearch ? t('search.indexing') : t('explore.count', { n: fmt(results.length + additionalCount) })}
             </p>
           </div>
-          <Link to={`/sources${q ? `?q=${encodeURIComponent(q)}` : ''}`} className="btn-secondary" aria-label="Explorar todas las fuentes GitHub">Fuentes GitHub</Link>
+          <Link to="/collections" className="btn-secondary">Bibliotecas</Link>
           <button className="btn-secondary lg:hidden" onClick={() => setDrawer(true)} aria-label={t('filters.show')}>
             <SlidersHorizontal className="h-4 w-4" />{t('filters.title')}{nFilters > 0 && <span className="rounded bg-accent px-1.5 text-xs text-accent-fg">{nFilters}</span>}
           </button>
@@ -153,7 +154,7 @@ export function ExplorePage() {
             <IconGrid icons={results} label={title} />
           </>
         )}
-        {(q || validRemoteSource) && <RemoteGithubResults query={q} sourceId={validRemoteSource || undefined} />}
+        {(q || validRemoteSource) && <RemoteGithubResults query={q} sourceId={validRemoteSource || undefined} onCount={setAdditionalCount} />}
       </section>
     </div>
   );

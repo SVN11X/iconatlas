@@ -33,7 +33,7 @@ for (const theme of ['light', 'dark'] as const) {
     const remote = page.getByTestId('remote-github-results');
     const cards = remote.getByTestId('remote-github-card');
     await expect(cards).toHaveCount(2);
-    await expect(cards.filter({ hasText: 'cloud-storage.svg' })).toHaveAccessibleName('cloud-storage.svg Google Cloud');
+    await expect(cards.filter({ hasText: 'cloud storage' }).getByRole('button').first()).toHaveAccessibleName('cloud storage Google Cloud');
 
     const results = await new AxeBuilder({ page })
       .include('[data-testid="remote-github-results"]')

@@ -23,9 +23,10 @@ export default defineConfig({
     { name: 'mobile', use: { ...devices['Pixel 7'] }, testMatch: /mobile\.spec\.ts/ },
   ],
   webServer: {
-    command: 'npx vite preview --port 4173 --strictPort',
+    // Evita probar un dist obsoleto si la compilación previa falló.
+    command: 'npm run build && npx vite preview --port 4173 --strictPort',
     url: BASE,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
     timeout: 60_000,
   },
 });
