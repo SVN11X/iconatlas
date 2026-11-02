@@ -39,10 +39,10 @@ function Segmented<T extends string>({ value, options, onChange, label }: { valu
   );
 }
 
-export function IconDetail({ id, onClose, onOpen }: { id: string; onClose: () => void; onOpen: (id: string) => void }) {
+export function IconDetail({ id, onClose, onOpen, remote }: { id: string; onClose: () => void; onOpen: (id: string) => void; remote?: { icon: Icon; svg: SvgData; details: Detail } }) {
   const { catalog } = useCatalog();
   const { t, lang, fmt } = useI18n();
-  const icon = catalog?.byId.get(id) ?? null;
+  const icon = remote?.icon ?? catalog?.byId.get(id) ?? null;
   const dialogRef = useRef<HTMLDivElement>(null);
   const restoreRef = useRef<HTMLElement | null>(null);
 
@@ -82,18 +82,18 @@ export function IconDetail({ id, onClose, onOpen }: { id: string; onClose: () =>
             <button className="icon-btn" onClick={onClose} aria-label={t('detail.close')} data-autofocus><X className="h-5 w-5" /></button>
           </div>
         ) : (
-          <DetailBody icon={icon} onClose={onClose} onOpen={onOpen} t={t} lang={lang} fmt={fmt} />
+          <DetailBody icon={icon} onClose={onClose} onOpen={onOpen} t={t} lang={lang} fmt={fmt} remote={remote} />
         )}
       </div>
     </div>
   );
 }
 
-function DetailBody({ icon, onClose, onOpen, t, lang, fmt }: { icon: Icon; onClose: () => void; onOpen: (id: string) => void; t: ReturnType<typeof useI18n>['t']; lang: 'es' | 'en'; fmt: (n: number) => string }) {
+function DetailBody({ icon, onClose, onOpen, t, lang, fmt, remote }: { remote?: { icon: Icon; svg: SvgData; details: Detail }; icon: Icon; onClose: () => void; onOpen: (id: string) => void; t: ReturnType<typeof useI18n>['t']; lang: 'es' | 'en'; fmt: (n: number) => string }) {
   const { catalog } = useCatalog();
   const theme = useTheme();
   const prefs = useExportPrefs();
-  const actions = useIconActions();
+  const actions = useIconActions(remote ? async () => remote.svg : undefined);
   const favs = useFavorites();
   const fav = favs.includes(icon.id);
   const downloadable = isDownloadable(icon);
@@ -121,10 +121,13 @@ function DetailBody({ icon, onClose, onOpen, t, lang, fmt }: { icon: Icon; onClo
   useEffect(() => {
     setData(null); setLoadError(null); setColor(defaultColor(icon)); setPadding(0); setZoom(100);
     let alive = true;
-    getDetails(icon).then((d) => alive && setDetail(d)).catch(() => alive && setDetail({}));
-    if (icon.shard >= 0) getSvgData(icon).then((d) => alive && setData(d)).catch((e: Error) => alive && setLoadError(e.message));
+    if (remote) { setDetail(remote.details); setData(remote.svg); }
+    else {
+      getDetails(icon).then((d) => alive && setDetail(d)).catch(() => alive && setDetail({}));
+      if (icon.shard >= 0) getSvgData(icon).then((d) => alive && setData(d)).catch((e: Error) => alive && setLoadError(e.message));
+    }
     return () => { alive = false; };
-  }, [icon]);
+  }, [icon, remote]);
 
   const exportBackground = exportBg === 'transparent' ? null : exportBg === 'white' ? '#ffffff' : exportBg === 'black' ? '#000000' : isValidColor(exportCustom) ? exportCustom : null;
   const svgOpts = { color: policy.freeColor || policy.presetColors.length ? color : null, padding, background: null as string | null };
@@ -178,11 +181,11 @@ function DetailBody({ icon, onClose, onOpen, t, lang, fmt }: { icon: Icon; onClo
             {official && <span className="chip border-accent/30 text-accent"><BadgeCheck className="h-3 w-3" aria-hidden />{t('card.official')}</span>}
             {(icon.flags & FLAG_LEGACY) === FLAG_LEGACY && <span className="chip">{t('detail.legacy')}</span>}
           </div>
-          <p className="truncate text-sm text-muted">{provider && icon.provider !== 'community' ? `${provider.name} · ` : ''}{coll.name} · {category?.labels[lang]}</p>
+          <p className="truncate text-sm text-muted">{provider && icon.provider !== 'community' ? `${provider.name} · ` : ''}{coll.name} · {category?.labels[lang] ?? (remote ? icon.category : '')}</p>
         </div>
-        <button className="icon-btn" onClick={() => actions.favorite(icon)} aria-pressed={fav} aria-label={fav ? t('card.unfavorite') : t('card.favorite')} data-testid="detail-favorite">
+        {!remote && <button className="icon-btn" onClick={() => actions.favorite(icon)} aria-pressed={fav} aria-label={fav ? t('card.unfavorite') : t('card.favorite')} data-testid="detail-favorite">
           <Star className={`h-5 w-5 ${fav ? 'fill-warn text-warn' : ''}`} />
-        </button>
+        </button>}
         <button className="icon-btn" onClick={onClose} aria-label={t('detail.close')} data-autofocus><X className="h-5 w-5" /></button>
       </div>
 
@@ -377,7 +380,7 @@ function DetailBody({ icon, onClose, onOpen, t, lang, fmt }: { icon: Icon; onClo
                 </Row>
                 {coll.attribution && <Row label={t('detail.attribution')}>{coll.attribution}</Row>}
                 {coll.restrictions.length > 0 && <Row label={t('detail.restrictions')}><ul className="list-disc space-y-1 pl-4 text-xs">{coll.restrictions.map((r) => <li key={r}>{r}</li>)}</ul></Row>}
-                <Row label={t('detail.reviewed')}>{new Date(coll.reviewed).toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-US')}</Row>
+                <Row label={t('detail.reviewed')}>{remote ? (lang === 'es' ? 'Licencia sin verificar' : 'License not verified') : new Date(coll.reviewed).toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-US')}</Row>
               </dl>
             </section>
 

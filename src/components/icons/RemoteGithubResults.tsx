@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Download, ExternalLink, Loader2, X } from 'lucide-react';
+import { RemoteSvgDetail } from '../preview/RemoteSvgDetail';
 import { Link } from 'react-router-dom';
 import { downloadBlob } from '../../services/export/svg';
 import { prepareRemoteAssetDownload } from '../../utils/githubAssetDownload';
@@ -54,7 +55,7 @@ export function RemoteGithubResults({ query, sourceId }: { query: string; source
     <section className="mt-8 border-t border-border pt-6" aria-label="Recursos de todas las bibliotecas GitHub" data-testid="remote-github-results">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div><h2 className="text-lg font-semibold">{sourceId ? `Recursos de ${registry.sources.find(s => s.id === sourceId)?.name ?? sourceId} en GitHub` : "Recursos de todas las bibliotecas GitHub"}</h2>
-          <p className="text-xs text-muted">Archivos del origen GitHub, accesibles desde el buscador de IconAtlas; no forman parte de las descargas locales.</p></div>
+          <p className="text-xs text-muted">Iconos alojados en GitHub. Los SVG se abren con el mismo editor y las mismas funciones de exportación de IconAtlas.</p></div>
         <Link className="btn-secondary text-sm" to="/sources">Ver las fuentes registradas</Link>
       </div>
       {remote.status === 'loading' && <p className="mt-4 flex items-center gap-2 text-sm text-muted" role="status"><Loader2 className="h-4 w-4 animate-spin" />Cargando índice universal de fuentes…</p>}
@@ -80,7 +81,8 @@ export function RemoteGithubResults({ query, sourceId }: { query: string; source
         {hits.total === 0 && <p className="mt-3 text-sm text-muted">No hay archivos coincidentes en el índice generado. Algunos repositorios publican iconos mediante fuentes, CSS o componentes que requieren conversión.</p>}
       </>}
       {sources.length > 0 && <div className="mt-4 flex flex-wrap gap-2">{sources.map(s => <Link key={s.id} className="chip hover:border-accent" to={`/sources?source=${encodeURIComponent(s.id)}`}><ExternalLink className="mr-1 inline h-3 w-3" />{s.name}</Link>)}</div>}
-      {selected && <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4" role="dialog" aria-modal="true" aria-label={`Archivo ${selected.asset.path}`} onClick={() => setSelected(null)} onKeyDown={e => { if (e.key === 'Escape') setSelected(null); }}>
+      {selected?.asset.kind === 'svg' && <RemoteSvgDetail hit={selected} onClose={() => setSelected(null)} />}
+      {selected && selected.asset.kind !== 'svg' && <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4" role="dialog" aria-modal="true" aria-label={`Archivo ${selected.asset.path}`} onClick={() => setSelected(null)} onKeyDown={e => { if (e.key === 'Escape') setSelected(null); }}>
         <div className="w-full max-w-lg rounded-xl bg-bg p-5" onClick={e => e.stopPropagation()}>
           <div className="flex items-start justify-between gap-2"><div className="min-w-0"><h3 className="break-all text-sm font-semibold">{selected.asset.path}</h3><p className="text-xs text-muted">{selected.source.repo}</p></div><button type="button" className="icon-btn" onClick={() => setSelected(null)} aria-label="Cerrar"><X className="h-5 w-5" /></button></div>
           <div className="mt-4 flex h-56 items-center justify-center rounded-lg bg-white p-4">{preview ? <img className="max-h-full max-w-full object-contain" src={preview} alt={`Vista previa de ${selected.asset.path}`} /> : <p className="text-sm text-slate-700">Formato: {selected.asset.kind}</p>}</div>

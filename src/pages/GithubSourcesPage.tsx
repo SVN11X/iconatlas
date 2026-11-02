@@ -6,6 +6,8 @@ import { getAssets, matchSources, REPO_PATTERN, upstreamImageUrl, type RepoAsset
 import { useCatalog } from '../app/CatalogContext';
 import { downloadBlob } from '../services/export/svg';
 import { prepareRemoteAssetDownload } from '../utils/githubAssetDownload';
+import { RemoteSvgDetail } from '../components/preview/RemoteSvgDetail';
+import type { RemoteHit } from '../utils/universalGithubIndex';
 
 const sources = registry.sources as SourceRecord[];
 type SourceView = { repo: string; branch: string; assets: RepoAsset[]; truncated: boolean };
@@ -69,6 +71,13 @@ function RepositoryGallery({ source }: { source: SourceRecord }) {
     finally { setDownloading(false); }
   };
 
+  const remoteSvgHit: RemoteHit | null = selected?.kind === 'svg' && view ? {
+    key: `${source.id}:${selected.path}`, source: { id: source.id, name: source.name, repo: view.repo,
+      category: source.category, status: source.status, redistributionApproved: source.redistributionApproved,
+      sha: view.branch, count: view.assets.length, partial: view.truncated, error: '' },
+    asset: selected, score: 0,
+  } : null;
+
   return (
     <section aria-label={`Archivos de ${source.name}`} className="mt-5 rounded-xl border border-border bg-surface p-4">
       <div className="flex items-start justify-between gap-3">
@@ -78,7 +87,7 @@ function RepositoryGallery({ source }: { source: SourceRecord }) {
         </div>
         <span className="rounded-md border border-border px-2 py-1 text-xs text-muted">{source.redistributionApproved ? 'Importación autorizada' : 'Vista de fuente externa'}</span>
       </div>
-      <p className="mt-2 text-xs text-muted">Explora y descarga archivos desde su origen GitHub, sin cambiar de página. La descarga se realiza en tu navegador; revisa los permisos de uso de cada fuente.</p>
+      <p className="mt-2 text-xs text-muted">Explora los iconos directamente desde GitHub. Los SVG se abren en el editor de IconAtlas para copiar, personalizar y exportar; revisa sus derechos de uso.</p>
       {loading && <p className="mt-4 flex items-center gap-2 text-sm" role="status"><Loader2 className="h-4 w-4 animate-spin"/>Consultando los archivos públicos de GitHub…</p>}
       {error && <p className="mt-4 text-sm text-warn" role="alert">{error}</p>}
       {view && <>
@@ -96,7 +105,8 @@ function RepositoryGallery({ source }: { source: SourceRecord }) {
           })}
         </div> : <p className="mt-4 text-sm text-muted">No se detectaron archivos de iconos compatibles. Esta fuente podría usar sprites, componentes React, fuentes o un formato que requiere un adaptador.</p>}
         {visible < filtered.length && <button type="button" className="btn-secondary mt-4" onClick={() => setVisible(n => Math.min(n + 48, filtered.length))}>Ver 48 archivos más</button>}
-        {selected && view && <div role="dialog" aria-modal="true" aria-label={`Vista previa: ${selected.path}`} className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4" onClick={() => setSelected(null)}>
+        {remoteSvgHit && <RemoteSvgDetail hit={remoteSvgHit} onClose={() => setSelected(null)} />}
+        {selected && selected.kind !== 'svg' && view && <div role="dialog" aria-modal="true" aria-label={`Vista previa: ${selected.path}`} className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4" onClick={() => setSelected(null)}>
           <div className="w-full max-w-xl rounded-xl bg-bg p-5" onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between gap-3"><h3 className="break-all text-sm font-semibold">{selected.path}</h3><button className="btn-secondary" onClick={() => setSelected(null)}>Cerrar</button></div>
             <div className="mt-4 flex h-64 items-center justify-center rounded-xl bg-white p-6">{activeSrc ? <img src={activeSrc} alt={`Vista previa de ${selected.path}`} className="max-h-full max-w-full object-contain" /> : <span className="text-sm text-slate-700">Archivo {selected.kind === 'library' ? 'de biblioteca Excalidraw' : 'de cursor'}</span>}</div>

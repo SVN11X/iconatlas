@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import type { Icon } from '../types/catalog';
+import type { Icon, SvgData } from '../types/catalog';
 import { getSvgData, isDownloadable } from '../services/catalog/catalogStore';
 import { buildSvg, downloadBlob, fileBaseName, type SvgOptions } from '../services/export/svg';
 import { svgToPng, type PngOptions } from '../services/export/png';
@@ -8,7 +8,7 @@ import { toggleFavorite } from '../services/storage/favorites';
 import { useToast } from '../components/ui/Toaster';
 import { useI18n } from '../app/i18n';
 
-export function useIconActions() {
+export function useIconActions(remoteLoader?: (icon: Icon) => Promise<SvgData>) {
   const { notify } = useToast();
   const { t } = useI18n();
 
@@ -20,7 +20,7 @@ export function useIconActions() {
     return true;
   }, [notify, t]);
 
-  const getSvg = useCallback(async (icon: Icon, opts?: SvgOptions) => buildSvg(icon, await getSvgData(icon), opts), []);
+  const getSvg = useCallback(async (icon: Icon, opts?: SvgOptions) => buildSvg(icon, await (remoteLoader ? remoteLoader(icon) : getSvgData(icon)), opts), [remoteLoader]);
 
   const downloadSvg = useCallback(async (icon: Icon, opts?: SvgOptions) => {
     if (!ensure(icon)) return;
