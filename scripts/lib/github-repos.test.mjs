@@ -11,6 +11,21 @@ test('registro sin repositorios duplicados', () => {
   assert.equal(new Set(sources.map((s) => s.repo.toLowerCase())).size, sources.length);
   assert.deepEqual(sources.filter((s) => s.redistributionApproved === true).map((s) => s.id).sort(), ['circle-flags','iconoir','mapa-chile-svg']);
   assert.equal(sources.find((s) => s.id === 'unicons')?.redistributionApproved, false);
+  const requested = [
+    'FabricTools/fabric-icons',
+    'vytautas9/fabric-icons',
+    'microsoft/PowerBI-Icons',
+    'marclelijveld/Power-BI-Icons',
+    'astrzala/FabricToolset',
+    'kevincobain2000/google-cloud-icons',
+  ];
+  assert.ok(sources.length >= 77);
+  for (const repo of requested) {
+    const source = sources.find(s => s.repo.toLowerCase() === repo.toLowerCase());
+    assert.ok(source, `Falta la fuente solicitada ${repo}`);
+    assert.equal(source.redistributionApproved, false, `${repo}: no atribuir permisos sin verificar`);
+  }
+
 });
 
 test('resumen de árbol: formatos y truncamiento', () => {

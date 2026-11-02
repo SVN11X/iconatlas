@@ -48,7 +48,7 @@ jobs:
       - name: Pruebas unitarias
         run: npm test
 
-      - name: Construir índice universal de recursos GitHub (71 fuentes)
+      - name: Construir índice universal de recursos GitHub (registro dinámico)
         run: npm run github:index
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

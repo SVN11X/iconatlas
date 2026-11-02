@@ -3,8 +3,8 @@ import { githubSourceCount, githubSources, uniqueLibraryCount, type GithubCovera
 
 describe('bibliotecas locales y fuentes GitHub unificadas', () => {
   it('cuenta bibliotecas únicas sin duplicar repositorios ya integrados', () => {
-    expect(githubSources).toHaveLength(71);
-    expect(uniqueLibraryCount(['iconoir', 'lucide', 'biblioteca-local'])).toBe(72);
+    expect(githubSources.length).toBeGreaterThanOrEqual(77);
+    expect(uniqueLibraryCount(['iconoir', 'lucide', 'biblioteca-local'])).toBe(githubSources.length + 1);
   });
 
   it('muestra el recuento publicado de Google Cloud sin atribuirlo a la colección local', () => {

@@ -815,6 +815,77 @@
       "name": "lucide-extended",
       "candidateLicense": "NOASSERTION",
       "notes": "Descubierto por GitHub Actions; 2879 SVG, 0 bibliotecas. Revisar derechos, procedencia y adaptador antes de publicar."
+    },
+    {
+      "id": "fabrictools-fabric-icons",
+      "repo": "FabricTools/fabric-icons",
+      "category": "cloud",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Microsoft Fabric Icons (FabricTools)",
+      "candidateLicense": "MIT (repository code only; verify assets)",
+      "notes": "SVG desde @fabric-msft/svg-icons, incluidos en node_modules del repo. Iconos y marcas sujetos a las condiciones de Microsoft; indexar y cargar bajo demanda."
+    },
+    {
+      "id": "vytautas9-fabric-icons",
+      "repo": "vytautas9/fabric-icons",
+      "category": "cloud",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Microsoft Fabric Icons para draw.io (vytautas9)",
+      "candidateLicense": "MIT (repository code only; verify assets)",
+      "notes": "Los SVG individuales están en icons/high_res/. Las bibliotecas draw.io XML no se convierten automáticamente; su contenido procede de @fabric-msft/svg-icons."
+    },
+    {
+      "id": "microsoft-powerbi-icons",
+      "repo": "microsoft/PowerBI-Icons",
+      "category": "cloud",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Power BI Icons (Microsoft)",
+      "candidateLicense": "CC-BY-4.0 (documentation); MIT (code)",
+      "notes": "Repositorio archivado desde 2024-10-29; los SVG y PNG siguen disponibles. Las licencias no otorgan derechos sobre marcas Microsoft."
+    },
+    {
+      "id": "marclelijveld-powerbi-icons",
+      "repo": "marclelijveld/Power-BI-Icons",
+      "category": "cloud",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Power BI Icons (Data-Marc)",
+      "candidateLicense": "CC-BY-4.0 (documentation); MIT (code)",
+      "notes": "Fork de microsoft/PowerBI-Icons, con SVG, PNG y biblioteca diagrams.net; muchos archivos se solapan. Conservar procedencia y no confundir entradas con recursos distintos."
+    },
+    {
+      "id": "astrzala-fabrictoolset",
+      "repo": "astrzala/FabricToolset",
+      "category": "cloud",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Fabric & Azure Icon Pack (FabricToolset)",
+      "candidateLicense": "MIT (repository code only; verify assets)",
+      "notes": "Buscar SVG en Microsoft Fabric & Azure Icon Pack; otras carpetas contienen scripts de administración, no iconos. Verificar términos de marcas Microsoft."
+    },
+    {
+      "id": "kevincobain2000-google-cloud-icons",
+      "repo": "kevincobain2000/google-cloud-icons",
+      "category": "cloud",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Google Cloud Icons (kevincobain2000)",
+      "notes": "Repositorio solicitado por usuario. URL no confirmada por búsqueda pública; la auditoría/indexador registrará 404 u otro error si no está accesible. Derechos de marcas Google pendientes."
     }
   ]
 }
