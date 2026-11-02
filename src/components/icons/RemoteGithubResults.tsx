@@ -8,7 +8,7 @@ import { type RemoteHit, type RemoteIndex } from '../../utils/universalGithubInd
 import registry from '../../catalog/github-sources.json';
 
 /** Forma parte de la página /explore: no es un catálogo paralelo ni requiere salir de IconAtlas. */
-export function RemoteGithubResults({ query }: { query: string }) {
+export function RemoteGithubResults({ query, sourceId }: { query: string; sourceId?: string }) {
   type SearchResponse = { status: 'loading' | 'ready' | 'missing'; matches: RemoteHit[]; total: number; stats: RemoteIndex['stats'] | null };
   const [remote, setRemote] = useState<SearchResponse>({ status: 'loading', matches: [], total: 0, stats: null });
   const [selected, setSelected] = useState<RemoteHit | null>(null);
@@ -27,16 +27,16 @@ export function RemoteGithubResults({ query }: { query: string }) {
     return () => { worker.terminate(); workerRef.current = null; };
   }, []);
   useEffect(() => {
-    if (!query.trim()) return;
+    if (!query.trim() && !sourceId) return;
     sequence.current += 1;
     setRemote({ status: 'loading', matches: [], total: 0, stats: null });
-    workerRef.current?.postMessage({ id: sequence.current, query });
-  }, [query]);
+    workerRef.current?.postMessage({ id: sequence.current, query, sourceId });
+  }, [query, sourceId]);
   const hits = { matches: remote.matches, total: remote.total };
   const sources = useMemo(() => {
     const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    return registry.sources.filter(s => terms.length > 0 && terms.every(t => `${s.name} ${s.repo} ${s.category}`.toLowerCase().includes(t)));
-  }, [query]);
+    return registry.sources.filter(s => (sourceId ? s.id === sourceId : terms.length > 0) && (!terms.length || terms.every(t => `${s.name} ${s.repo} ${s.category}`.toLowerCase().includes(t))));
+  }, [query, sourceId]);
 
   const download = async (hit: RemoteHit) => {
     setPending(true); setError('');
@@ -49,11 +49,11 @@ export function RemoteGithubResults({ query }: { query: string }) {
   const preview = selected && (selected.asset.kind === 'svg' || selected.asset.kind === 'raster')
     ? upstreamImageUrl(selected.source.repo, selected.source.sha, selected.asset.path) : null;
 
-  if (!query.trim()) return null;
+  if (!query.trim() && !sourceId) return null;
   return (
     <section className="mt-8 border-t border-border pt-6" aria-label="Recursos de todas las bibliotecas GitHub" data-testid="remote-github-results">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <div><h2 className="text-lg font-semibold">Recursos de todas las bibliotecas GitHub</h2>
+        <div><h2 className="text-lg font-semibold">{sourceId ? `Recursos de ${registry.sources.find(s => s.id === sourceId)?.name ?? sourceId} en GitHub` : "Recursos de todas las bibliotecas GitHub"}</h2>
           <p className="text-xs text-muted">Archivos del origen GitHub, accesibles desde el buscador de IconAtlas; no forman parte de las descargas locales.</p></div>
         <Link className="btn-secondary text-sm" to="/sources">Ver las fuentes registradas</Link>
       </div>
@@ -61,7 +61,7 @@ export function RemoteGithubResults({ query }: { query: string }) {
       {remote.status === 'missing' && <p className="mt-4 text-sm text-muted">El índice remoto todavía no está publicado. El próximo despliegue de GitHub Actions lo genera automáticamente; puedes explorar las fuentes registradas mientras tanto.</p>}
       {remote.status === 'ready' && <>
         <p className="mt-3 text-sm text-muted" aria-live="polite">
-          {hits.total.toLocaleString('es-CL')} coincidencias externas · {remote.stats?.indexedSources}/{remote.stats?.registeredSources} fuentes indexadas
+          {hits.total.toLocaleString('es-CL')} archivos remotos encontrados · {remote.stats?.indexedSources}/{remote.stats?.registeredSources} fuentes indexadas
           {(remote.stats?.failedSources || 0) > 0 || (remote.stats?.partialSources || 0) > 0 ? ' · algunas fuentes incompletas (ver informe)' : ''}
         </p>
         {hits.matches.length > 0 && <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">

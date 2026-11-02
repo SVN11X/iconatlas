@@ -6,10 +6,12 @@ import { useI18n } from '../app/i18n';
 import { SearchBox } from '../components/search/SearchBox';
 import { IconImage } from '../components/icons/IconImage';
 import type { Icon } from '../types/catalog';
+import { cloudSourceByProvider, githubSourceCount, githubSources, uniqueLibraryCount, useGithubCoverage } from '../utils/githubCoverage';
 
 export function HomePage() {
   const { catalog } = useCatalog();
   const { t, fmt, lang } = useI18n();
+  const githubCoverage = useGithubCoverage();
   useEffect(() => { document.title = `IconAtlas — ${t('app.tagline')}`; }, [t]);
 
   const featured = useMemo(() => (catalog ? catalog.index.providers.filter((p) => p.featured).sort((a, b) => (a.featured ?? 0) - (b.featured ?? 0)) : []), [catalog]);
@@ -51,16 +53,17 @@ export function HomePage() {
           <p className="mx-auto mt-4 max-w-2xl text-balance text-base text-muted sm:text-lg">{t('app.subtitle')}</p>
           <div className="mt-8"><SearchBox hotkey={false} large /></div>
           {catalog && (
-            <dl className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4" data-testid="stats">
+            <dl className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-5" data-testid="stats">
               {[
-                { k: t('stats.icons'), v: catalog.index.stats.icons, sub: `${fmt(catalog.index.stats.downloadable)} ${t('stats.downloadable')}` },
-                { k: t('stats.libraries'), v: catalog.index.stats.libraries },
+                { k: t('stats.icons'), v: catalog.index.stats.icons, sub: `${fmt(catalog.index.stats.downloadable)} locales descargables` },
+                { k: t('stats.libraries'), v: uniqueLibraryCount(catalog.index.collections.map(c => c.id)), sub: `${catalog.index.collections.length} locales · ${githubSources.length} fuentes GitHub (sin duplicar)` },
+                { k: 'Recursos en GitHub', v: githubCoverage?.stats.indexedSources ? githubCoverage.stats.indexedAssets : null, sub: githubCoverage ? `${githubCoverage.stats.indexedSources} de ${githubCoverage.stats.registeredSources} fuentes indexadas · archivos remotos` : 'Cargando cobertura remota…' },
                 { k: t('stats.providers'), v: catalog.index.stats.providers },
                 { k: t('stats.categories'), v: catalog.index.stats.categories },
               ].map((s) => (
                 <div key={s.k} className="card px-4 py-3 text-left">
                   <dt className="text-xs text-muted">{s.k}</dt>
-                  <dd className="text-2xl font-semibold tabular-nums tracking-tight">{fmt(s.v)}</dd>
+                  <dd className="text-2xl font-semibold tabular-nums tracking-tight">{s.v === null ? '—' : fmt(s.v)}</dd>
                   {s.sub && <dd className="text-[11px] text-muted">{s.sub}</dd>}
                 </div>
               ))}
@@ -91,15 +94,18 @@ export function HomePage() {
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((p) => {
               const logo = p.logoIcon ? catalog?.byId.get(p.logoIcon) : null;
+              const sourceId = cloudSourceByProvider[p.id];
+              const remoteCount = sourceId ? githubSourceCount(githubCoverage, sourceId) : null;
+              const dest = `/explore?provider=${p.id}${sourceId ? `&remoteSource=${sourceId}` : ''}`;
               return (
-                <Link key={p.id} to={`/explore?provider=${p.id}`} className="card group flex items-center gap-4 p-4 transition-colors hover:border-accent focus-ring" data-testid={`provider-card-${p.id}`}>
+                <Link key={p.id} to={dest} className="card group flex items-center gap-4 p-4 transition-colors hover:border-accent focus-ring" data-testid={`provider-card-${p.id}`}>
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-border bg-white">
                     {logo ? <IconImage icon={logo} className="h-7 w-7" /> : <span className="text-sm font-semibold">{p.name.slice(0, 2)}</span>}
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block font-medium">{p.name}</span>
                     <span className="block text-xs text-muted">
-                      {t('home.downloadableN', { n: fmt(p.downloadable) })}{p.references ? ` · ${t('home.officialOnly', { n: fmt(p.references) })}` : ''}
+                      {t('home.downloadableN', { n: fmt(p.downloadable) })}{remoteCount !== null ? ` · ${fmt(remoteCount)} archivos en GitHub` : ''}{p.references ? ` · ${t('home.officialOnly', { n: fmt(p.references) })}` : ''}
                     </span>
                   </span>
                   <ArrowRight className="h-4 w-4 text-muted transition-transform group-hover:translate-x-0.5" aria-hidden />

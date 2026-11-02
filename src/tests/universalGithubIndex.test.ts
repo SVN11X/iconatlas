@@ -18,6 +18,13 @@ describe('buscador universal de archivos GitHub', () => {
     expect(searchRemoteIndex(index, 'google cloud').total).toBe(2);
     expect(searchRemoteIndex(index, 'cloud-storage').total).toBe(2);
   });
+  it('abre una biblioteca GitHub completa aunque la búsqueda esté vacía', () => {
+    const results = searchRemoteIndex(index, '', 120, 'gcp-awesome');
+    expect(results.total).toBe(2);
+    expect(results.matches.every(h => h.source.id === 'gcp-awesome')).toBe(true);
+    expect(searchRemoteIndex(index, '').total).toBe(0);
+    expect(searchRemoteIndex(index, 'cloud', 120, 'other').total).toBe(1);
+  });
   it('mantiene los resultados remotos separados de las cifras de iconos locales', () => {
     const results = searchRemoteIndex(index, 'cloud', 1);
     expect(results.total).toBe(3);

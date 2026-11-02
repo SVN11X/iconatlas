@@ -16,6 +16,7 @@ import { useOpenIcon } from '../hooks/useOpenIcon';
 import { useFavorites } from '../services/storage/favorites';
 import { useSelection } from '../services/storage/selection';
 import { RemoteGithubResults } from '../components/icons/RemoteGithubResults';
+import { githubSources, cloudSourceByProvider } from '../utils/githubCoverage';
 
 export const MAX_SELECT = 1000;
 const KIND_ORDER: Record<string, number> = { architecture: 0, brand: 1, reference: 2, ui: 3 };
@@ -26,6 +27,9 @@ export function ExplorePage() {
   const { notify } = useToast();
   const [params, setParams] = useSearchParams();
   const filters = useMemo(() => parseFilters(params), [params]);
+  const explicitSource = params.get('remoteSource') ?? '';
+  const remoteSource = explicitSource || (filters.provider.length === 1 ? cloudSourceByProvider[filters.provider[0]] ?? '' : '');
+  const validRemoteSource = githubSources.some(s => s.id === remoteSource) ? remoteSource : '';
   const [hits, setHits] = useState<{ q: string; ids: number[] } | null>(null);
   const [drawer, setDrawer] = useState(false);
 
@@ -50,10 +54,11 @@ export function ExplorePage() {
 
   const base: Icon[] = useMemo(() => {
     if (!catalog) return [];
+    if (!q && validRemoteSource && filters.provider.length === 0 && filters.collection.length === 0) return [];
     if (!q) return defaultOrder;
     if (!hits || hits.q !== q) return [];
     return hits.ids.map((i) => catalog.icons[i]);
-  }, [catalog, q, hits, defaultOrder]);
+  }, [catalog, q, hits, defaultOrder, validRemoteSource, filters.provider.length, filters.collection.length]);
 
   const results = useMemo(() => applyFilters(base, filters), [base, filters]);
   const counts = useMemo(() => facetCounts(base, filters), [base, filters]);
@@ -69,10 +74,11 @@ export function ExplorePage() {
 
   const title = useMemo(() => {
     if (!catalog) return t('explore.title');
+    if (validRemoteSource && !q && filters.provider.length === 0) return githubSources.find(s => s.id === validRemoteSource)?.name ?? 'Recursos GitHub';
     if (filters.provider.length === 1 && !q) return catalog.providers.get(filters.provider[0])?.name ?? t('explore.title');
     if (filters.category.length === 1 && !q) return catalog.categories.get(filters.category[0])?.labels[lang] ?? t('explore.title');
     return q ? `«${q}»` : t('explore.title');
-  }, [catalog, filters, q, t, lang]);
+  }, [catalog, filters, q, t, lang, validRemoteSource]);
 
   useEffect(() => { document.title = `${title} · IconAtlas`; }, [title]);
 
@@ -100,7 +106,7 @@ export function ExplorePage() {
           <div className="mr-auto min-w-0">
             <h1 id="explore-title" className="truncate text-xl font-semibold tracking-tight">{title}</h1>
             <p className="text-sm text-muted" aria-live="polite" data-testid="result-count">
-              {waitingSearch ? t('search.indexing') : t('explore.count', { n: fmt(results.length) })}
+              {waitingSearch ? t('search.indexing') : validRemoteSource && !filters.provider.length && !q ? 'Biblioteca GitHub · consulta los recursos más abajo' : `${t('explore.count', { n: fmt(results.length) })} del catálogo local`}
             </p>
           </div>
           <Link to={`/sources${q ? `?q=${encodeURIComponent(q)}` : ''}`} className="btn-secondary" aria-label="Explorar todas las fuentes GitHub">Fuentes GitHub</Link>
@@ -133,7 +139,7 @@ export function ExplorePage() {
 
         {waitingSearch ? (
           <div className="flex items-center gap-2 py-16 text-sm text-muted"><Loader2 className="h-4 w-4 animate-spin" aria-hidden />{t('search.indexing')}</div>
-        ) : results.length === 0 ? (
+        ) : results.length === 0 && validRemoteSource ? null : results.length === 0 ? (
           <div className="card flex flex-col items-center gap-3 px-6 py-16 text-center" data-testid="empty-state">
             <SearchX className="h-10 w-10 text-muted" aria-hidden />
             <p className="font-medium">{q ? t('search.noResults', { q }) : t('search.noResults', { q: '—' })}</p>
@@ -147,7 +153,7 @@ export function ExplorePage() {
             <IconGrid icons={results} label={title} />
           </>
         )}
-        {q && <RemoteGithubResults query={q} />}
+        {(q || validRemoteSource) && <RemoteGithubResults query={q} sourceId={validRemoteSource || undefined} />}
       </section>
     </div>
   );

@@ -52,14 +52,14 @@ export function validateRemoteIndex(x: unknown): x is RemoteIndex {
 }
 
 /** Busca en todas las fuentes, priorizando el nombre del archivo frente al nombre de la fuente. */
-export function searchRemoteIndex(index: RemoteIndex, query: string, limit = 120): { matches: RemoteHit[]; total: number } {
+export function searchRemoteIndex(index: RemoteIndex, query: string, limit = 120, sourceId?: string): { matches: RemoteHit[]; total: number } {
   const terms = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean).slice(0, 8);
-  if (!terms.length) return { matches: [], total: 0 };
+  if (!terms.length && !sourceId) return { matches: [], total: 0 };
   const hits: RemoteHit[] = [];
   let total = 0;
   for (const row of index.assets) {
     const source = index.sources[row[0]];
-    if (!source || !source.sha) continue;
+    if (!source || !source.sha || (sourceId && source.id !== sourceId)) continue;
     const path = row[1];
     const assetKind = classifyAsset(path, row[3] || undefined);
     if (!assetKind) continue;

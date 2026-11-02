@@ -5,14 +5,19 @@ import { useCatalog } from '../app/CatalogContext';
 import { useI18n } from '../app/i18n';
 import { CatalogStatus } from '../components/ui/CatalogStatus';
 import { IconImage } from '../components/icons/IconImage';
+import { cloudSourceByProvider, githubSourceCount, githubSources, uniqueLibraryCount, useGithubCoverage } from '../utils/githubCoverage';
 
 export function CollectionsPage() {
   const { catalog } = useCatalog();
   const { t, fmt, lang } = useI18n();
+  const githubCoverage = useGithubCoverage();
   useEffect(() => { document.title = `${t('collections.title')} · IconAtlas`; }, [t]);
   if (!catalog) return <CatalogStatus />;
   const providers = [...catalog.index.providers].filter((p) => p.id !== 'community').sort((a, b) => (a.featured ?? 99) - (b.featured ?? 99) || b.count - a.count);
   const libs = catalog.index.collections;
+  const localIds = new Set(libs.map(c => c.id));
+  const remoteOnly = githubSources.filter(s => !localIds.has(s.id));
+  const remoteCounts = new Map((githubCoverage?.sources.filter(s => !s.error) ?? []).map(s => [s.id, s] as const));
   const kindLabel: Record<string, string> = lang === 'es'
     ? { ui: 'Interfaz', brand: 'Marcas', architecture: 'Arquitectura oficial', reference: 'Fichas sin SVG local' }
     : { ui: 'Interface', brand: 'Brands', architecture: 'Official architecture', reference: 'Entries without local SVG' };
@@ -28,7 +33,8 @@ export function CollectionsPage() {
         <Link to="/sources" className="btn-secondary mt-3 inline-flex">Abrir explorador de fuentes</Link>
       </div>
       <section className="mt-8" aria-labelledby="libs-h">
-        <h2 id="libs-h" className="mb-3 text-lg font-semibold">{t('collections.libraries')}</h2>
+        <h2 id="libs-h" className="mb-3 text-lg font-semibold">{t('collections.libraries')} · {fmt(uniqueLibraryCount(libs.map(c => c.id)))}</h2>
+        <p className="mb-3 text-sm text-muted">{libs.length} bibliotecas locales y {githubSources.length} fuentes GitHub registradas, con coincidencias contadas una sola vez. Los recuentos remotos se consultan del índice publicado; no son copias locales.</p>
         <div className="overflow-x-auto rounded-xl border border-border">
           <table className="w-full min-w-[760px] text-left text-sm">
             <thead className="bg-surface text-xs text-muted">
@@ -45,11 +51,11 @@ export function CollectionsPage() {
               {libs.map((c) => (
                 <tr key={c.id} className="bg-bg">
                   <td className="px-3 py-2">
-                    <Link to={`/explore?collection=${c.id}`} className="font-medium hover:text-accent hover:underline">{c.name}</Link>
+                    <Link to={`/explore?collection=${c.id}${remoteCounts.has(c.id) ? `&remoteSource=${c.id}` : ''}`} className="font-medium hover:text-accent hover:underline">{c.name}</Link>
                     <div className="text-xs text-muted">{c.owner ?? catalog.providers.get(c.provider)?.name}</div>
                   </td>
                   <td className="px-3 py-2 text-xs">{kindLabel[c.kind]}</td>
-                  <td className="px-3 py-2 text-right tabular-nums">{fmt(c.count)}</td>
+                  <td className="px-3 py-2 text-right tabular-nums">{fmt(c.count)} <span className="block text-[11px] text-muted">locales{remoteCounts.get(c.id) && ` · ${fmt(remoteCounts.get(c.id)!.count)} GitHub`}</span></td>
                   <td className="px-3 py-2 text-xs"><a href={c.license.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{c.license.title}</a></td>
                   <td className="px-3 py-2 font-mono text-xs text-muted">{c.version ?? '—'}</td>
                   <td className="px-3 py-2 text-xs">
@@ -59,6 +65,17 @@ export function CollectionsPage() {
                   </td>
                 </tr>
               ))}
+              {remoteOnly.map(s => {
+                const info = remoteCounts.get(s.id);
+                return <tr key={`github-${s.id}`} className="bg-bg">
+                  <td className="px-3 py-2"><Link to={`/explore?remoteSource=${encodeURIComponent(s.id)}`} className="font-medium hover:text-accent hover:underline">{s.name}</Link><div className="text-xs text-muted">{s.repo}</div></td>
+                  <td className="px-3 py-2 text-xs">GitHub · {s.category}</td>
+                  <td className="px-3 py-2 text-right tabular-nums">{info ? fmt(info.count) : '—'}<span className="block text-[11px] text-muted">archivos remotos</span></td>
+                  <td className="px-3 py-2 text-xs">{s.licenseUrl ? <a href={s.licenseUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">{s.license ?? 'Ver licencia'}</a> : <span className="text-muted">Verificar derechos</span>}</td>
+                  <td className="px-3 py-2 font-mono text-xs text-muted">—</td>
+                  <td className="px-3 py-2 text-xs">{info?.error ? <span className="text-warn">No disponible</span> : info?.partial ? <span className="text-warn">Índice parcial</span> : info?.count === 0 ? <span className="text-muted">Sin archivos compatibles</span> : <span className="text-muted">Explorar y descargar desde GitHub</span>}</td>
+                </tr>;
+              })}
             </tbody>
           </table>
         </div>
@@ -78,10 +95,10 @@ export function CollectionsPage() {
                   <div className="min-w-0 flex-1">
                     <h3 id={`p-${p.id}`} className="font-medium">{p.name}</h3>
                     <p className="text-xs text-muted">
-                      {fmt(p.downloadable)} {t('stats.downloadable')}{p.references ? ` · ${t('home.officialOnly', { n: fmt(p.references) })}` : ''}
+                      {fmt(p.downloadable)} {t('stats.downloadable')}{cloudSourceByProvider[p.id] && githubSourceCount(githubCoverage, cloudSourceByProvider[p.id]) !== null ? ` · ${fmt(githubSourceCount(githubCoverage, cloudSourceByProvider[p.id])!)} archivos GitHub` : ''}{p.references ? ` · ${t('home.officialOnly', { n: fmt(p.references) })}` : ''}
                     </p>
                   </div>
-                  {p.count > 0 && <Link to={`/explore?provider=${p.id}`} className="btn-secondary h-8 text-xs">{t('collections.view')}</Link>}
+                  {p.count > 0 && <Link to={`/explore?provider=${p.id}${cloudSourceByProvider[p.id] ? `&remoteSource=${cloudSourceByProvider[p.id]}` : ''}`} className="btn-secondary h-8 text-xs">{t('collections.view')}</Link>}
                 </div>
                 {p.officialIcons?.length ? (
                   <div className="mt-3">
@@ -90,10 +107,10 @@ export function CollectionsPage() {
                       {p.officialIcons.map((o) => (
                         <li key={o.url} className="rounded-lg border border-border bg-bg p-2.5 text-xs">
                           <div className="flex items-center gap-2">
-                            {o.redistributable ? <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-success" aria-label={t('collections.integrated')} /> : <Link2 className="h-3.5 w-3.5 shrink-0 text-warn" aria-label={t('collections.linkOnly')} />}
+                            {o.redistributable ? <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-success" aria-label={t('collections.integrated')} /> : <Link2 className="h-3.5 w-3.5 shrink-0 text-warn" aria-label="Fuente oficial con condiciones específicas" />}
                             <a href={o.url} target="_blank" rel="noopener noreferrer" className="font-medium hover:underline">{o.name}</a>
                             <ExternalLink className="h-3 w-3 text-muted" aria-hidden />
-                            <span className="ml-auto shrink-0 text-muted">{o.redistributable ? t('collections.integrated') : t('collections.linkOnly')} · {o.reviewed}</span>
+                            <span className="ml-auto shrink-0 text-muted">{o.redistributable ? t('collections.integrated') : 'Fuente oficial'} · {o.reviewed}</span>
                           </div>
                           <p className="mt-1 text-muted">{o.terms}</p>
                         </li>

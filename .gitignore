@@ -10,5 +10,4 @@ coverage
 github-health-report.json
 github-discovery-report.json
 
-# Informe generado por GitHub Actions (el bootstrap index sí queda en control de versiones)
-public/github-index/report.json
+# El índice y el informe tienen versiones bootstrap en Git; GitHub Actions los reemplaza en cada deploy.
