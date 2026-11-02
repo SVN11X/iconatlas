@@ -19,7 +19,27 @@ test('registro sin repositorios duplicados', () => {
     'astrzala/FabricToolset',
     'kevincobain2000/google-cloud-icons',
   ];
-  assert.ok(sources.length >= 77);
+  assert.ok(sources.length >= 89);
+  const additional = [
+    'Fantomiald/sketchyicons',
+    'guokaigdg/naive-icons',
+    'withevergrow/withicons',
+    'shuqikhor/pixel-icons',
+    'Semporia/Hand-Painted-icon',
+    'realvjy/3dicons',
+    'icons8/3d-kit',
+    'icons8/flat-color-icons',
+    'abderrahmane-harouat/rinaz-glassmorphism-icons',
+    'fjudith/cloud-native-isometric-icons',
+    'richbl/isometric-icons',
+    'lipis/flag-icons',
+  ];
+  for (const repo of additional) {
+    const source = sources.find(s => s.repo.toLowerCase() === repo.toLowerCase());
+    assert.ok(source, `Falta la biblioteca ${repo}`);
+    assert.equal(source.status, 'watch');
+    assert.equal(source.redistributionApproved, false);
+  }
   for (const repo of requested) {
     const source = sources.find(s => s.repo.toLowerCase() === repo.toLowerCase());
     assert.ok(source, `Falta la fuente solicitada ${repo}`);

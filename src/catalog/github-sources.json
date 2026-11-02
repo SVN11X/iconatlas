@@ -886,6 +886,147 @@
       "redistributionApproved": false,
       "name": "Google Cloud Icons (kevincobain2000)",
       "notes": "Repositorio solicitado por usuario. URL no confirmada por búsqueda pública; la auditoría/indexador registrará 404 u otro error si no está accesible. Derechos de marcas Google pendientes."
+    },
+    {
+      "id": "fantomiald-sketchyicons",
+      "repo": "Fantomiald/sketchyicons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Sketchyicons — estilo dibujado a mano",
+      "candidateLicense": "MIT (código) + ISC/Lucide y MIT/Feather (geometría)",
+      "notes": "Iconos SVG de estilo bocetado; parte de los paquetes se generan al compilar. El índice GitHub detecta solo archivos ya presentes en el repositorio, no iconos generados y no publicados. Conservar avisos de Lucide y Feather."
+    },
+    {
+      "id": "guokaigdg-naive-icons",
+      "repo": "guokaigdg/naive-icons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Naive Icons — arte popular",
+      "candidateLicense": "MIT",
+      "notes": "SVG individuales autocontenidos en svg/ y componentes React. La indexación remota utiliza SVG originales, no requiere ejecutar componentes TSX."
+    },
+    {
+      "id": "withevergrow-withicons",
+      "repo": "withevergrow/withicons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Withicons — múltiples estilos",
+      "candidateLicense": "MIT",
+      "notes": "Familia de iconos con numerosos estilos; algunos resultados SVG se producen durante el proceso de generación o se distribuyen por npm/CDN. El árbol GitHub puede tener menos iconos indexables que el producto completo."
+    },
+    {
+      "id": "shuqikhor-pixel-icons",
+      "repo": "shuqikhor/pixel-icons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Pixel Icons — pixel art",
+      "candidateLicense": "MIT",
+      "notes": "Iconos pixel-art vectoriales de cuadrícula 9x9, SVG en icons/. Algunos diseños representan logos o personajes de terceros; conservar la información de procedencia."
+    },
+    {
+      "id": "semporia-hand-painted-icon",
+      "repo": "Semporia/Hand-Painted-icon",
+      "category": "illustration",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Hand-Painted Icons — Semporia",
+      "notes": "Recursos PNG de 108 px; la descripción del autor indica uso personal. Permitir búsqueda y descarga compatible con derechos de uso; no presentar estos PNG como SVG editables ni autorizar redistribución masiva."
+    },
+    {
+      "id": "realvjy-3dicons",
+      "repo": "realvjy/3dicons",
+      "category": "illustration",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "3Dicons — Realvjy",
+      "candidateLicense": "CC0-1.0",
+      "notes": "Iconos e ilustraciones 3D de varios estilos; en este repositorio predominan imágenes raster y archivos de un sitio Gatsby. Se indexan los formatos web disponibles; no se convierten a SVG vectorial de forma ficticia."
+    },
+    {
+      "id": "icons8-3d-kit",
+      "repo": "icons8/3d-kit",
+      "category": "illustration",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Icons8 3D Kit",
+      "notes": "Ilustraciones PNG transparentes de 1200x1200 en png/. Icons8 solicita enlazar/atribuir a Icons8 al usarlas, salvo acuerdo de pago. No declarar que son SVG ni que tienen licencia MIT."
+    },
+    {
+      "id": "icons8-flat-color-icons",
+      "repo": "icons8/flat-color-icons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Icons8 Flat Color Icons",
+      "candidateLicense": "MIT / Good Boy License (ver LICENSE.md)",
+      "notes": "SVG de colores en svg/. Mantener las condiciones de LICENSE.md y la atribución de origen; evitar confundir esta muestra gratuita con la colección comercial completa de Icons8."
+    },
+    {
+      "id": "rinaz-glassmorphism-icons",
+      "repo": "abderrahmane-harouat/rinaz-glassmorphism-icons",
+      "category": "ui",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Rinaz Glassmorphism Icons",
+      "notes": "URL proporcionada no confirmada. Una referencia del autor menciona rinaz-technology/rinaz-glassmorphism-icons, que sería otro repositorio; conservar exactamente la URL solicitada y mostrar error si GitHub indica 404, sin sustituirla automáticamente."
+    },
+    {
+      "id": "cloud-native-isometric-icons",
+      "repo": "fjudith/cloud-native-isometric-icons",
+      "category": "illustration",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Cloud Native Isometric Icons",
+      "candidateLicense": "CC-BY-ND-4.0 (activos; README) / Apache-2.0 (código)",
+      "notes": "Ilustraciones isométricas de nube/Kubernetes. El README requiere atribuir a Florian JUDITH y Marie DAO, conservar README con el original, y prohíbe distribuir obras derivadas bajo CC BY-ND 4.0. No aprobar redistribución o edición de contenido protegido por defecto."
+    },
+    {
+      "id": "richbl-isometric-icons",
+      "repo": "richbl/isometric-icons",
+      "category": "illustration",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Isometric Icons — richbl",
+      "candidateLicense": "MIT (repositorio; comprobar elementos derivados)",
+      "notes": "Iconos isométricos en SVG basados en Google Material Design. Mantener avisos de los materiales originales y comprobar términos aplicables a los derivados."
+    },
+    {
+      "id": "lipis-flag-icons",
+      "repo": "lipis/flag-icons",
+      "category": "flags",
+      "status": "watch",
+      "license": null,
+      "licenseUrl": null,
+      "redistributionApproved": false,
+      "name": "Flag Icons — lipis",
+      "candidateLicense": "MIT",
+      "notes": "Banderas SVG por país en flags/1x1/ y flags/4x3/. Se ofrecen dos relaciones de aspecto; usar ruta completa para no colapsarlas como duplicados. Los símbolos nacionales pueden tener reglas propias de uso."
     }
   ]
 }
