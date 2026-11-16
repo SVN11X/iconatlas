@@ -7,7 +7,7 @@
     "type": "svg-folder",
     "path": "vendor/iconoir/svg",
     "upstream": "https://github.com/iconoir-icons/iconoir",
-    "commit": "285be69c1972e7df06e5342a616ac72241a56e71"
+    "commit": "39834e3f193bc0cca2c36bebb6a650471977433d"
   },
   "owner": "iconoir-icons",
   "homepage": "https://github.com/iconoir-icons/iconoir",
@@ -30,5 +30,5 @@
   "brandMatching": false,
   "restrictions": [],
   "attribution": "Luca Burgio / Iconoir",
-  "reviewed": "2026-11-01"
+  "reviewed": "2026-11-16"
 }
